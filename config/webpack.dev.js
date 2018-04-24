@@ -9,7 +9,7 @@ module.exports = merge(webpackCommon, {
     devtool: 'source-map',
     output: {
         path: path.join(__dirname, '../dist/'),
-        filename: 'cp-image-scrop.js',
+        filename: 'cp-image-crop.js',
         publicPath: '/dist/'
     },
     devServer: {
@@ -19,7 +19,7 @@ module.exports = merge(webpackCommon, {
     },
     plugins: [
         new ExtractTextPlugin({
-            filename: "capivara-image-scrop.css",
+            filename: "cp-image-crop.css",
             allChunks: true
         })
     ],

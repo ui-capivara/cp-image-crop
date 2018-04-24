@@ -9,13 +9,13 @@ module.exports = merge(webpackCommon, {
     mode: 'production',
     output: {
         path: path.join(__dirname, '../dist/'),
-        filename: 'cp-image-scrop.min.js',
+        filename: 'cp-image-crop.min.js',
         publicPath: '/dist/'
     },
     plugins: [
         new UglifyJSPlugin(),
         new ExtractTextPlugin({
-            filename: "cp-image-scrop.min.css",
+            filename: "cp-image-crop.min.css",
             allChunks: true
         })
     ],

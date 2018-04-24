@@ -1,0 +1,594 @@
+cp-image-crop {
+  font-family: Helvetica, Arial, sans-serif; }
+  cp-image-crop .image-crop-card {
+    background: #fff;
+    position: relative;
+    border: 1px solid #f0f0f0;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
+    overflow: hidden;
+    padding: 5px; }
+    cp-image-crop .image-crop-card .image-crop-card-content {
+      height: 100%;
+      width: 100%;
+      position: relative; }
+      cp-image-crop .image-crop-card .image-crop-card-content img {
+        width: 100%;
+        height: 100%;
+        cursor: pointer; }
+      cp-image-crop .image-crop-card .image-crop-card-content .backdrop-crop-button {
+        height: 0px;
+        width: 100%;
+        background: rgba(15, 15, 15, 0.7);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        transition: all 150ms ease;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        overflow: hidden; }
+        cp-image-crop .image-crop-card .image-crop-card-content .backdrop-crop-button .backdrop-crop-button-container {
+          width: 100%;
+          height: 100%;
+          padding: 0 24px 0 24px;
+          display: flex;
+          transition: all 150ms ease;
+          align-items: center;
+          justify-content: center; }
+          cp-image-crop .image-crop-card .image-crop-card-content .backdrop-crop-button .backdrop-crop-button-container svg {
+            cursor: pointer;
+            width: 16px;
+            fill: #ccc; }
+          cp-image-crop .image-crop-card .image-crop-card-content .backdrop-crop-button .backdrop-crop-button-container label {
+            color: #fff;
+            cursor: pointer;
+            -webkit-font-smoothing: antialiased;
+            font-weight: 700;
+            direction: ltr;
+            line-height: 1.34;
+            font-size: 14px;
+            margin: 0 10px; }
+          cp-image-crop .image-crop-card .image-crop-card-content .backdrop-crop-button .backdrop-crop-button-container:hover {
+            cursor: pointer;
+            background: rgba(15, 15, 15, 0.75); }
+      cp-image-crop .image-crop-card .image-crop-card-content:hover .backdrop-crop-button {
+        height: 54px; }
+
+.modal-cp-image-crop {
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* The Close Button */ }
+  .modal-cp-image-crop .croppie-container .cr-slider-wrap {
+    margin: 0px 0px;
+    width: 100%;
+    transform: scale(0.7); }
+  .modal-cp-image-crop .modal-instance {
+    width: 100%;
+    height: 100%; }
+  .modal-cp-image-crop .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px; }
+  .modal-cp-image-crop .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s; }
+  .modal-cp-image-crop .close:hover,
+  .modal-cp-image-crop .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer; }
+.modal-cp-image-crop {
+  font-family: Helvetica, Arial, sans-serif; }
+  .modal-cp-image-crop .image-drop-area {
+    transition: all 350ms ease;
+    transform: scale(0.9);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; }
+    .modal-cp-image-crop .image-drop-area svg {
+      width: 100px;
+      pointer-events: none;
+      fill: #666; }
+    .modal-cp-image-crop .image-drop-area h2 {
+      color: #666;
+      pointer-events: none;
+      font-size: 14px; }
+  .modal-cp-image-crop .modal-instance {
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .modal-cp-image-crop .modal-instance .content-image-crop-edit.small {
+      width: 500px;
+      height: 300px;
+      padding: 0; }
+      .modal-cp-image-crop .modal-instance .content-image-crop-edit.small .content-left {
+        background: #CCCCCC; }
+      .modal-cp-image-crop .modal-instance .content-image-crop-edit.small .content-right {
+        padding: 24px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+        .modal-cp-image-crop .modal-instance .content-image-crop-edit.small .content-right .upload-divider {
+          text-align: center;
+          margin: 8px 0; }
+          .modal-cp-image-crop .modal-instance .content-image-crop-edit.small .content-right .upload-divider svg {
+            fill: #d8d8d8;
+            stroke: #d8d8d8;
+            stroke-miterlimit: 10;
+            stroke-width: 2px;
+            display: inline-block;
+            margin-right: 5px;
+            width: 40px;
+            vertical-align: middle; }
+        .modal-cp-image-crop .modal-instance .content-image-crop-edit.small .content-right .modal-text-upload {
+          padding: 0;
+          margin: 4px;
+          font-size: 18px;
+          text-align: center;
+          color: #555; }
+        .modal-cp-image-crop .modal-instance .content-image-crop-edit.small .content-right .modal-crop-buttons {
+          width: 100%;
+          display: flex; }
+          .modal-cp-image-crop .modal-instance .content-image-crop-edit.small .content-right .modal-crop-buttons div.item {
+            width: 50%;
+            display: flex;
+            align-items: center;
+            padding: 5px; }
+            .modal-cp-image-crop .modal-instance .content-image-crop-edit.small .content-right .modal-crop-buttons div.item button {
+              font-size: 11px;
+              padding: 8px 8px; }
+          .modal-cp-image-crop .modal-instance .content-image-crop-edit.small .content-right .modal-crop-buttons div.item:first-child {
+            justify-content: flex-end; }
+        .modal-cp-image-crop .modal-instance .content-image-crop-edit.small .content-right .modal-crop-buttons.no-drive {
+          justify-content: space-around; }
+          .modal-cp-image-crop .modal-instance .content-image-crop-edit.small .content-right .modal-crop-buttons.no-drive div.item:first-child {
+            justify-content: center; }
+    .modal-cp-image-crop .modal-instance .content-image-crop-edit.empty .content-left {
+      border: 2px dashed #999; }
+    .modal-cp-image-crop .modal-instance .content-image-crop-edit.empty .content-left.hover {
+      border: 2px dashed #2c3e50; }
+      .modal-cp-image-crop .modal-instance .content-image-crop-edit.empty .content-left.hover .image-drop-area {
+        transform: scale(1.2); }
+      .modal-cp-image-crop .modal-instance .content-image-crop-edit.empty .content-left.hover h2 {
+        color: #666;
+        font-size: 14px; }
+    .modal-cp-image-crop .modal-instance .content-image-crop-edit {
+      width: 700px;
+      height: 350px;
+      background: #ebeef0;
+      border-radius: 3px;
+      display: flex;
+      padding: 24px; }
+      .modal-cp-image-crop .modal-instance .content-image-crop-edit .content-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 50%; }
+        .modal-cp-image-crop .modal-instance .content-image-crop-edit .content-left .image-view {
+          max-width: 85%;
+          max-height: 100%;
+          box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.2), 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px 0 rgba(0, 0, 0, 0.12); }
+      .modal-cp-image-crop .modal-instance .content-image-crop-edit .content-right {
+        padding: 24px 0 0 34px;
+        width: 50%;
+        position: relative; }
+      .modal-cp-image-crop .modal-instance .content-image-crop-edit h3 {
+        font-size: 14px;
+        margin: 0;
+        color: #555; }
+  .modal-cp-image-crop .modal-crop-footer-options {
+    margin-top: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; }
+    .modal-cp-image-crop .modal-crop-footer-options a {
+      cursor: pointer;
+      margin-right: 34px;
+      text-decoration: none;
+      color: #2c3e4f; }
+      .modal-cp-image-crop .modal-crop-footer-options a:hover {
+        color: #000; }
+  .modal-cp-image-crop .range-slider {
+    margin: 5px 0px 5px 0%; }
+  .modal-cp-image-crop .range-slider {
+    width: 100%; }
+  .modal-cp-image-crop .range-slider__range {
+    -webkit-appearance: none;
+    width: calc(100% - (120px));
+    height: 10px;
+    border-radius: 5px;
+    background: #d7dcdf;
+    outline: none;
+    padding: 0;
+    margin: 0; }
+    .modal-cp-image-crop .range-slider__range::-webkit-slider-thumb {
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: #2c3e50;
+      cursor: pointer;
+      transition: background .15s ease-in-out; }
+      .modal-cp-image-crop .range-slider__range::-webkit-slider-thumb:hover {
+        background: transparent; }
+    .modal-cp-image-crop .range-slider__range:active::-webkit-slider-thumb {
+      background: transparent; }
+    .modal-cp-image-crop .range-slider__range::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border: 0;
+      border-radius: 50%;
+      background: #2c3e50;
+      cursor: pointer;
+      transition: background .15s ease-in-out; }
+      .modal-cp-image-crop .range-slider__range::-moz-range-thumb:hover {
+        background: transparent; }
+    .modal-cp-image-crop .range-slider__range:active::-moz-range-thumb {
+      background: transparent; }
+  .modal-cp-image-crop .range-slider__value {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    color: #fff;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    background: #2c3e50;
+    padding: 5px 10px;
+    margin-left: 8px; }
+    .modal-cp-image-crop .range-slider__value:after {
+      position: absolute;
+      top: 8px;
+      left: -7px;
+      width: 0;
+      height: 0;
+      border-top: 7px solid transparent;
+      border-right: 7px solid #2c3e50;
+      border-bottom: 7px solid transparent;
+      content: ''; }
+  .modal-cp-image-crop ::-moz-range-track {
+    background: #d7dcdf;
+    border: 0; }
+  .modal-cp-image-crop input::-moz-focus-inner,
+  .modal-cp-image-crop input::-moz-focus-outer {
+    border: 0; }
+  .modal-cp-image-crop button.btn-modal-save-crop {
+    float: right;
+    margin-right: 28px; }
+  .modal-cp-image-crop button.btn-modal-crop {
+    outline: none;
+    cursor: pointer;
+    transition: color 0.25s;
+    background: none;
+    border: 0;
+    box-sizing: border-box;
+    padding: 8px 14px;
+    box-shadow: inset 0 0 0 2px #ccc;
+    color: #666;
+    font-size: inherit;
+    font-weight: 700;
+    position: relative;
+    vertical-align: middle;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+    .modal-cp-image-crop button.btn-modal-crop svg {
+      width: 18px;
+      height: 18px;
+      margin-right: 5px; }
+    .modal-cp-image-crop button.btn-modal-crop::before, .modal-cp-image-crop button.btn-modal-crop::after {
+      box-sizing: inherit;
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%; }
+    .modal-cp-image-crop button.btn-modal-crop::before, .modal-cp-image-crop button.btn-modal-crop::after {
+      border: 2px solid transparent;
+      width: 0;
+      height: 0; }
+    .modal-cp-image-crop button.btn-modal-crop::before {
+      top: 0;
+      left: 0; }
+    .modal-cp-image-crop button.btn-modal-crop::after {
+      bottom: 0;
+      right: 0; }
+    .modal-cp-image-crop button.btn-modal-crop:hover {
+      color: #304050; }
+    .modal-cp-image-crop button.btn-modal-crop:hover::before, .modal-cp-image-crop button.btn-modal-crop:hover::after {
+      width: 100%;
+      height: 100%; }
+    .modal-cp-image-crop button.btn-modal-crop:hover::before {
+      border-top-color: #304050;
+      border-right-color: #304050;
+      transition: width 0.25s ease-out, height 0.25s ease-out 0.25s; }
+    .modal-cp-image-crop button.btn-modal-crop:hover::after {
+      border-bottom-color: #304050;
+      border-left-color: #304050;
+      transition: border-color 0s ease-out 0.5s, width 0.25s ease-out 0.5s, height 0.25s ease-out 0.75s; }
+.croppie-container {
+    width: 100%;
+    height: 100%;
+}
+
+.croppie-container .cr-image {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    max-height: none;
+    max-width: none;
+}
+
+.croppie-container .cr-boundary {
+    position: relative;
+    overflow: hidden;
+    margin: 0 auto;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.croppie-container .cr-viewport,
+.croppie-container .cr-resizer {
+    position: absolute;
+    border: 2px solid #fff;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    box-shadow: 0 0 2000px 2000px rgba(0, 0, 0, 0.5);
+    z-index: 0;
+}
+
+.croppie-container .cr-resizer {
+  z-index: 2;
+  box-shadow: none;
+  pointer-events: none;
+}
+
+.croppie-container .cr-resizer-vertical,
+.croppie-container .cr-resizer-horisontal {
+  position: absolute;
+  pointer-events: all;
+}
+
+.croppie-container .cr-resizer-vertical::after,
+.croppie-container .cr-resizer-horisontal::after {
+    display: block;
+    position: absolute;
+    box-sizing: border-box;
+    border: 1px solid black;
+    background: #fff;
+    width: 10px;
+    height: 10px;
+    content: '';
+}
+
+.croppie-container .cr-resizer-vertical {
+  bottom: -5px;
+  cursor: row-resize;
+  width: 100%;
+  height: 10px;
+}
+
+.croppie-container .cr-resizer-vertical::after {
+    left: 50%;
+    margin-left: -5px;
+}
+
+.croppie-container .cr-resizer-horisontal {
+  right: -5px;
+  cursor: col-resize;
+  width: 10px;
+  height: 100%;
+}
+
+.croppie-container .cr-resizer-horisontal::after {
+    top: 50%;
+    margin-top: -5px;
+}
+
+.croppie-container .cr-original-image {
+    display: none;
+}
+
+.croppie-container .cr-vp-circle {
+    border-radius: 50%;
+}
+
+.croppie-container .cr-overlay {
+    z-index: 1;
+    position: absolute;
+    cursor: move;
+    touch-action: none;
+}
+
+.croppie-container .cr-slider-wrap {
+    width: 75%;
+    margin: 15px auto;
+    text-align: center;
+}
+
+.croppie-result {
+    position: relative;
+    overflow: hidden;
+}
+
+.croppie-result img {
+    position: absolute;
+}
+
+.croppie-container .cr-image,
+.croppie-container .cr-overlay,
+.croppie-container .cr-viewport {
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    transform: translateZ(0);
+}
+
+/*************************************/
+/***** STYLING RANGE INPUT ***********/
+/*************************************/
+/*http://brennaobrien.com/blog/2014/05/style-input-type-range-in-every-browser.html */
+/*************************************/
+
+.cr-slider {
+    -webkit-appearance: none;
+/*removes default webkit styles*/
+	/*border: 1px solid white; *//*fix for FF unable to apply focus style bug */
+    width: 300px;
+/*required for proper track sizing in FF*/
+    max-width: 100%;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background-color: transparent;
+}
+
+.cr-slider::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 0;
+    border-radius: 3px;
+}
+
+.cr-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #ddd;
+    margin-top: -6px;
+}
+
+.cr-slider:focus {
+    outline: none;
+}
+/*
+.cr-slider:focus::-webkit-slider-runnable-track {
+background: #ccc;
+}
+*/
+
+.cr-slider::-moz-range-track {
+    width: 100%;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.5);
+    border: 0;
+    border-radius: 3px;
+}
+
+.cr-slider::-moz-range-thumb {
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: #ddd;
+    margin-top: -6px;
+}
+
+/*hide the outline behind the border*/
+.cr-slider:-moz-focusring {
+    outline: 1px solid white;
+    outline-offset: -1px;
+}
+
+.cr-slider::-ms-track {
+    width: 100%;
+    height: 5px;
+    background: transparent;
+/*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+	border-color: transparent;/*leave room for the larger thumb to overflow with a transparent border */
+	border-width: 6px 0;
+	color: transparent;/*remove default tick marks*/
+}
+.cr-slider::-ms-fill-lower {
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+}
+.cr-slider::-ms-fill-upper {
+	background: rgba(0, 0, 0, 0.5);
+	border-radius: 10px;
+}
+.cr-slider::-ms-thumb {
+	border: none;
+	height: 16px;
+	width: 16px;
+	border-radius: 50%;
+	background: #ddd;
+	margin-top:1px;
+}
+.cr-slider:focus::-ms-fill-lower {
+	background: rgba(0, 0, 0, 0.5);
+}
+.cr-slider:focus::-ms-fill-upper {
+	background: rgba(0, 0, 0, 0.5);
+}
+/*******************************************/
+
+/***********************************/
+/* Rotation Tools */
+/***********************************/
+.cr-rotate-controls {
+	position: absolute;
+	bottom: 5px;
+	left: 5px;
+	z-index: 1;
+}
+.cr-rotate-controls button {
+	border: 0;
+	background: none;
+}
+.cr-rotate-controls i:before {
+	display: inline-block;
+	font-style: normal;
+	font-weight: 900;
+	font-size: 22px;
+}
+.cr-rotate-l i:before {
+	content: '\21BA';
+}
+.cr-rotate-r i:before {
+	content: '\21BB';
+}
+
+/*# sourceMappingURL=cp-image-crop.css.map*/

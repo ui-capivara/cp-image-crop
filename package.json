@@ -1,6 +1,6 @@
 {
   "name": "cp-image-crop",
-  "version": "1.0.0",
+  "version": "1.3.0",
   "description": "cp-image-crop",
   "main": "src/index.ts",
   "scripts": {

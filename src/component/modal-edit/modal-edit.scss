@@ -1,0 +1,371 @@
+// Base Colors
+$shade-10: #2c3e50 !default;
+$shade-1: #d7dcdf !default;
+$shade-0: #fff !default;
+$teal: transparent !default;
+
+$cyan: #304050;
+$btnModalColor: #ccc;
+
+.modal-cp-image-crop{
+    font-family: Helvetica, Arial, sans-serif;
+
+    .image-drop-area{
+        transition: all 350ms ease;
+        transform: scale(.9);
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        svg{
+            width: 100px;
+            pointer-events: none;
+            fill: #666;
+        }
+        h2{
+            color: #666;
+            pointer-events: none;
+            font-size: 14px;
+        }
+    }
+    .modal-instance{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .content-image-crop-edit.small{
+            width: 500px;
+            height: 300px;
+            padding: 0;
+            .content-left{
+                background: #CCCCCC;
+            }            
+            .content-right{
+                padding: 24px 0; 
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                .upload-divider{
+                    text-align: center;
+                    margin: 8px 0;
+                    svg{
+                        fill: #d8d8d8;
+                        stroke: #d8d8d8;
+                        stroke-miterlimit: 10;
+                        stroke-width: 2px;
+                        display: inline-block;
+                        margin-right: 5px;
+                        width: 40px;
+                        vertical-align: middle;
+                    }
+                } 
+                .modal-text-upload{
+                    padding: 0;
+                    margin: 4px;
+                    font-size: 18px;
+                    text-align: center;
+                    color: #555;
+                }
+                .modal-crop-buttons{
+                    width: 100%;
+                    display: flex;
+                    div.item{
+                        width: 50%;
+                        display: flex;
+                        align-items: center;
+                        padding: 5px;
+                        button{
+                            font-size: 11px;
+                            padding: 8px 8px;
+                        }
+                    }
+                    div.item:first-child{
+                        justify-content: flex-end;
+                    }
+                }
+                .modal-crop-buttons.no-drive{
+                    justify-content: space-around;
+                    div.item:first-child{
+                        justify-content: center;
+                    }
+                }
+            }            
+        }
+        .content-image-crop-edit.empty{
+            .content-left{
+                border: 2px dashed #999;
+            }
+            .content-left.hover{
+                border: 2px dashed $shade-10;
+                .image-drop-area{
+                    transform: scale(1.2);
+                }
+                h2{
+                    color: #666;
+                    font-size: 14px;
+                }
+            }
+        }
+        .content-image-crop-edit{
+            // width: 1080px;
+            // height: 600px;
+            width: 700px;
+            height: 350px;
+            background: #ebeef0;
+            border-radius: 3px;
+            display: flex;
+            padding: 24px;
+            .content-left{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                width: 50%;
+                .image-view{
+                    max-width: 85%;
+                    max-height: 100%;
+                    box-shadow: 0 2px 4px -1px rgba(0,0,0,.2),0 4px 5px 0 rgba(0,0,0,.14),0 1px 10px 0 rgba(0,0,0,.12);
+                }
+            }
+            .content-right{
+                padding: 24px 0 0 34px;
+                width: 50%;
+                position: relative;
+            }
+            h3{
+                font-size: 14px;
+                margin: 0;
+                color: #555;            
+            }
+        }
+    } 
+
+    .modal-crop-footer-options{
+        margin-top: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        a{
+            cursor: pointer;
+            margin-right: 34px;
+            text-decoration: none;
+            color: #2c3e4f;
+            &:hover{
+                color: #000;
+            }
+        }
+    }
+
+    .range-slider {
+        margin: 5px 0px 5px 0%;
+    }
+
+
+    // Range Slider
+    $range-width: 100% !default;
+
+    $range-handle-color: $shade-10 !default;
+    $range-handle-color-hover: $teal !default;
+    $range-handle-size: 20px !default;
+
+    $range-track-color: $shade-1 !default;
+    $range-track-height: 10px !default;
+
+    $range-label-color: $shade-10 !default;
+    $range-label-width: 60px !default;
+
+    .range-slider {
+        width: $range-width;
+    }
+
+    .range-slider__range {
+    -webkit-appearance: none;
+    width: calc(100% - (#{$range-label-width + 60px}));
+    height: $range-track-height;
+    border-radius: 5px;
+    background: $range-track-color;
+    outline: none;
+    padding: 0;
+    margin: 0;
+
+    // Range Handle
+    &::-webkit-slider-thumb {
+        appearance: none;
+        width: $range-handle-size;
+        height: $range-handle-size;
+        border-radius: 50%;
+        background: $range-handle-color;
+        cursor: pointer;
+        transition: background .15s ease-in-out;
+
+        &:hover {
+        background: $range-handle-color-hover;
+        }
+    }
+
+    &:active::-webkit-slider-thumb {
+        background: $range-handle-color-hover;
+    }
+
+    &::-moz-range-thumb {
+        width: $range-handle-size;
+        height: $range-handle-size;
+        border: 0;
+        border-radius: 50%;
+        background: $range-handle-color;
+        cursor: pointer;
+        transition: background .15s ease-in-out;
+
+        &:hover {
+        background: $range-handle-color-hover;
+        }
+    }
+
+    &:active::-moz-range-thumb {
+        background: $range-handle-color-hover;
+    }
+}
+    // Range Label
+    .range-slider__value {
+    display: inline-block;
+    position: relative;
+    width: $range-label-width;
+    color: $shade-0;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 3px;
+    background: $range-label-color;
+    padding: 5px 10px;
+    margin-left: 8px;
+
+    &:after {
+        position: absolute;
+        top: 8px;
+        left: -7px;
+        width: 0;
+        height: 0;
+        border-top: 7px solid transparent;
+        border-right: 7px solid $range-label-color;
+        border-bottom: 7px solid transparent;
+        content: '';
+    }
+    }
+
+
+    // Firefox Overrides
+    ::-moz-range-track {
+        background: $range-track-color;
+        border: 0;
+    }
+
+    input::-moz-focus-inner,
+    input::-moz-focus-outer { 
+    border: 0; 
+    }
+
+    button.btn-modal-save-crop{
+        float: right;
+        margin-right: 28px;
+    }
+
+    button.btn-modal-crop {
+        outline: none;
+        cursor: pointer;
+        transition: color 0.25s;
+        background: none;
+        border: 0;
+        box-sizing: border-box;
+        padding: 8px 14px;
+        
+        // Using inset box-shadow instead of border for sizing simplicity
+        box-shadow: inset 0 0 0 2px $btnModalColor;
+        color: #666;
+        font-size: inherit;
+        font-weight: 700;
+      
+        // Required, since we're setting absolute on pseudo-elements
+        position: relative;
+        vertical-align: middle;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg{
+            width: 18px;
+            height: 18px;
+            margin-right: 5px;
+        }
+      
+        &::before,
+        &::after {
+          box-sizing: inherit;
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+        }
+    
+        &::before,
+      &::after {
+        // Set border to invisible, so we don't see a 4px border on a 0x0 element before the transition starts
+        border: 2px solid transparent;
+        width: 0;
+        height: 0;
+      }
+    
+      // This covers the top & right borders (expands right, then down)
+      &::before {
+        top: 0;
+        left: 0;
+      }
+    
+      // And this the bottom & left borders (expands left, then up)
+      &::after {
+        bottom: 0;
+        right: 0;
+      }
+      
+      &:hover {
+        color: $cyan;
+      }
+    
+      // Hover styles
+      &:hover::before,
+      &:hover::after {
+        width: 100%;
+        height: 100%;
+      }
+    
+      &:hover::before {
+        border-top-color: $cyan; // Make borders visible
+        border-right-color: $cyan;
+        transition:
+          width 0.25s ease-out, // Width expands first
+          height 0.25s ease-out 0.25s; // And then height
+      }
+    
+      &:hover::after {
+        border-bottom-color: $cyan; // Make borders visible
+        border-left-color: $cyan;
+        transition:
+          border-color 0s ease-out 0.5s, // Wait for ::before to finish before showing border
+          width 0.25s ease-out 0.5s, // And then exanding width
+          height 0.25s ease-out 0.75s; // And finally height
+      }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

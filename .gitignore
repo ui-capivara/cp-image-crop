@@ -1,0 +1,18 @@
+.DS_STORE
+node_modules
+
+# Include when developing application packages.
+pubspec.lock
+.c9
+.idea/
+.settings/
+*.swo
+modules/.settings
+.vscode
+modules/.vscode
+coverage
+
+# Ignore npm/yarn debug log
+npm-debug.log
+yarn-error.log
+package-lock.json

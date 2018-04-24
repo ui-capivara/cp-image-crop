@@ -1,0 +1,56 @@
+{
+  "name": "cp-image-crop",
+  "version": "1.0.0",
+  "description": "cp-image-crop",
+  "main": "src/index.ts",
+  "scripts": {
+    "dev": "webpack-dev-server --config ./config/webpack.dev.js",
+    "prod": "npm run test-once && webpack --config ./config/webpack.dev.js && webpack --config ./config/webpack.prod.js",
+    "test": "karma start",
+    "test-once": "karma start --single-run"
+  },
+  "repository": {
+    "type": "git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "@types/jasmine": "^2.6.3",
+    "@types/node": "^9.4.6",
+    "babel-loader": "^7.1.4",
+    "babel-preset-stage-0": "^6.24.1",
+    "css-loader": "^0.28.2",
+    "file-loader": "^1.1.11",
+    "html-loader": "^0.5.5",
+    "jasmine": "^3.1.0",
+    "jasmine-core": "^3.1.0",
+    "karma": "^2.0.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^1.1.1",
+    "karma-phantomjs-launcher": "^1.0.4",
+    "karma-typescript": "^3.0.8",
+    "node-sass": "^4.7.2",
+    "sass-loader": "^6.0.7",
+    "script-loader": "^0.7.2",
+    "style-loader": "^0.20.3",
+    "ts-loader": "^4.1.0",
+    "typescript": "^2.7.2",
+    "uglifyjs-webpack-plugin": "^1.2.3",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.11",
+    "webpack-dev-server": "^3.1.1",
+    "webpack-merge": "^4.1.2"
+  },
+  "keywords": [
+    "capivara",
+    "components",
+    "capivara-image-scrop"
+  ],
+  "author": "CapivaraJS Team",
+  "license": "LGPL-3.0",
+  "dependencies": {
+    "capivarajs": "^1.11.5",
+    "croppie": "^2.6.2"
+  }
+}

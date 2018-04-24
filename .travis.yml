@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+ - "stable"
+before_script: 
+ - npm install
+script:
+ - npm run test
+ - npm run prod
+# - npm publish
+branches:
+  only:
+  - master
+# before_install:
+#   - printf "//registry.npmjs.org/:_authToken=${NPM_TOKEN}\n" >> .npmrc
+  

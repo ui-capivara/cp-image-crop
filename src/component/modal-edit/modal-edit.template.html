@@ -1,0 +1,97 @@
+<div class="modal-instance">
+    <span class="close" cp-click="$ctrl.close();">&times;</span>
+
+    <div class="content-image-crop-edit" cp-show="$ctrl.mode == 'crop'">
+        <div class="content-left">
+            <div id="cropElem"></div>
+        </div>
+        <div class="content-right">
+            <div class="filter-custom" cp-repeat="filter in $ctrl.filters">
+                <h3>[[filter.label]]</h3>
+                <div class="range-slider">
+                    <input class="range-slider__range" cp-model="filter.value" type="range" cp-min="filter.min" cp-max="filter.max" cp-step="filter.step"
+                    />
+                    <span class="range-slider__value">
+                        [[ filter.value ]][[ filter.measure ]]
+                    </span>
+                </div>
+            </div>
+            <div class="modal-crop-footer-options">
+                <a cp-click="$ctrl.destroyCrop()">Cancelar</a>
+                <button type="button" class="btn-modal-crop btn-modal-save-crop" cp-click="$ctrl.saveCrop()">Salvar</button>
+            </div>
+        </div>
+    </div>
+    <div class="content-image-crop-edit small" cp-class="{'empty' : !$ctrl.params.image}" cp-show="$ctrl.mode == 'view'">
+        <div class="content-left">
+            <img cp-if="$ctrl.params.image" cp-src="$ctrl.params.image" class="image-view">
+            <div class="image-drop-area" cp-if="!$ctrl.params.image">
+                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                    viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
+                    <g>
+                        <path d="M57,6H1C0.448,6,0,6.447,0,7v44c0,0.553,0.448,1,1,1h56c0.552,0,1-0.447,1-1V7C58,6.447,57.552,6,57,6z M56,50H2V8h54V50z"
+                        />
+                        <path d="M16,28.138c3.071,0,5.569-2.498,5.569-5.568C21.569,19.498,19.071,17,16,17s-5.569,2.498-5.569,5.569
+                       C10.431,25.64,12.929,28.138,16,28.138z M16,19c1.968,0,3.569,1.602,3.569,3.569S17.968,26.138,16,26.138s-3.569-1.601-3.569-3.568
+                       S14.032,19,16,19z" />
+                        <path d="M7,46c0.234,0,0.47-0.082,0.66-0.249l16.313-14.362l10.302,10.301c0.391,0.391,1.023,0.391,1.414,0s0.391-1.023,0-1.414
+                       l-4.807-4.807l9.181-10.054l11.261,10.323c0.407,0.373,1.04,0.345,1.413-0.062c0.373-0.407,0.346-1.04-0.062-1.413l-12-11
+                       c-0.196-0.179-0.457-0.268-0.72-0.262c-0.265,0.012-0.515,0.129-0.694,0.325l-9.794,10.727l-4.743-4.743
+                       c-0.374-0.373-0.972-0.392-1.368-0.044L6.339,44.249c-0.415,0.365-0.455,0.997-0.09,1.412C6.447,45.886,6.723,46,7,46z"
+                        />
+                    </g>
+                </svg>
+                <h2>Solte a imagem</h2>
+            </div>
+        </div>
+        <div class="content-right">
+
+            <h2 class="modal-text-upload">Fazer upload</h2>
+
+            <div class="upload-divider">
+                <svg class="detail" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 78.56 7.99">
+                    <path class="pathdetaillogin" d="M11.82,5A9.21,9.21,0,0,0,23.76,5a7.23,7.23,0,0,1,9.59,0,9.21,9.21,0,0,0,11.9,0,7.24,7.24,0,0,1,9.56,0,9.21,9.21,0,0,0,12,0,7,7,0,0,1,4.78-1.8A6.47,6.47,0,0,1,75.68,4.5c.48-.47.95-1,1.41-1.45a8.6,8.6,0,0,0-5.55-1.88,8.94,8.94,0,0,0-6,2.2,7.24,7.24,0,0,1-9.56,0A9.21,9.21,0,0,0,44,3.37a7.23,7.23,0,0,1-9.55,0,9.21,9.21,0,0,0-11.94,0,7.23,7.23,0,0,1-9.55,0,8.94,8.94,0,0,0-6-2.2A8.58,8.58,0,0,0,1.51,3c.46.49.93,1,1.41,1.45A6.46,6.46,0,0,1,7,3.17,7,7,0,0,1,11.82,5Z"
+                        transform="translate(-0.04 -0.16)"></path>
+                </svg>
+            </div>
+
+            <div class="modal-crop-buttons" cp-class="{'no-drive': !$ctrl.params.drive}">
+                <div class="item">
+                    <button class="btn-modal-crop" cp-click="$ctrl.chooseFile()">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            width="548.172px" height="548.172px" viewBox="0 0 548.172 548.172" style="enable-background:new 0 0 548.172 548.172;"
+                            xml:space="preserve">
+                            <g>
+                                <path d="M534.75,49.965c-8.945-8.945-19.694-13.422-32.261-13.422H45.681c-12.562,0-23.313,4.477-32.264,13.422
+                               C4.471,58.913,0,69.663,0,82.226v310.633c0,12.566,4.471,23.315,13.417,32.265c8.951,8.945,19.702,13.414,32.264,13.414h155.318
+                               c0,7.231-1.524,14.661-4.57,22.269c-3.044,7.614-6.09,14.273-9.136,19.981c-3.042,5.715-4.565,9.897-4.565,12.56
+                               c0,4.948,1.807,9.24,5.424,12.847c3.615,3.621,7.898,5.435,12.847,5.435h146.179c4.949,0,9.233-1.813,12.848-5.435
+                               c3.62-3.606,5.427-7.898,5.427-12.847c0-2.468-1.526-6.611-4.571-12.415c-3.046-5.801-6.092-12.566-9.134-20.267
+                               c-3.046-7.71-4.569-15.085-4.569-22.128h155.318c12.56,0,23.309-4.469,32.254-13.414c8.949-8.949,13.422-19.698,13.422-32.265
+                               V82.226C548.176,69.663,543.699,58.913,534.75,49.965z M511.627,319.768c0,2.475-0.903,4.613-2.711,6.424
+                               c-1.81,1.804-3.952,2.707-6.427,2.707H45.681c-2.473,0-4.615-0.903-6.423-2.707c-1.807-1.817-2.712-3.949-2.712-6.424V82.226
+                               c0-2.475,0.902-4.615,2.712-6.423c1.809-1.805,3.951-2.712,6.423-2.712h456.815c2.471,0,4.617,0.904,6.42,2.712
+                               c1.808,1.809,2.711,3.949,2.711,6.423V319.768L511.627,319.768z" />
+                            </g>
+                        </svg>
+                        Computador
+                    </button>
+                    <input type="file" hidden accept="image/x-png,image/gif,image/jpeg">
+                </div>
+                <div class="item" cp-show="$ctrl.params.drive">
+                    <button class="btn-modal-crop" cp-click="$ctrl.openPickerGoogle()">
+                        <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                            viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+                            <polygon style="fill:#FFC107;" points="341.344,352 512,352 341.344,32 170.656,32 " />
+                            <polygon style="fill:#2196F3;" points="158.464,352 85.344,480 432,480 512,352 " />
+                            <polygon style="fill:#4CAF50;" points="170.656,32 0,330.656 85.344,480 253.056,186.496 " />
+                        </svg>
+                        Google drive
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

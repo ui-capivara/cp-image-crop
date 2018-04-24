@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Demo CapivaraImagescrop</title>
+    <link rel="stylesheet" href="dist/capivara-image-scrop.css">
+</head>
+
+<body>
+    <style>
+        body,
+        html {
+            width: 100%;
+            height: 99%;
+            /* background: #F5F5F5; */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+
+    <cp-image-crop #myComponent width="422px"></cp-image-crop>
+
+    <script src="dist/capivara-image-scrop.js"></script>
+
+    <script>
+        capivara.controller(document.body, function () {
+            const $ctrl = this;
+
+            $ctrl.pessoa = { image: 'https://pbs.twimg.com/profile_images/882658676900802561/I98JM9OX_400x400.jpg' };
+
+            capivara.componentBuilder('myComponent')
+                .context($ctrl)
+                .bindings({
+                    cpModel: 'pessoa.image'
+                })
+                .constants({
+                    width: '200px',
+                    height: '200px',
+                    drive: {
+                        apiKey: 'AIzaSyBxoy9Str65OahPkos1crgOa7zR0ZVYSbU',
+                        clientId: '502780041751-vdlgq1v8s2i68vdvhap6t20iv4m9rpfn.apps.googleusercontent.com',
+                    },
+                    crop: {
+                        viewport: {
+                            width: 200,
+                            height: 200
+                        }
+                    }
+                })
+                .build();
+
+        })
+
+
+
+    </script>
+
+    <script src="https://www.google.com/jsapi?key=AIzaSyBxoy9Str65OahPkos1crgOa7zR0ZVYSbU"></script>
+    <script src="https://apis.google.com/js/client.js"></script>
+</body>
+
+</html>

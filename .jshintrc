@@ -1,0 +1,12 @@
+{
+    "undef": true,
+    "unused": true,
+    "esversion": 6,
+    "node": true,
+    "globals": {
+        "capivara": true,
+        "window": true,
+        "document": true,
+        "require": true
+    }
+}

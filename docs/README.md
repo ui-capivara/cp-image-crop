@@ -9,10 +9,10 @@ O cp-image-crop é um componente para manipulação de imagens, ele permite que 
 Recomendamos vincular a um número de versão específico que você possa atualizar manualmente, porém no exemplo iremos utilizar a ultima versão disponível.
 ```html
 <!-- Stylesheet -->
-<link rel="stylesheet" href="https://unpkg.com/cp-image-crop@latest/dist/cp-image-crop.css">
+<link rel="stylesheet" href="https://unpkg.com/cp-image-crop@latest/dist/cp-image-crop.min.css">
 
 <!-- Component -->
-<script src="https://unpkg.com/cp-image-crop@latest/dist/cp-image-crop.js"></script>
+<script src="https://unpkg.com/cp-image-crop@latest/dist/cp-image-crop.min.js"></script>
 ```
 Certifique-se de ler sobre as diferentes construções e use a produção, substituindo os arquivos .js por .min.js. Esta é uma compilação otimizada para velocidade em vez de experiência de desenvolvimento.
 
@@ -51,50 +51,69 @@ import 'cp-image-crop';
 Se chegamos até aqui, provavelmente a instalação foi finalizada êxito, isso significa que já podemos utilizar o cp-image-crop.
 Vamos agora criar uma nova instância do componente, primeiro faça a declaração no HTML dando um **alias** para essa instância no exemplo usaremos o alias **exampleCrop**.
 
-Você pode ver esse exemplo no [Jsfiddle](https://jsfiddle.net/xfnkp3no/5/)
-
 ```html
-<cp-image-crop #exampleCrop></cp-image-crop>
+<cp-image-crop cp-model="$ctrl.pessoa.foto"></cp-image-crop>
 ```
 
 Depois de declarar o componente no HTML precisamos inicializa-lo, nesse momento é possível passar alguns parâmetros caso julgarmos necessário.
 Na inicialização do componente, precisar informar o contexto que será aplicado o valor. Exemplo:
 ```javascript
-let pessoa = { name: "João" };
+class MyController {
+    constructor() {
+      this.pessoa = {
+        foto: ''
+      }
+    }
+}
 
-capivara.componentBuilder('exampleCrop')
-        .context(pessoa)
-        .bindings({
-            cpModel: 'picture'
-        })
-        .build();
+capivara.controller(document.body, MyController);
 ```
+
+Exemplo em CapivaraJS - [Jsfiddle](https://jsfiddle.net/t0b8xxfj/6/).
+
+Exemplo em Angular.js - [Jsfiddle](https://jsfiddle.net/t0b8xxfj/8/).
+
+Exemplo em Angular - [Jsfiddle](https://jsfiddle.net/1hk7knwq/3584/).
+
+Exemplo em Vue.js - [Jsfiddle](http://jsfiddle.net/td4v7qqd/61/).
+
+Exemplo em React - [Jsfiddle](http://jsfiddle.net/td4v7qqd/62/).
+
+
+
 ------
 # Configuração
 
 O componente aceita algumas constantes que permitem configurar funcionalidades. No exemplo abaixo iremos fazer a visualização em **200x200**, entretanto definir que a imagem será recortada em **250x250**.
 
-Você pode ver esse exemplo no [Jsfiddle](https://jsfiddle.net/xfnkp3no/7/)
+Você pode ver esse exemplo no [Jsfiddle](https://jsfiddle.net/xfnkp3no/15/)
 
 ```javascript
-let pessoa = { name: "João" };
-
-const config = {
-  width: '200px',
-  height: '200px',
-  crop: {
-    viewport: {
-        width: 250,
-        height: 250
+class MyController {
+  constructor() {
+    this.pessoa = {
+      foto: 'https://goo.gl/SYn4yp'
     }
   }
-};
 
-capivara.componentBuilder('exampleCrop')
-        .context(pessoa)
-        .bindings({ cpModel: 'picture' })
-        .constants(config)
-        .build();
+  $onInit() {
+    const config = {
+      crop: {
+        viewport: {
+          width: 50,
+          height: 250
+        }
+      }
+    };
+    capivara.componentBuilder('exampleCrop').then((instance) => {
+      instance.constants(config).build();
+    });
+  }
+
+}
+
+capivara.controller(document.body, MyController);
+
 ```
 ## Objeto de config
 | Atributo: Default      | Tipo          | Descrição |
@@ -106,7 +125,7 @@ capivara.componentBuilder('exampleCrop')
 
 ## CropConfig
 
-Veja esse exemplo no [Jsfiddle](https://jsfiddle.net/xfnkp3no/9/) que demostramos como deixar o resize livre e o zoom infinito.
+Veja esse exemplo no [Jsfiddle](https://jsfiddle.net/xfnkp3no/20/) que demostramos como deixar o resize livre e o zoom infinito.
 
 | Atributo: Default      | Tipo          | Descrição |
 | ------------- |:-------------:| -----:|
@@ -142,4 +161,4 @@ Você pode permitir que seu usuário sincronize as imagens do google drive com o
 
 Obs: Quando estiver criando o **ID do cliente OAuth** certifique-se de colocar as URL de origens permitidas.
 
-Veja no [Jsfiddle](https://jsfiddle.net/xfnkp3no/10/) como informar suas chaves.
+Veja no [Jsfiddle](https://jsfiddle.net/xfnkp3no/26/) como informar suas chaves.

@@ -11,12 +11,13 @@ export class CapivaraImageCrop {
     private url;
 
     constructor() {
+        this.$constants = this.$constants || {};
     }
 
     /**
-     * @description Method executed when a component is created
+     * @description Method executed when a component is build
      */
-    $onInit() {
+    $onBuild() {
         if (this.$constants.drive && this.$constants.drive.apiKey && this.$constants.drive.clientId) {
             document.write(`<script async src="https://www.google.com/jsapi?key=${this.$constants.drive.apiKey}"></script>`);
             document.write('<script async src="https://apis.google.com/js/client.js"></script>');

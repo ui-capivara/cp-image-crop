@@ -23,7 +23,8 @@
         }
     </style>
 
-    <cp-image-crop #myComponent width="422px"></cp-image-crop>
+    <cp-image-crop cp-model="$ctrl.pessoa.image"></cp-image-crop>
+
 
     <script src="dist/cp-image-crop.js"></script>
 
@@ -32,27 +33,6 @@
             const $ctrl = this;
 
             $ctrl.pessoa = { image: 'https://pbs.twimg.com/profile_images/882658676900802561/I98JM9OX_400x400.jpg' };
-
-            capivara.componentBuilder('myComponent')
-                .context($ctrl)
-                .bindings({
-                    cpModel: 'pessoa.image'
-                })
-                .constants({
-                    width: '200px',
-                    height: '200px',
-                    drive: {
-                        apiKey: 'AIzaSyC9LFTBO-96juMn6JqlAgCOAeWx28eDgwQ',
-                        clientId: '376579813716-7stu1pub41kph5onpagnn12q270lu673.apps.googleusercontent.com',
-                    },
-                    crop: {
-                        viewport: {
-                            width: 200,
-                            height: 200
-                        }
-                    }
-                })
-                .build();
 
         })
 

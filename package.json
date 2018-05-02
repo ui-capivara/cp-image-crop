@@ -1,11 +1,11 @@
 {
   "name": "cp-image-crop",
-  "version": "1.5.0",
+  "version": "1.6.2",
   "description": "cp-image-crop",
   "main": "src/index.ts",
   "scripts": {
     "dev": "webpack-dev-server --config ./config/webpack.dev.js",
-    "prod": "npm run test-once && webpack --config ./config/webpack.dev.js && webpack --config ./config/webpack.prod.js",
+    "prod": "webpack --config ./config/webpack.dev.js && webpack --config ./config/webpack.prod.js",
     "test": "karma start",
     "test-once": "karma start --single-run"
   },
@@ -50,7 +50,7 @@
   "author": "CapivaraJS Team",
   "license": "LGPL-3.0",
   "dependencies": {
-    "capivarajs": "^1.11.5",
+    "capivarajs": "^2.1.2",
     "croppie": "^2.6.2"
   }
 }

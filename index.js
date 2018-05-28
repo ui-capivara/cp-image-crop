@@ -1,2 +1,2 @@
-import './dist/cp-select.js';
-import './dist/cp-select.css';
+import './dist/cp-image-crop.js';
+import './dist/cp-image-crop.css';

@@ -193,7 +193,7 @@ cp-image-crop {
         font-size: 14px; }
     .modal-cp-image-crop .modal-instance .content-image-crop-edit {
       width: 700px;
-      height: 350px;
+      height: 390px;
       background: #ebeef0;
       border-radius: 3px;
       display: flex;
@@ -229,11 +229,14 @@ cp-image-crop {
       .modal-cp-image-crop .modal-crop-footer-options a:hover {
         color: #000; }
   .modal-cp-image-crop .range-slider {
-    margin: 5px 0px 5px 0%; }
+    margin: 5px 0px 5px 0%;
+    display: flex;
+    align-items: center; }
   .modal-cp-image-crop .range-slider {
     width: 100%; }
   .modal-cp-image-crop .range-slider__range {
     -webkit-appearance: none;
+    flex: 1;
     width: calc(100% - (120px));
     height: 10px;
     border-radius: 5px;

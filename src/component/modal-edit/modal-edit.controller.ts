@@ -5,8 +5,8 @@ import { Relative } from '../relative-element';
 import { FilePicker } from '../google-drive/file-picker';
 
 export class ModalEditController {
+
     private editImage;
-    private element;
     private contentElement;
     private funcListener;
     private params;
@@ -17,9 +17,8 @@ export class ModalEditController {
     private inputFile;
     private mode = 'view';
 
-    constructor(scope) {
-        this.element = scope.element;
-        this.contentElement = this.element.querySelector('.content-image-crop-edit');
+    constructor($scope, private $element) {
+        this.contentElement = this.$element.querySelector('.content-image-crop-edit');
     }
 
     $onInit() {
@@ -103,12 +102,12 @@ export class ModalEditController {
     }
 
     chooseFile() {
-        this.element.querySelector('input[type="file"]').click();
+        this.$element.querySelector('input[type="file"]').click();
     }
 
     $onViewInit() {
-        this.fileDrag = this.element.querySelector('.content-image-crop-edit.small .content-left');
-        this.inputFile = this.element.querySelector('input[type="file"]');
+        this.fileDrag = this.$element.querySelector('.content-image-crop-edit.small .content-left');
+        this.inputFile = this.$element.querySelector('input[type="file"]');
         this.fileDrag.addEventListener('drop', this.fileSelectFunc);
         this.inputFile.addEventListener('change', this.fileSelectFunc);
         this.fileDrag.addEventListener('dragover', this.dragOverFunc);
@@ -151,7 +150,7 @@ export class ModalEditController {
             viewport: {
                 width: 170,
                 height: 170,
-                type: 'square'
+                type: this.params.type == 'circle' ? 'circle' : 'square'
             },
             zoomOnWheel: true,
             enableOrientation: true,
@@ -159,7 +158,6 @@ export class ModalEditController {
         };
 
         const config = Object.assign(defaultCrop, this.params.crop);
-
         this.crop = new Croppie(document.getElementById('cropElem'), config);
         this.crop.bind({ url: this.editImage }).then(() => { });
     }

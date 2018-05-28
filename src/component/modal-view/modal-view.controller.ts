@@ -8,15 +8,17 @@ export class ModalViewController {
     private image;
     private funcListener;
     private modalInstance;
+    private $constants;
 
-    constructor(scope) {
-        this.element = scope.element;
-        this.imageElement = scope.element.querySelector('img');
+    constructor($scope, $element) {
+        this.element = $element;
+        this.imageElement = $element.querySelector('img');
         this.funcListener = Relative.relativeImage(this.imageElement);
     }
 
     modalParams(params){
         this.image = params.url;
+        this.$constants = params.constants;
         this.modalInstance = params.modalInstance;
     }
 

@@ -3,10 +3,13 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible"
+          content="ie=edge">
     <title>Demo CapivaraImagescrop</title>
-    <link rel="stylesheet" href="dist/cp-image-crop.css">
+    <link rel="stylesheet"
+          href="dist/cp-image-crop.css">
 </head>
 
 <body>
@@ -15,7 +18,6 @@
         html {
             width: 100%;
             height: 99%;
-            /* background: #F5F5F5; */
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -23,21 +25,25 @@
         }
     </style>
 
-    <cp-image-crop cp-model="$ctrl.pessoa.image"></cp-image-crop>
+    <cp-image-crop cp-model="$ctrl.pessoa.image"
+                   default-image="'https://goo.gl/w5nU9b'"
+                   drive="$ctrl.drive"
+                   type="'circle'"></cp-image-crop>
 
 
     <script src="dist/cp-image-crop.js"></script>
 
     <script>
-        capivara.controller(document.body, function () {
-            const $ctrl = this;
-
-            $ctrl.pessoa = { image: 'https://pbs.twimg.com/profile_images/882658676900802561/I98JM9OX_400x400.jpg' };
-
-        })
-
-
-
+        class Controller {
+            constructor() {
+                this.drive = {
+                    apiKey: 'AIzaSyC9LFTBO-96juMn6JqlAgCOAeWx28eDgwQ',
+                    clientId: '376579813716-7stu1pub41kph5onpagnn12q270lu673.apps.googleusercontent.com'
+                }
+                // this.pessoa = { image: 'https://pbs.twimg.com/profile_images/882658676900802561/I98JM9OX_400x400.jpg' };
+            }
+        }
+        capivara.controller(document.body, Controller);
     </script>
 
 </body>

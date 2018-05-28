@@ -142,19 +142,19 @@
 /******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
 /******/
 /******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "dist";
+/******/ 	__webpack_require__.p = "/dist/";
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.ts");
+/******/ 	return __webpack_require__(__webpack_require__.s = "../src/index.ts");
 /******/ })
 /************************************************************************/
 /******/ ({
 
-/***/ "./node_modules/lodash/lodash.js":
-/*!***************************************!*\
-  !*** ./node_modules/lodash/lodash.js ***!
-  \***************************************/
+/***/ "../node_modules/lodash/lodash.js":
+/*!****************************************!*\
+  !*** ../node_modules/lodash/lodash.js ***!
+  \****************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -17256,14 +17256,14 @@
   else {}
 }.call(this));
 
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../webpack/buildin/module.js */ "./node_modules/webpack/buildin/module.js")(module)))
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../webpack/buildin/global.js */ "../node_modules/webpack/buildin/global.js"), __webpack_require__(/*! ./../webpack/buildin/module.js */ "../node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
 
-/***/ "./node_modules/melanke-watchjs/src/watch.js":
-/*!***************************************************!*\
-  !*** ./node_modules/melanke-watchjs/src/watch.js ***!
-  \***************************************************/
+/***/ "../node_modules/melanke-watchjs/src/watch.js":
+/*!****************************************************!*\
+  !*** ../node_modules/melanke-watchjs/src/watch.js ***!
+  \****************************************************/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -18050,10 +18050,10 @@
 
 /***/ }),
 
-/***/ "./node_modules/webpack/buildin/global.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/global.js ***!
-  \***********************************/
+/***/ "../node_modules/webpack/buildin/global.js":
+/*!*************************************************!*\
+  !*** ../node_modules/webpack/buildin/global.js ***!
+  \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -18081,10 +18081,10 @@ module.exports = g;
 
 /***/ }),
 
-/***/ "./node_modules/webpack/buildin/module.js":
-/*!***********************************!*\
-  !*** (webpack)/buildin/module.js ***!
-  \***********************************/
+/***/ "../node_modules/webpack/buildin/module.js":
+/*!*************************************************!*\
+  !*** ../node_modules/webpack/buildin/module.js ***!
+  \*************************************************/
 /*! no static exports found */
 /***/ (function(module, exports) {
 
@@ -18114,32 +18114,29 @@ module.exports = function(module) {
 
 /***/ }),
 
-/***/ "./package.json":
-/*!**********************!*\
-  !*** ./package.json ***!
-  \**********************/
+/***/ "../package.json":
+/*!***********************!*\
+  !*** ../package.json ***!
+  \***********************/
 /*! exports provided: name, version, description, main, repository, scripts, author, license, dependencies, keywords, nyc, devDependencies, default */
 /***/ (function(module) {
 
-module.exports = {"name":"capivarajs","version":"2.1.2","description":"Um framework para criação de componentes.","main":"./index.js","repository":{"url":"https://github.com/CapivaraJS/capivarajs","type":"git"},"scripts":{"dev":"webpack-dev-server --config ./webpack.config.js","prod":"npm run test-single && webpack --config ./webpack.config.js && NODE_ENV=production webpack --config ./webpack.config.js","test":"karma start","test-single":"karma start --single-run","e2e":"webpack-dev-server --config ./webpack.config.js --env.tests true","generate-report":"nyc --report-dir coverage npm run test && nyc report --reporter=text","coverage":"npm run generate-report && nyc report --reporter=text-lcov > coverage.lcov && codecov"},"author":"Capivara Team.","license":"MIT","dependencies":{"lodash":"^4.17.5","melanke-watchjs":"^1.3.1"},"keywords":["frameworkjs","web components","front end","documentation","components","gumga","capivara","capivarajs","js","javascript","framework"],"nyc":{"include":["src/*.ts","src/**/*.ts"],"exclude":["typings"],"extension":[".ts",".js"],"reporter":["json","html"],"all":true},"devDependencies":{"@babel/core":"^7.0.0-beta.42","@babel/preset-env":"^7.0.0-beta.42","@types/jasmine":"^2.6.3","@types/node":"^9.6.4","babel-loader":"^7.1.4","babel-preset-stage-0":"^6.24.1","codecov":"^3.0.0","css-loader":"^0.28.7","eslint":"^4.19.1","extract-text-webpack-plugin":"^4.0.0-beta.0","file-loader":"^1.1.5","html-loader":"^0.5.1","jasmine":"^3.1.0","jasmine-core":"^3.1.0","karma":"^2.0.0","karma-cli":"^1.0.1","karma-es6-shim":"^1.0.0","karma-jasmine":"^1.1.1","karma-phantomjs-launcher":"^1.0.4","karma-typescript":"^3.0.8","nightwatch":"^0.9.20","node-sass":"^4.7.2","nyc":"^11.6.0","style-loader":"^0.21.0","ts-loader":"^4.1.0","tslint":"^5.9.1","typescript":"^2.7.2","uglifyjs-webpack-plugin":"^1.1.2","weakset":"^1.0.0","webpack":"^4.3.0","webpack-cli":"^2.0.13","webpack-dev-server":"^3.1.1"}};
+module.exports = {"name":"capivarajs","version":"3.3.4","description":"Um framework para criação de componentes.","main":"./src/index.ts","repository":{"url":"https://github.com/CapivaraJS/capivarajs","type":"git"},"scripts":{"dev":"webpack-dev-server --config ./config/webpack.dev.js","prod":"npm run test-single && webpack --config ./config/webpack.dev.js && webpack --config ./config/webpack.prod.js","test":"karma start","test-single":"karma start --single-run","e2e":"webpack-dev-server --config ./config/webpack.dev.js --t true","generate-report":"nyc --report-dir coverage npm run test && nyc report --reporter=text","coverage":"npm run generate-report && nyc report --reporter=text-lcov > coverage.lcov && codecov"},"author":"Capivara Team.","license":"MIT","dependencies":{"lodash":"^4.17.5","melanke-watchjs":"^1.4.3"},"keywords":["frameworkjs","web components","front end","documentation","components","gumga","capivara","capivarajs","js","javascript","framework"],"nyc":{"include":["src/*.ts","src/**/*.ts"],"exclude":["typings"],"extension":[".ts",".js"],"reporter":["json","html"],"all":true},"devDependencies":{"@babel/core":"^7.0.0-beta.42","@babel/preset-env":"^7.0.0-beta.42","@types/jasmine":"^2.6.3","@types/node":"^10.0.3","babel-loader":"^7.1.4","babel-polyfill":"^6.26.0","babel-preset-stage-0":"^6.24.1","codecov":"^3.0.0","css-loader":"^0.28.7","eslint":"^4.19.1","extract-text-webpack-plugin":"^4.0.0-beta.0","file-loader":"^1.1.5","html-loader":"^0.5.1","jasmine":"^3.1.0","jasmine-core":"^3.1.0","karma":"^2.0.2","karma-cli":"^1.0.1","karma-es6-shim":"^1.0.0","karma-jasmine":"^1.1.1","karma-phantomjs-launcher":"^1.0.4","karma-typescript":"^3.0.12","nightwatch":"^0.9.20","node-sass":"^4.7.2","nyc":"^11.6.0","style-loader":"^0.21.0","ts-loader":"^4.1.0","tslint":"^5.9.1","typescript":"^2.7.2","uglifyjs-webpack-plugin":"^1.1.2","weakset":"^1.0.0","webpack":"^4.8.1","webpack-cli":"^2.1.3","webpack-dev-server":"^3.1.1","webpack-merge":"^4.1.2"}};
 
 /***/ }),
 
-/***/ "./src/common.ts":
-/*!***********************!*\
-  !*** ./src/common.ts ***!
-  \***********************/
+/***/ "../src/common.ts":
+/*!************************!*\
+  !*** ../src/common.ts ***!
+  \************************/
 /*! exports provided: Common */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Common", function() { return Common; });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./constants */ "./src/constants.ts");
-/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./core */ "./src/core/index.ts");
-
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./constants */ "../src/constants.ts");
+/* harmony import */ var _core__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./core */ "../src/core/index.ts");
 
 
 var Common;
@@ -18157,7 +18154,10 @@ var Common;
      */
     function evalInContext(source, context, prefix) {
         if (source) {
-            return _core__WEBPACK_IMPORTED_MODULE_2__["Eval"].exec(source, context, prefix);
+            try {
+                return _core__WEBPACK_IMPORTED_MODULE_1__["Eval"].exec(source, context, prefix);
+            }
+            catch (e) { }
         }
     }
     Common.evalInContext = evalInContext;
@@ -18167,75 +18167,55 @@ var Common;
     }
     Common.getFirstKey = getFirstKey;
     function getAttributeCpShow(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].SHOW_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].SHOW_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpShow = getAttributeCpShow;
     function getAttributeCpIf(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].IF_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].IF_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpIf = getAttributeCpIf;
     function getAttributeCpElseIf(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].ELSE_IF_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].ELSE_IF_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpElseIf = getAttributeCpElseIf;
     function getAttributeCpElse(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].ELSE_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].ELSE_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpElse = getAttributeCpElse;
     function getAttributeCpInit(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].INIT_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].INIT_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpInit = getAttributeCpInit;
-    function getAttributeCpMin(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MIN_ATTRIBUTE_NAME);
-    }
-    Common.getAttributeCpMin = getAttributeCpMin;
-    function getAttributeCpStep(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].STEP_ATTRIBUTE_NAME);
-    }
-    Common.getAttributeCpStep = getAttributeCpStep;
-    function getAttributeCpMax(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MAX_ATTRIBUTE_NAME);
-    }
-    Common.getAttributeCpMax = getAttributeCpMax;
-    function getAttributeCpMaxLength(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MAX_LENGTH_ATTRIBUTE_NAME);
-    }
-    Common.getAttributeCpMaxLength = getAttributeCpMaxLength;
     function getAttributeCpStyle(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].STYLE_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].STYLE_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpStyle = getAttributeCpStyle;
     function getAttributeCpClass(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].CLASS_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].CLASS_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpClass = getAttributeCpClass;
     function getAttributeCpSrc(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].SRC_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].SRC_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpSrc = getAttributeCpSrc;
     function getAttributeCpDisable(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].DISABLE_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].DISABLE_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpDisable = getAttributeCpDisable;
     function getAttributeCpFocus(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].FOCUS_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].FOCUS_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpFocus = getAttributeCpFocus;
     function getAttributeCpHide(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].HIDE_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].HIDE_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpHide = getAttributeCpHide;
     function getAttributeCpBlur(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].BLUR_ATTRIBUTE_NAME);
+        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].BLUR_ATTRIBUTE_NAME);
     }
     Common.getAttributeCpBlur = getAttributeCpBlur;
-    function getAttributeCpPlaceholder(element) {
-        return element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].PLACEHOLDER_ATTRIBUTE_NAME);
-    }
-    Common.getAttributeCpPlaceholder = getAttributeCpPlaceholder;
     function getScope(element) {
-        return element[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].SCOPE_ATTRIBUTE_NAME];
+        return element[_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].SCOPE_ATTRIBUTE_NAME];
     }
     Common.getScope = getScope;
     function isComponent(element) {
@@ -18243,44 +18223,22 @@ var Common;
         return component ? true : false;
     }
     Common.isComponent = isComponent;
-    function getScopeParent(element) {
-        if (getScope(element)) {
-            return getScope(element).scope;
-        }
-        if (element.parentNode) {
-            return getScopeParent(element.parentNode);
-        }
-    }
-    Common.getScopeParent = getScopeParent;
-    function executeFunctionCallback(element, attribute, evt) {
-        var callback = getCallbackClick(element, attribute);
-        if (callback && !isNative(callback)) {
-            var params = attribute.substring(attribute.indexOf('(') + 1, attribute.lastIndexOf(')')), args_1 = [];
-            var context_1 = getScope(element);
-            params.split(',').forEach(function (param) {
-                if (param === _constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].EVENT_ATTRIBUTE_NAME) {
-                    args_1.push(evt);
-                }
-                else {
-                    var valueScope = evalInContext(param, context_1.scope);
-                    args_1.push(valueScope === undefined ? evalInContext(param, context_1.scope) : valueScope);
-                }
-            });
-            if (context_1.mapDom.element.$instance) {
-                context_1 = context_1.scope[context_1.mapDom.element.$instance.config.controllerAs];
+    function insideComponent(element) {
+        if (element && element.parentNode) {
+            if (isComponent(element.parentNode)) {
+                return true;
             }
-            return callback.call.apply(callback, [context_1].concat(args_1));
+            else {
+                return insideComponent(element.parentNode);
+            }
         }
+        return false;
+    }
+    Common.insideComponent = insideComponent;
+    function executeFunctionCallback(element, attribute, additionalParameters) {
+        return evalInMultiContext(element, attribute, additionalParameters);
     }
     Common.executeFunctionCallback = executeFunctionCallback;
-    function getCallbackClick(element, attribute) {
-        var callback = lodash__WEBPACK_IMPORTED_MODULE_0__["get"](getScope(element).scope, attribute.substring(0, attribute.indexOf('(')));
-        if (!callback && element.parentNode && getScope(element.parentNode)) {
-            return getCallbackClick(element.parentNode, attribute);
-        }
-        return callback;
-    }
-    Common.getCallbackClick = getCallbackClick;
     function isNative(fn) {
         return /{\s*\[native code]\s*}/.test('' + fn);
     }
@@ -18301,14 +18259,33 @@ var Common;
             elementComment.replaceWith(element);
         }
         if (element.$instance) {
-            element.$instance.initController(true);
+            element.$instance.initController();
         }
     }
     Common.createElement = createElement;
+    function getAllScopes(element, scopes) {
+        if (scopes === void 0) { scopes = []; }
+        if (element && element[_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].SCOPE_ATTRIBUTE_NAME]) {
+            if (scopes.filter(function (s) { return s.id === element[_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].SCOPE_ATTRIBUTE_NAME].id; }).length === 0) {
+                scopes.push(element[_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].SCOPE_ATTRIBUTE_NAME]);
+            }
+        }
+        if (element && element.parentNode) {
+            return getAllScopes(element.parentNode, scopes);
+        }
+        return scopes;
+    }
+    Common.getAllScopes = getAllScopes;
+    function evalInMultiContext(element, condition, additionalParameters) {
+        var scopes = getAllScopes(element).map(function (scope) { return scope.scope; });
+        if (additionalParameters) {
+            scopes.push(additionalParameters);
+        }
+        return evalInContext(condition, scopes);
+    }
+    Common.evalInMultiContext = evalInMultiContext;
     function isValidCondition(element, condition) {
-        var scope = isComponent(element) && element.parentNode && element.parentNode[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].SCOPE_ATTRIBUTE_NAME] ? getScope(element.parentNode).scope : getScope(element).scope;
-        var result = evalInContext(condition, scope);
-        return result;
+        return evalInMultiContext(element, condition);
     }
     Common.isValidCondition = isValidCondition;
     function appendBefore(element, elementToInsert) {
@@ -18327,7 +18304,7 @@ var Common;
     }
     Common.setScopeId = setScopeId;
     function parentHasIgnore(element) {
-        if (element.hasAttribute && element.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].IGNORE_BINDINGS)) {
+        if (element.hasAttribute && (element.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].IGNORE_BINDINGS) || element.nodeName === 'CP-TRANSCLUDE')) {
             return true;
         }
         if (element.parentNode) {
@@ -18350,10 +18327,10 @@ var Common;
 
 /***/ }),
 
-/***/ "./src/constants.ts":
-/*!**************************!*\
-  !*** ./src/constants.ts ***!
-  \**************************/
+/***/ "../src/constants.ts":
+/*!***************************!*\
+  !*** ../src/constants.ts ***!
+  \***************************/
 /*! exports provided: Constants */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -18368,6 +18345,7 @@ var Constants = {
     REPEAT_ATTRIBUTE_OPERATOR: 'in',
     MODEL_ATTRIBUTE_NAME: 'cp-model',
     CLICK_ATTRIBUTE_NAME: 'cp-click',
+    DBLCLICK_ATTRIBUTE_NAME: 'cp-dblclick',
     SHOW_ATTRIBUTE_NAME: 'cp-show',
     IF_ATTRIBUTE_NAME: 'cp-if',
     STEP_ATTRIBUTE_NAME: 'cp-step',
@@ -18381,6 +18359,7 @@ var Constants = {
     CLASS_ATTRIBUTE_NAME: 'cp-class',
     SRC_ATTRIBUTE_NAME: 'cp-src',
     KEY_ATTRIBUTE_NAME: 'cp-key',
+    ATTR_ATTRIBUTE_NAME: 'cp-attr',
     DISABLE_ATTRIBUTE_NAME: 'cp-disabled',
     START_INTERPOLATION: '[[',
     END_INTERPOLATION: ']]',
@@ -18388,31 +18367,34 @@ var Constants = {
     FOCUS_ATTRIBUTE_NAME: 'cp-focus',
     HIDE_ATTRIBUTE_NAME: 'cp-hide',
     BLUR_ATTRIBUTE_NAME: 'cp-blur',
-    DBCLICK_ATTRIBUTE_NAME: 'cp-dbclick',
     TITLE_ATTRIBUTE_NAME: 'cp-title',
     PLACEHOLDER_ATTRIBUTE_NAME: 'cp-placeholder',
+    MOUSE_ATTRIBUTE_NAME: 'cp-mouse',
+    CHANGE_ATTRIBUTE_NAME: 'cp-change',
 };
 
 
 /***/ }),
 
-/***/ "./src/core/capivara.ts":
-/*!******************************!*\
-  !*** ./src/core/capivara.ts ***!
-  \******************************/
+/***/ "../src/core/capivara.ts":
+/*!*******************************!*\
+  !*** ../src/core/capivara.ts ***!
+  \*******************************/
 /*! exports provided: Capivara */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Capivara", function() { return Capivara; });
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./src/constants.ts");
-/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./component */ "./src/core/component.ts");
-/* harmony import */ var _component_instance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component.instance */ "./src/core/component.instance.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "../src/constants.ts");
+/* harmony import */ var _scope_scope__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scope/scope */ "../src/scope/scope.ts");
+/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component */ "../src/core/component.ts");
+/* harmony import */ var _component_instance__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component.instance */ "../src/core/component.instance.ts");
 
 
 
-var packageJson = __webpack_require__(/*! ../../package.json */ "./package.json");
+
+var packageJson = __webpack_require__(/*! ../../package.json */ "../package.json");
 var Capivara = /** @class */ (function () {
     function Capivara() {
         var _this = this;
@@ -18420,19 +18402,35 @@ var Capivara = /** @class */ (function () {
         this.components = {};
         this.scopes = [];
         this.$watchers = [];
-        if (!Element.prototype.hasOwnProperty('hasAttributeStartingWith')) {
-            Object.defineProperty(Element.prototype, 'hasAttributeStartingWith', {
+        if (!Element.prototype.hasOwnProperty('getAttributeStartingWith')) {
+            Object.defineProperty(Element.prototype, 'getAttributeStartingWith', {
                 value: function hasAttributeStartingWith(attr) {
                     return Array.from(this.attributes).filter(function (attributeNode) {
                         return attributeNode.nodeName.indexOf(attr) === 0;
-                    }).length > 0;
+                    });
                 },
             });
         }
-        document.addEventListener("DOMContentLoaded", function (event) {
-            _this.createComponents();
-            _this.createListeners();
-        });
+        if (!Element.prototype.hasOwnProperty('hasAttributeStartingWith')) {
+            Object.defineProperty(Element.prototype, 'hasAttributeStartingWith', {
+                value: function hasAttributeStartingWith(attr) {
+                    return this.getAttributeStartingWith(attr).length > 0;
+                },
+            });
+        }
+        if (document.readyState === 'complete' ||
+            (document.readyState !== 'loading' && !document.documentElement['doScroll'])) {
+            setTimeout(function () {
+                _this.createListeners();
+                _this.createComponents();
+            });
+        }
+        else {
+            document.addEventListener("DOMContentLoaded", function (event) {
+                _this.createListeners();
+                _this.createComponents();
+            });
+        }
     }
     Capivara.prototype.createComponents = function () {
         var _this = this;
@@ -18464,12 +18462,12 @@ var Capivara = /** @class */ (function () {
     };
     Capivara.prototype.onMutation = function (mutations) {
         var _this = this;
-        mutations.forEach(function (mutation) {
+        (mutations || []).forEach(function (mutation) {
             if (mutation.type === 'childList') {
-                mutation.addedNodes.forEach(function (addedNode) {
+                ((mutation && mutation.addedNodes && mutation.addedNodes.forEach) ? mutation.addedNodes : []).forEach(function (addedNode) {
                     _this.constroyIfComponent(addedNode);
                 });
-                mutation.removedNodes.forEach(function (removedNode) {
+                ((mutation && mutation.removedNodes && mutation.removedNodes.forEach) ? mutation.removedNodes : []).forEach(function (removedNode) {
                     _this.destroyIfComponent(removedNode);
                 });
             }
@@ -18478,13 +18476,15 @@ var Capivara = /** @class */ (function () {
     Capivara.prototype.createListeners = function () {
         var _this = this;
         var MutationObserver = window['MutationObserver'] || window['WebKitMutationObserver'] || window['MozMutationObserver'];
-        var observer = new MutationObserver(function (mutations) { return _this.onMutation(mutations); });
-        observer.observe(document.body, {
-            attributes: false,
-            childList: true,
-            subtree: true,
-            characterData: false,
-        });
+        if (MutationObserver) {
+            var observer = new MutationObserver(function (mutations) { return _this.onMutation(mutations); });
+            observer.observe(document.body, {
+                attributes: false,
+                childList: true,
+                subtree: true,
+                characterData: false,
+            });
+        }
     };
     /**
      * @name capivara.component
@@ -18495,7 +18495,7 @@ var Capivara = /** @class */ (function () {
             console.error("A registered component with this name already exists.");
             return;
         }
-        window["capivara"].components[componentName.toUpperCase()] = new _component__WEBPACK_IMPORTED_MODULE_1__["Component"](componentName, config);
+        window["capivara"].components[componentName.toUpperCase()] = new _component__WEBPACK_IMPORTED_MODULE_2__["Component"](componentName, config);
     };
     /**
      * @name capivara.componentBuilder
@@ -18533,7 +18533,7 @@ var Capivara = /** @class */ (function () {
      * @description Cria um novo controller para fazer manipulação de um determinado elemento.
      */
     Capivara.prototype.controller = function (elm, callback) {
-        new _component_instance__WEBPACK_IMPORTED_MODULE_2__["ComponentInstance"](elm, { controller: callback }).create();
+        new _component_instance__WEBPACK_IMPORTED_MODULE_3__["ComponentInstance"](elm, { controller: callback }).create();
     };
     /**
      * @name capivara,isArray
@@ -18643,6 +18643,81 @@ var Capivara = /** @class */ (function () {
             watcher.callback.apply(watcher, args);
         });
     };
+    Capivara.prototype.simpleCompare = function (a, b) {
+        return a === b || (a !== a && b !== b);
+    };
+    Capivara.prototype.isRegExp = function (value) {
+        return toString.call(value) === '[object RegExp]';
+    };
+    Capivara.prototype.isDefined = function (value) {
+        return typeof value !== 'undefined';
+    };
+    Capivara.prototype.isWindow = function (value) {
+        return value && value.window === value;
+    };
+    Capivara.prototype.isScope = function (value) {
+        return value instanceof _scope_scope__WEBPACK_IMPORTED_MODULE_1__["Scope"];
+    };
+    Capivara.prototype.equals = function (o1, o2) {
+        if (o1 === o2) {
+            return true;
+        }
+        if (o1 === null || o2 === null) {
+            return false;
+        }
+        if (o1 !== o1 && o2 !== o2) {
+            return true;
+        }
+        /* tslint:disable */
+        var t1 = typeof o1, t2 = typeof o2, length, key, keySet;
+        if (t1 === t2 && t1 === 'object') {
+            if (this.isArray(o1)) {
+                if (!this.isArray(o2)) {
+                    return false;
+                }
+                ;
+                if ((length = o1.length) === o2.length) {
+                    for (key = 0; key < length; key++) {
+                        if (!this.equals(o1[key], o2[key]))
+                            return false;
+                    }
+                    return true;
+                }
+            }
+            else if (this.isDate(o1)) {
+                if (!this.isDate(o2))
+                    return false;
+                return this.simpleCompare(o1.getTime(), o2.getTime());
+            }
+            else if (this.isRegExp(o1)) {
+                if (!this.isRegExp(o2))
+                    return false;
+                return o1.toString() === o2.toString();
+            }
+            else {
+                if (this.isScope(o1) || this.isScope(o2) || this.isWindow(o1) || this.isWindow(o2) ||
+                    this.isArray(o2) || this.isDate(o2) || this.isRegExp(o2))
+                    return false;
+                keySet = Object.create(null);
+                for (key in o1) {
+                    if (key.charAt(0) === '$' || this.isFunction(o1[key]))
+                        continue;
+                    if (!this.equals(o1[key], o2[key]))
+                        return false;
+                    keySet[key] = true;
+                }
+                for (key in o2) {
+                    if (!(key in keySet) &&
+                        key.charAt(0) !== '$' &&
+                        this.isDefined(o2[key]) &&
+                        !this.isFunction(o2[key]))
+                        return false;
+                }
+                return true;
+            }
+        }
+        return false;
+    };
     return Capivara;
 }());
 
@@ -18650,24 +18725,28 @@ var Capivara = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/core/component.instance.ts":
-/*!****************************************!*\
-  !*** ./src/core/component.instance.ts ***!
-  \****************************************/
+/***/ "../src/core/component.instance.ts":
+/*!*****************************************!*\
+  !*** ../src/core/component.instance.ts ***!
+  \*****************************************/
 /*! exports provided: ComponentInstance */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ComponentInstance", function() { return ComponentInstance; });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var melanke_watchjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! melanke-watchjs */ "./node_modules/melanke-watchjs/src/watch.js");
+/* harmony import */ var melanke_watchjs__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! melanke-watchjs */ "../node_modules/melanke-watchjs/src/watch.js");
 /* harmony import */ var melanke_watchjs__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(melanke_watchjs__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common */ "./src/common.ts");
-/* harmony import */ var _controller__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./controller */ "./src/core/controller.ts");
-/* harmony import */ var _magic_magic__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./magic/magic */ "./src/core/magic/magic.ts");
-/* harmony import */ var _observer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./observer */ "./src/core/observer/index.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../constants */ "../src/constants.ts");
+/* harmony import */ var _scope_scope_proxy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../scope/scope.proxy */ "../src/scope/scope.proxy.ts");
+/* harmony import */ var _controller__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./controller */ "../src/core/controller.ts");
+/* harmony import */ var _magic_magic__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./magic/magic */ "../src/core/magic/magic.ts");
+/* harmony import */ var _observer__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./observer */ "../src/core/observer/index.ts");
+
+
 
 
 
@@ -18698,7 +18777,12 @@ var ComponentInstance = /** @class */ (function () {
                     Array.from((transcludeTemplate.querySelectorAll('cp-transclude') || [])).forEach(function (transclude) {
                         var attrName = transclude.getAttribute('name');
                         var query = transclude.nodeName.toLowerCase() + (attrName ? '[name="' + attrName + '"]' : '');
-                        Array.from((templateToElm_1.querySelectorAll(query) || [])).forEach(function (transcludeReference) { return transcludeReference.replaceWith(transclude); });
+                        Array.from((templateToElm_1.querySelectorAll(query) || [])).forEach(function (transcludeReference) {
+                            Array.from(transclude.children).forEach(function (children) {
+                                _common__WEBPACK_IMPORTED_MODULE_2__["Common"].appendAfter(transcludeReference, children);
+                            });
+                            transcludeReference.parentNode.removeChild(transcludeReference);
+                        });
                     });
                     this.element.innerHTML = templateToElm_1.body.innerHTML;
                 }
@@ -18713,31 +18797,41 @@ var ComponentInstance = /** @class */ (function () {
     };
     ComponentInstance.prototype.registerController = function () {
         var _this = this;
-        new _controller__WEBPACK_IMPORTED_MODULE_3__["Controller"](this.element, function (scope) {
+        new _controller__WEBPACK_IMPORTED_MODULE_5__["Controller"](this.element, function (scope) {
             _this.componentScope = scope;
         });
     };
     ComponentInstance.prototype.initController = function () {
         if (this.destroyed) {
             if (this.config.controller) {
-                this.componentScope[this.config.controllerAs] = new this.config.controller(this.componentScope);
+                var args = [
+                    this.componentScope.element[_constants__WEBPACK_IMPORTED_MODULE_3__["Constants"].SCOPE_ATTRIBUTE_NAME],
+                    this.componentScope.mapDom.element,
+                    this.componentScope.mapDom,
+                ];
+                this.componentScope[this.config.controllerAs] = new ((_a = this.config.controller).bind.apply(_a, [void 0].concat(args)))();
             }
-            // this.applyContains();
-            // this.applyFunctions();
+            this.contextObj = _magic_magic__WEBPACK_IMPORTED_MODULE_6__["Magic"].getContext(this.element);
+            this.applyConstantsComponentMagic();
+            this.applyFunctionsComponentMagic();
             this.applyBindingsComponentMagic();
             if (this.componentScope[this.config.controllerAs] && this.componentScope[this.config.controllerAs].$onInit) {
                 this.componentScope[this.config.controllerAs].$onInit();
             }
             this.destroyed = false;
+            Object.defineProperty(this.componentScope, '__$controllerAs__', {
+                value: this.config.controllerAs,
+            });
             _common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).$emit('$onInit');
             _common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).mapDom.reload();
         }
+        var _a;
     };
     /**
      * @description Aplica os bindings|constants|functions
      */
     ComponentInstance.prototype.build = function () {
-        this.applyContainsComponentBuilder();
+        this.applyConstantsComponentBuilder();
         this.applyFunctionsComponentBuilder();
         if (this.contextObj) {
             this.applyBindingsComponentBuilder();
@@ -18758,12 +18852,13 @@ var ComponentInstance = /** @class */ (function () {
     ComponentInstance.prototype.destroy = function () {
         var _this = this;
         this.destroyed = true;
-        _observer__WEBPACK_IMPORTED_MODULE_5__["Observe"].unobserve(this.componentScope[this.config.controllerAs]);
+        this.element[_constants__WEBPACK_IMPORTED_MODULE_3__["Constants"].SCOPE_ATTRIBUTE_NAME].destroy();
+        _observer__WEBPACK_IMPORTED_MODULE_7__["Observe"].unobserve(this.componentScope[this.config.controllerAs]);
         if (this.componentScope[this.config.controllerAs] && this.componentScope[this.config.controllerAs].$destroy) {
             this.componentScope[this.config.controllerAs].$destroy();
         }
         window['capivara'].scopes = window['capivara'].scopes.filter(function (scope) {
-            return scope.id !== _this.componentScope.scope.id;
+            return scope.id !== _this.componentScope.element[_constants__WEBPACK_IMPORTED_MODULE_3__["Constants"].SCOPE_ATTRIBUTE_NAME].id;
         });
     };
     /**
@@ -18797,7 +18892,10 @@ var ComponentInstance = /** @class */ (function () {
     };
     ComponentInstance.prototype.applyBindingsComponentMagic = function () {
         var _this = this;
-        this.contextObj = _magic_magic__WEBPACK_IMPORTED_MODULE_4__["Magic"].getContext(this.element);
+        if (!_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).scope[this.config.controllerAs]['$bindings']) {
+            lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).scope, this.config.controllerAs + '.$bindings', {});
+            lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).scope, '$bindings', {});
+        }
         (this.config.bindings || []).forEach(function (bindingKey) {
             var bindAttribute = bindingKey.replace(/([A-Z])/g, "-$1").toLowerCase();
             var valueAttribute = _this.element.getAttribute(bindAttribute);
@@ -18816,15 +18914,18 @@ var ComponentInstance = /** @class */ (function () {
         var _this = this;
         if (_bindings === void 0) { _bindings = {}; }
         var $ctrl = _common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).scope[this.config.controllerAs];
-        $ctrl._$$checkBindings = function (changes) {
-            changes.forEach(function (change) {
-                if (change.type === 'update' && _bindings.hasOwnProperty(change.name)) {
-                    lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_this.contextObj, _bindings[change.name], $ctrl['$bindings'][change.name]);
-                    _this.forceUpdateContext();
-                    _common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(_this.element).mapDom.reload();
-                }
-            });
-        };
+        Object.defineProperty($ctrl, '_$$checkBindings', {
+            value: function (changes) {
+                changes.forEach(function (change) {
+                    if (change.type === 'update' && _bindings.hasOwnProperty(change.name)) {
+                        lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_this.contextObj, _bindings[change.name], $ctrl['$bindings'][change.name]);
+                        _this.forceUpdateContext();
+                        _common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(_this.element).mapDom.reload();
+                    }
+                });
+            },
+            writable: true,
+        });
     };
     ComponentInstance.prototype.forceUpdateContext = function () {
         if (this.contextObj) {
@@ -18852,21 +18953,33 @@ var ComponentInstance = /** @class */ (function () {
         if (_bindings === void 0) { _bindings = {}; }
         return _bindings[key].indexOf('.') !== -1 ? _bindings[key].substring(0, _bindings[key].indexOf('.')) : _bindings[key];
     };
+    ComponentInstance.prototype.observeAndSetValues = function (obj, _bindings, key) {
+        var _this = this;
+        _observer__WEBPACK_IMPORTED_MODULE_7__["Observe"].observe(obj, function (changes) { return _this.setAttributeValue(_bindings, key); });
+    };
     ComponentInstance.prototype.createObserverContext = function (_bindings, key) {
         var _this = this;
         if (!_bindings[key]) {
             return;
         }
-        var attrToObserve = ComponentInstance.getFirstAttribute(_bindings, key);
-        this.listenerContextBindings[attrToObserve] = this.listenerContextBindings[attrToObserve] || [];
-        if (this.listenerContextBindings[attrToObserve].length === 0) {
-            melanke_watchjs__WEBPACK_IMPORTED_MODULE_1___default.a.watch(this.contextObj, attrToObserve, function () {
-                _this.listenerContextBindings[attrToObserve].forEach(function (keyListener) {
+        if (this.contextObj instanceof _scope_scope_proxy__WEBPACK_IMPORTED_MODULE_4__["ScopeProxy"]) {
+            if (this.contextObj[this.config.controllerAs]) {
+                this.observeAndSetValues(this.contextObj[this.config.controllerAs], _bindings, key);
+            }
+            else {
+                this.observeAndSetValues(this.contextObj, _bindings, key);
+            }
+        }
+        else {
+            var attrToObserve_1 = ComponentInstance.getFirstAttribute(_bindings, key);
+            this.listenerContextBindings[attrToObserve_1] = this.listenerContextBindings[attrToObserve_1] || [];
+            melanke_watchjs__WEBPACK_IMPORTED_MODULE_1___default.a.watch(this.contextObj, attrToObserve_1, function () {
+                _this.listenerContextBindings[attrToObserve_1].forEach(function (keyListener) {
                     _this.setAttributeValue(_bindings, keyListener);
                 });
             });
+            this.listenerContextBindings[attrToObserve_1].push(key);
         }
-        this.listenerContextBindings[attrToObserve].push(key);
     };
     ComponentInstance.prototype.setAttributeValue = function (_bindings, key) {
         if (_bindings === void 0) { _bindings = {}; }
@@ -18883,7 +18996,23 @@ var ComponentInstance = /** @class */ (function () {
         this.constantsValue = _constants;
         return this;
     };
-    ComponentInstance.prototype.applyContainsComponentBuilder = function () {
+    ComponentInstance.prototype.applyConstantsComponentMagic = function () {
+        var _this = this;
+        if (!_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).scope[this.config.controllerAs]['$constants']) {
+            lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).scope, this.config.controllerAs + '.$constants', {});
+            lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).scope, '$constants', {});
+        }
+        (this.config.constants || []).forEach(function (constantKey) {
+            var bindAttribute = constantKey.replace(/([A-Z])/g, "-$1").toLowerCase();
+            var valueAttribute = _this.element.getAttribute(bindAttribute);
+            if (valueAttribute) {
+                var constantValue = _common__WEBPACK_IMPORTED_MODULE_2__["Common"].evalInContext(valueAttribute, _this.contextObj);
+                lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(_this.element).scope, _this.config.controllerAs + '.$constants.' + constantKey, constantValue);
+                lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(_this.element).scope, '$constants.' + constantKey, constantValue);
+            }
+        });
+    };
+    ComponentInstance.prototype.applyConstantsComponentBuilder = function () {
         var _this = this;
         (this.config.constants || []).forEach(function (key) {
             lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(_this.element).scope, _this.config.controllerAs + '.$constants.' + key, _this.constantsValue[key]);
@@ -18895,6 +19024,26 @@ var ComponentInstance = /** @class */ (function () {
         if (_functions === void 0) { _functions = {}; }
         this.functionsValue = _functions;
         return this;
+    };
+    ComponentInstance.prototype.applyFunctionsComponentMagic = function () {
+        var _this = this;
+        if (!_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).scope[this.config.controllerAs]['$functions']) {
+            lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).scope, this.config.controllerAs + '.$functions', {});
+            lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(this.element).scope, '$functions', {});
+        }
+        (this.config.functions || []).forEach(function (functionKey) {
+            var bindAttribute = functionKey.replace(/([A-Z])/g, "-$1").toLowerCase();
+            var valueAttribute = _this.element.getAttribute(bindAttribute);
+            if (valueAttribute) {
+                var indexRelative = valueAttribute.indexOf('(');
+                var callback = indexRelative !== -1 ? lodash__WEBPACK_IMPORTED_MODULE_0__["get"](_this.contextObj, valueAttribute.substring(0, indexRelative)) : lodash__WEBPACK_IMPORTED_MODULE_0__["get"](_this.contextObj, valueAttribute);
+                Object.defineProperty(callback, '__ctx__', {
+                    value: _this.contextObj,
+                });
+                lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(_this.element).scope, _this.config.controllerAs + '.$functions.' + functionKey, callback);
+                lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_2__["Common"].getScope(_this.element).scope, '$functions.' + functionKey, callback);
+            }
+        });
     };
     ComponentInstance.prototype.applyFunctionsComponentBuilder = function () {
         var _this = this;
@@ -18910,17 +19059,17 @@ var ComponentInstance = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/core/component.ts":
-/*!*******************************!*\
-  !*** ./src/core/component.ts ***!
-  \*******************************/
+/***/ "../src/core/component.ts":
+/*!********************************!*\
+  !*** ../src/core/component.ts ***!
+  \********************************/
 /*! exports provided: Component */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Component", function() { return Component; });
-/* harmony import */ var _component_instance__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./component.instance */ "./src/core/component.instance.ts");
+/* harmony import */ var _component_instance__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./component.instance */ "../src/core/component.instance.ts");
 
 var Component = /** @class */ (function () {
     function Component(_componentName, config) {
@@ -18947,18 +19096,18 @@ var Component = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/core/controller.ts":
-/*!********************************!*\
-  !*** ./src/core/controller.ts ***!
-  \********************************/
+/***/ "../src/core/controller.ts":
+/*!*********************************!*\
+  !*** ../src/core/controller.ts ***!
+  \*********************************/
 /*! exports provided: Controller */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Controller", function() { return Controller; });
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "./src/constants.ts");
-/* harmony import */ var _scope_scope__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scope/scope */ "./src/scope/scope.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "../src/constants.ts");
+/* harmony import */ var _scope_scope__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../scope/scope */ "../src/scope/scope.ts");
 
 
 var Controller = /** @class */ (function () {
@@ -18976,17 +19125,63 @@ var Controller = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/core/eval.ts":
-/*!**************************!*\
-  !*** ./src/core/eval.ts ***!
-  \**************************/
+/***/ "../src/core/element.ts":
+/*!******************************!*\
+  !*** ../src/core/element.ts ***!
+  \******************************/
+/*! exports provided: CapivaraElement */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CapivaraElement", function() { return CapivaraElement; });
+var CapivaraElement = /** @class */ (function () {
+    function CapivaraElement(element) {
+        this.element = element;
+        this.events = {};
+        if (typeof element === 'string') {
+            element = document.querySelector(element);
+        }
+    }
+    CapivaraElement.prototype.on = function (eventName, callback) {
+        var _this = this;
+        if (this.events[eventName]) {
+            this.events[eventName].push(callback);
+        }
+        else {
+            this.events[eventName] = [callback];
+            if (!this.onEvent) {
+                this.onEvent = function (evt) {
+                    (_this.events[evt.type] || []).forEach(function (cb) { return cb(evt); });
+                };
+            }
+            this.element.addEventListener(eventName, this.onEvent);
+        }
+    };
+    CapivaraElement.prototype.destroy = function () {
+        var _this = this;
+        Object.keys(this.events).forEach(function (eventName) {
+            _this.element.removeEventListener(eventName, _this.onEvent);
+        });
+    };
+    return CapivaraElement;
+}());
+
+
+
+/***/ }),
+
+/***/ "../src/core/eval.ts":
+/*!***************************!*\
+  !*** ../src/core/eval.ts ***!
+  \***************************/
 /*! exports provided: Eval */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Eval", function() { return Eval; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common */ "./src/common.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common */ "../src/common.ts");
 
 var Eval;
 (function (Eval) {
@@ -19021,23 +19216,34 @@ var Eval;
     Eval.isVariable = isVariable;
     function exec(source, context, prefix) {
         if (prefix === void 0) { prefix = ''; }
+        var contexts = Array.isArray(context) ? context : [context];
         var referenceSelf = "this." + (prefix ? prefix += '.' : ''), regex = /\$*[a-z0-9.$]+\s*/gi, keys = source.match(regex);
-        keys.forEach(function (str, i) {
-            var key = str.replace(/\s/g, ''), indexStart = getIndexStart(keys, i);
-            var indexEnd = indexStart + source.substring(indexStart, source.length).indexOf(key) + key.length;
-            if (!key.includes(referenceSelf)) {
-                var isVar = !prefix.trim() ? context.hasOwnProperty(_common__WEBPACK_IMPORTED_MODULE_0__["Common"].getFirstKey(key)) : isVariable(key);
-                if (isVar) {
-                    source = replaceAt(source, key, "" + referenceSelf + key, indexStart, indexEnd);
+        if (keys && Array.isArray(keys)) {
+            keys.forEach(function (str, i) {
+                var key = str.replace(/\s/g, ''), indexStart = getIndexStart(keys, i);
+                var indexEnd = indexStart + source.substring(indexStart, source.length).indexOf(key) + key.length;
+                if (!key.includes(referenceSelf)) {
+                    var isVar = !prefix.trim() ? contexts.filter(function (c) { return c.hasOwnProperty(_common__WEBPACK_IMPORTED_MODULE_0__["Common"].getFirstKey(key)); }).length > 0 : isVariable(key);
+                    if (isVar) {
+                        source = replaceAt(source, key, "" + referenceSelf + key, indexStart, indexEnd);
+                    }
                 }
-            }
-        });
-        try {
-            return function (str) {
-                return eval(str);
-            }.call(context, source);
+            });
         }
-        catch (e) { }
+        try {
+            return function executeCode(str) {
+                var _this = this;
+                (contexts || []).forEach(function (c) { return Object.keys(c).forEach(function (key) {
+                    if (!_this[key]) {
+                        _this[key] = c[key];
+                    }
+                }); });
+                return eval(str);
+            }.call({}, source);
+        }
+        catch (e) {
+            throw e;
+        }
     }
     Eval.exec = exec;
 })(Eval || (Eval = {}));
@@ -19045,31 +19251,31 @@ var Eval;
 
 /***/ }),
 
-/***/ "./src/core/index.ts":
-/*!***************************!*\
-  !*** ./src/core/index.ts ***!
-  \***************************/
+/***/ "../src/core/index.ts":
+/*!****************************!*\
+  !*** ../src/core/index.ts ***!
+  \****************************/
 /*! exports provided: Capivara, Controller, ComponentInstance, Component, Eval, Observe */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _capivara__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./capivara */ "./src/core/capivara.ts");
+/* harmony import */ var _capivara__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./capivara */ "../src/core/capivara.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Capivara", function() { return _capivara__WEBPACK_IMPORTED_MODULE_0__["Capivara"]; });
 
-/* harmony import */ var _controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./controller */ "./src/core/controller.ts");
+/* harmony import */ var _controller__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./controller */ "../src/core/controller.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Controller", function() { return _controller__WEBPACK_IMPORTED_MODULE_1__["Controller"]; });
 
-/* harmony import */ var _component_instance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component.instance */ "./src/core/component.instance.ts");
+/* harmony import */ var _component_instance__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component.instance */ "../src/core/component.instance.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "ComponentInstance", function() { return _component_instance__WEBPACK_IMPORTED_MODULE_2__["ComponentInstance"]; });
 
-/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component */ "./src/core/component.ts");
+/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component */ "../src/core/component.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Component", function() { return _component__WEBPACK_IMPORTED_MODULE_3__["Component"]; });
 
-/* harmony import */ var _eval__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./eval */ "./src/core/eval.ts");
+/* harmony import */ var _eval__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./eval */ "../src/core/eval.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Eval", function() { return _eval__WEBPACK_IMPORTED_MODULE_4__["Eval"]; });
 
-/* harmony import */ var _observer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./observer */ "./src/core/observer/index.ts");
+/* harmony import */ var _observer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./observer */ "../src/core/observer/index.ts");
 /* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Observe", function() { return _observer__WEBPACK_IMPORTED_MODULE_5__["Observe"]; });
 
 
@@ -19082,21 +19288,23 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/core/magic/check.context.ts":
-/*!*****************************************!*\
-  !*** ./src/core/magic/check.context.ts ***!
-  \*****************************************/
+/***/ "../src/core/magic/check.context.ts":
+/*!******************************************!*\
+  !*** ../src/core/magic/check.context.ts ***!
+  \******************************************/
 /*! exports provided: CheckContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckContext", function() { return CheckContext; });
-/* harmony import */ var _types_angular_context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./types/angular.context */ "./src/core/magic/types/angular.context.ts");
-/* harmony import */ var _types_angularjs_context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types/angularjs.context */ "./src/core/magic/types/angularjs.context.ts");
-/* harmony import */ var _types_capivara_context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./types/capivara.context */ "./src/core/magic/types/capivara.context.ts");
-/* harmony import */ var _types_react_context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./types/react.context */ "./src/core/magic/types/react.context.ts");
-/* harmony import */ var _types_vuejs_context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./types/vuejs.context */ "./src/core/magic/types/vuejs.context.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _types_angular_context__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./types/angular.context */ "../src/core/magic/types/angular.context.ts");
+/* harmony import */ var _types_angularjs_context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./types/angularjs.context */ "../src/core/magic/types/angularjs.context.ts");
+/* harmony import */ var _types_capivara_context__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./types/capivara.context */ "../src/core/magic/types/capivara.context.ts");
+/* harmony import */ var _types_react_context__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./types/react.context */ "../src/core/magic/types/react.context.ts");
+/* harmony import */ var _types_vuejs_context__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./types/vuejs.context */ "../src/core/magic/types/vuejs.context.ts");
+
 
 
 
@@ -19109,7 +19317,10 @@ var CheckContext;
      * @param element
      */
     function getContext(element) {
-        var context = new _types_angularjs_context__WEBPACK_IMPORTED_MODULE_1__["AngularJSContext"](new _types_angular_context__WEBPACK_IMPORTED_MODULE_0__["AngularContext"](new _types_vuejs_context__WEBPACK_IMPORTED_MODULE_4__["VueJSContext"](new _types_react_context__WEBPACK_IMPORTED_MODULE_3__["ReactContext"](new _types_capivara_context__WEBPACK_IMPORTED_MODULE_2__["CapivaraJSContext"]()))));
+        if (_common__WEBPACK_IMPORTED_MODULE_0__["Common"].insideComponent(element)) {
+            return new _types_capivara_context__WEBPACK_IMPORTED_MODULE_3__["CapivaraJSContext"]().getContext(element);
+        }
+        var context = new _types_angularjs_context__WEBPACK_IMPORTED_MODULE_2__["AngularJSContext"](new _types_angular_context__WEBPACK_IMPORTED_MODULE_1__["AngularContext"](new _types_vuejs_context__WEBPACK_IMPORTED_MODULE_5__["VueJSContext"](new _types_react_context__WEBPACK_IMPORTED_MODULE_4__["ReactContext"](new _types_capivara_context__WEBPACK_IMPORTED_MODULE_3__["CapivaraJSContext"]()))));
         return context.getContext(element);
     }
     CheckContext.getContext = getContext;
@@ -19118,10 +19329,10 @@ var CheckContext;
 
 /***/ }),
 
-/***/ "./src/core/magic/context.ts":
-/*!***********************************!*\
-  !*** ./src/core/magic/context.ts ***!
-  \***********************************/
+/***/ "../src/core/magic/context.ts":
+/*!************************************!*\
+  !*** ../src/core/magic/context.ts ***!
+  \************************************/
 /*! exports provided: Context */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -19149,17 +19360,17 @@ var Context = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/core/magic/magic.ts":
-/*!*********************************!*\
-  !*** ./src/core/magic/magic.ts ***!
-  \*********************************/
+/***/ "../src/core/magic/magic.ts":
+/*!**********************************!*\
+  !*** ../src/core/magic/magic.ts ***!
+  \**********************************/
 /*! exports provided: Magic */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Magic", function() { return Magic; });
-/* harmony import */ var _check_context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./check.context */ "./src/core/magic/check.context.ts");
+/* harmony import */ var _check_context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./check.context */ "../src/core/magic/check.context.ts");
 
 var Magic;
 (function (Magic) {
@@ -19172,17 +19383,17 @@ var Magic;
 
 /***/ }),
 
-/***/ "./src/core/magic/types/angular.context.ts":
-/*!*************************************************!*\
-  !*** ./src/core/magic/types/angular.context.ts ***!
-  \*************************************************/
+/***/ "../src/core/magic/types/angular.context.ts":
+/*!**************************************************!*\
+  !*** ../src/core/magic/types/angular.context.ts ***!
+  \**************************************************/
 /*! exports provided: AngularContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AngularContext", function() { return AngularContext; });
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "./src/core/magic/context.ts");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "../src/core/magic/context.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -19214,17 +19425,17 @@ var AngularContext = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ "./src/core/magic/types/angularjs.context.ts":
-/*!***************************************************!*\
-  !*** ./src/core/magic/types/angularjs.context.ts ***!
-  \***************************************************/
+/***/ "../src/core/magic/types/angularjs.context.ts":
+/*!****************************************************!*\
+  !*** ../src/core/magic/types/angularjs.context.ts ***!
+  \****************************************************/
 /*! exports provided: AngularJSContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "AngularJSContext", function() { return AngularJSContext; });
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "./src/core/magic/context.ts");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "../src/core/magic/context.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -19253,19 +19464,19 @@ var AngularJSContext = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ "./src/core/magic/types/capivara.context.ts":
-/*!**************************************************!*\
-  !*** ./src/core/magic/types/capivara.context.ts ***!
-  \**************************************************/
+/***/ "../src/core/magic/types/capivara.context.ts":
+/*!***************************************************!*\
+  !*** ../src/core/magic/types/capivara.context.ts ***!
+  \***************************************************/
 /*! exports provided: CapivaraJSContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CapivaraJSContext", function() { return CapivaraJSContext; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../constants */ "./src/constants.ts");
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../context */ "./src/core/magic/context.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../constants */ "../src/constants.ts");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../context */ "../src/core/magic/context.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -19301,17 +19512,17 @@ var CapivaraJSContext = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ "./src/core/magic/types/react.context.ts":
-/*!***********************************************!*\
-  !*** ./src/core/magic/types/react.context.ts ***!
-  \***********************************************/
+/***/ "../src/core/magic/types/react.context.ts":
+/*!************************************************!*\
+  !*** ../src/core/magic/types/react.context.ts ***!
+  \************************************************/
 /*! exports provided: ReactContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ReactContext", function() { return ReactContext; });
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "./src/core/magic/context.ts");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "../src/core/magic/context.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -19370,17 +19581,17 @@ var ReactContext = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ "./src/core/magic/types/vuejs.context.ts":
-/*!***********************************************!*\
-  !*** ./src/core/magic/types/vuejs.context.ts ***!
-  \***********************************************/
+/***/ "../src/core/magic/types/vuejs.context.ts":
+/*!************************************************!*\
+  !*** ../src/core/magic/types/vuejs.context.ts ***!
+  \************************************************/
 /*! exports provided: VueJSContext */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "VueJSContext", function() { return VueJSContext; });
-/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "./src/core/magic/context.ts");
+/* harmony import */ var _context__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../context */ "../src/core/magic/context.ts");
 var __extends = (undefined && undefined.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -19417,28 +19628,61 @@ var VueJSContext = /** @class */ (function (_super) {
 
 /***/ }),
 
-/***/ "./src/core/observer/index.ts":
-/*!************************************!*\
-  !*** ./src/core/observer/index.ts ***!
-  \************************************/
+/***/ "../src/core/observer/index.ts":
+/*!*************************************!*\
+  !*** ../src/core/observer/index.ts ***!
+  \*************************************/
 /*! exports provided: Observe */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Observe", function() { return Observe; });
-/* harmony import */ var _polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./polyfill */ "./src/core/observer/polyfill.ts");
-/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util */ "./src/core/observer/util.ts");
+/* harmony import */ var _polyfill__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./polyfill */ "../src/core/observer/polyfill.ts");
+/* harmony import */ var _util__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./util */ "../src/core/observer/util.ts");
 
 
 var Observe;
 (function (Observe) {
-    function observe(obj, handler) {
+    var watchers = new WeakMap();
+    function observe(obj, handler, deg) {
+        if (!obj) {
+            return;
+        }
+        if (!watchers.has(obj)) {
+            watchers.set(obj, [handler]);
+            this.create(obj, function (changes) {
+                (watchers.get(obj) || []).forEach(function (watcher) {
+                    watcher(changes);
+                });
+            });
+        }
+        else {
+            var handlers = watchers.get(obj);
+            handlers.push(handler);
+            watchers.set(obj, handlers);
+        }
+    }
+    Observe.observe = observe;
+    function unobserve(obj) {
+        this.destroy(obj);
+        watchers.delete(obj);
+    }
+    Observe.unobserve = unobserve;
+    function create(obj, handler, objCreated) {
+        if (objCreated === void 0) { objCreated = []; }
+        if (obj && obj.__observer__) {
+            return false;
+        }
+        objCreated.push(obj);
         var props = _util__WEBPACK_IMPORTED_MODULE_1__["Util"].keys(obj);
         var propsL = props.length;
+        _polyfill__WEBPACK_IMPORTED_MODULE_0__["Polyfill"].setDirtyCheck(obj, 50, updateProperties);
         for (var i = 0; i < propsL; i++) {
             if (Object.prototype.toString.call(obj[props[i]]) === '[object Object]' || Array.isArray(obj[props[i]])) {
-                this.observe(obj[props[i]], handler);
+                if (objCreated.indexOf(obj[props[i]]) === -1 && !obj[props[i]].__observer__) {
+                    this.create(obj[props[i]], handler, objCreated);
+                }
             }
             else {
                 _polyfill__WEBPACK_IMPORTED_MODULE_0__["Polyfill"].watchProperty(obj, props[i], handler);
@@ -19450,41 +19694,44 @@ var Observe;
                 props = _util__WEBPACK_IMPORTED_MODULE_1__["Util"].keys(obj);
             }
         }
-        _polyfill__WEBPACK_IMPORTED_MODULE_0__["Polyfill"].setDirtyCheck(obj, 50, updateProperties);
     }
-    Observe.observe = observe;
-    function unobserve(obj) {
+    Observe.create = create;
+    function destroy(obj, objDestroyed) {
+        if (objDestroyed === void 0) { objDestroyed = []; }
         if (!obj || !obj.__observer__) {
             return false;
         }
+        objDestroyed.push(obj);
         var props = Object.keys(obj), propsL = props.length;
+        _polyfill__WEBPACK_IMPORTED_MODULE_0__["Polyfill"].clearDirtyCheck(obj);
         for (var i = 0; i < propsL; i++) {
             if (Object.prototype.toString.call(obj[props[i]]) === '[object Object]' || Array.isArray(obj[props[i]])) {
-                this.unobserve(obj[props[i]]);
+                if (objDestroyed.indexOf(obj[props[i]]) === -1 && obj[props[i]].__observer__) {
+                    this.destroy(obj[props[i]], objDestroyed);
+                }
             }
             else {
                 _polyfill__WEBPACK_IMPORTED_MODULE_0__["Polyfill"].unWatchProperty(obj, props[i]);
             }
         }
-        _polyfill__WEBPACK_IMPORTED_MODULE_0__["Polyfill"].clearDirtyCheck(obj);
     }
-    Observe.unobserve = unobserve;
+    Observe.destroy = destroy;
 })(Observe || (Observe = {}));
 
 
 /***/ }),
 
-/***/ "./src/core/observer/polyfill.ts":
-/*!***************************************!*\
-  !*** ./src/core/observer/polyfill.ts ***!
-  \***************************************/
+/***/ "../src/core/observer/polyfill.ts":
+/*!****************************************!*\
+  !*** ../src/core/observer/polyfill.ts ***!
+  \****************************************/
 /*! exports provided: Polyfill */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Polyfill", function() { return Polyfill; });
-/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "./src/core/observer/index.ts");
+/* harmony import */ var _index__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./index */ "../src/core/observer/index.ts");
 
 var Polyfill;
 (function (Polyfill) {
@@ -19537,8 +19784,8 @@ var Polyfill;
                 });
             }
         }
-        _index__WEBPACK_IMPORTED_MODULE_0__["Observe"].unobserve(obj);
-        _index__WEBPACK_IMPORTED_MODULE_0__["Observe"].observe(obj, handler);
+        _index__WEBPACK_IMPORTED_MODULE_0__["Observe"].destroy(obj);
+        _index__WEBPACK_IMPORTED_MODULE_0__["Observe"].create(obj, handler);
         handler(response);
     }
     Polyfill.updateProperties = updateProperties;
@@ -19567,10 +19814,10 @@ var Polyfill;
 
 /***/ }),
 
-/***/ "./src/core/observer/util.ts":
-/*!***********************************!*\
-  !*** ./src/core/observer/util.ts ***!
-  \***********************************/
+/***/ "../src/core/observer/util.ts":
+/*!************************************!*\
+  !*** ../src/core/observer/util.ts ***!
+  \************************************/
 /*! exports provided: Util */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -19660,10 +19907,10 @@ var Util;
 
 /***/ }),
 
-/***/ "./src/core/util/keycodes.enum.ts":
-/*!****************************************!*\
-  !*** ./src/core/util/keycodes.enum.ts ***!
-  \****************************************/
+/***/ "../src/core/util/keycodes.enum.ts":
+/*!*****************************************!*\
+  !*** ../src/core/util/keycodes.enum.ts ***!
+  \*****************************************/
 /*! exports provided: KeyCode */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -19791,16 +20038,16 @@ var KeyCode;
 
 /***/ }),
 
-/***/ "./src/index.ts":
-/*!**********************!*\
-  !*** ./src/index.ts ***!
-  \**********************/
+/***/ "../src/index.ts":
+/*!***********************!*\
+  !*** ../src/index.ts ***!
+  \***********************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _core_capivara__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core/capivara */ "./src/core/capivara.ts");
+/* harmony import */ var _core_capivara__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./core/capivara */ "../src/core/capivara.ts");
 
 (function (capivara) {
     if (!capivara) {
@@ -19815,18 +20062,71 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-blur.ts":
-/*!**************************************!*\
-  !*** ./src/map/directive/cp-blur.ts ***!
-  \**************************************/
+/***/ "../src/map/directive/cp-attr.ts":
+/*!***************************************!*\
+  !*** ../src/map/directive/cp-attr.ts ***!
+  \***************************************/
+/*! exports provided: CPAttr */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPAttr", function() { return CPAttr; });
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
+
+
+var CPAttr = /** @class */ (function () {
+    function CPAttr(_element, _map) {
+        var _this = this;
+        this.attributes = [];
+        this.element = _element;
+        this.map = _map;
+        Array.from(this.element.attributes).forEach(function (attribute) {
+            if (attribute.nodeName && attribute.nodeName.startsWith(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].ATTR_ATTRIBUTE_NAME)) {
+                if (!attribute.value) {
+                    throw new Error("syntax error " + _constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].ATTR_ATTRIBUTE_NAME + " expected arguments");
+                }
+                _this.attributes.push(attribute.name);
+            }
+        });
+    }
+    CPAttr.prototype.create = function () {
+        this.init();
+    };
+    CPAttr.prototype.init = function () {
+        var _this = this;
+        this.attributes.forEach(function (attribute) {
+            var attributeValue = _this.element.getAttribute(attribute);
+            var attr = attribute.replace(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].ATTR_ATTRIBUTE_NAME + '.', '');
+            var value = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].evalInMultiContext(_this.element, attributeValue);
+            if (value === undefined || value === null) {
+                _this.element.setAttribute(attr, '');
+            }
+            else {
+                _this.element.setAttribute(attr, value);
+            }
+        });
+    };
+    return CPAttr;
+}());
+
+
+
+/***/ }),
+
+/***/ "../src/map/directive/cp-blur.ts":
+/*!***************************************!*\
+  !*** ../src/map/directive/cp-blur.ts ***!
+  \***************************************/
 /*! exports provided: CPBlur */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPBlur", function() { return CPBlur; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPBlur = /** @class */ (function () {
@@ -19843,7 +20143,8 @@ var CPBlur = /** @class */ (function () {
         this.init();
     };
     CPBlur.prototype.onBlur = function (evt) {
-        _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(evt.target['cpBlur'].element, evt.target['cpBlur'].attribute, evt);
+        _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(evt.target['cpBlur'].element, evt.target['cpBlur'].attribute, (_a = {}, _a[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].EVENT_ATTRIBUTE_NAME] = evt, _a));
+        var _a;
     };
     CPBlur.prototype.init = function () {
         // Remove old event
@@ -19858,17 +20159,61 @@ var CPBlur = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-class.ts":
-/*!***************************************!*\
-  !*** ./src/map/directive/cp-class.ts ***!
-  \***************************************/
+/***/ "../src/map/directive/cp-change.ts":
+/*!*****************************************!*\
+  !*** ../src/map/directive/cp-change.ts ***!
+  \*****************************************/
+/*! exports provided: CPChange */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPChange", function() { return CPChange; });
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
+
+
+var CPChange = /** @class */ (function () {
+    function CPChange(_element, _map) {
+        this.element = _element;
+        this.map = _map;
+        this.attribute = this.element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].CHANGE_ATTRIBUTE_NAME);
+        if (!this.attribute) {
+            throw new Error("syntax error " + _constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].CHANGE_ATTRIBUTE_NAME + " expected arguments");
+        }
+        if (!this.element.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MODEL_ATTRIBUTE_NAME)) {
+            throw new Error("syntax error " + _constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MODEL_ATTRIBUTE_NAME + " expected arguments");
+        }
+    }
+    CPChange.prototype.create = function () {
+        this.init();
+    };
+    CPChange.prototype.onModelChange = function (newValue, oldValue) {
+        _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(this.element, this.attribute, { $newValue: newValue, $oldValue: oldValue });
+    };
+    CPChange.prototype.init = function () {
+        var modelAttribute = this.element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MODEL_ATTRIBUTE_NAME).replace(_common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(this.element).scope['__$controllerAs__'] + '.', '');
+        _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(this.element).$unwatch(modelAttribute, this.onModelChange);
+        _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(this.element).$watch(modelAttribute, this.onModelChange, this);
+    };
+    return CPChange;
+}());
+
+
+
+/***/ }),
+
+/***/ "../src/map/directive/cp-class.ts":
+/*!****************************************!*\
+  !*** ../src/map/directive/cp-class.ts ***!
+  \****************************************/
 /*! exports provided: CPClass */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPClass", function() { return CPClass; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
 
 var CPClass = /** @class */ (function () {
     function CPClass(_element, _map) {
@@ -19902,7 +20247,7 @@ var CPClass = /** @class */ (function () {
                 .map(function (attr) {
                 return {
                     key: attr.substring(0, attr.indexOf(':')).replace(/'/g, "").replace(/"/, '').replace(/{/g, '').replace(/}/, ''),
-                    value: _common__WEBPACK_IMPORTED_MODULE_0__["Common"].evalInContext(attr.substring(attr.indexOf(':') + 1, attr.length).replace(/{/g, '').replace(/}/, ''), _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(_this.element).scope),
+                    value: _common__WEBPACK_IMPORTED_MODULE_0__["Common"].evalInMultiContext(_this.element, attr.substring(attr.indexOf(':') + 1, attr.length).replace(/{/g, '').replace(/}/, '')),
                 };
             })
                 .forEach(function (cpClass) {
@@ -19920,7 +20265,6 @@ var CPClass = /** @class */ (function () {
             });
         }
         catch (e) {
-            this.setClassByObject(_common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(this.element, this.attribute));
         }
     };
     CPClass.prototype.removeClass = function (className) {
@@ -19946,20 +20290,20 @@ var CPClass = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-click.ts":
-/*!***************************************!*\
-  !*** ./src/map/directive/cp-click.ts ***!
-  \***************************************/
+/***/ "../src/map/directive/cp-click.ts":
+/*!****************************************!*\
+  !*** ../src/map/directive/cp-click.ts ***!
+  \****************************************/
 /*! exports provided: CPClick */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPClick", function() { return CPClick; });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 
@@ -19968,8 +20312,13 @@ var CPClick = /** @class */ (function () {
         this.element = _element;
         this.map = _map;
         this.attribute = this.element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].CLICK_ATTRIBUTE_NAME);
+        this.eventName = 'click';
         if (!this.attribute) {
-            throw new Error("syntax error " + _constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].CLICK_ATTRIBUTE_NAME + " expected arguments");
+            this.attribute = this.element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].DBLCLICK_ATTRIBUTE_NAME);
+            this.eventName = 'dblclick';
+        }
+        if (!this.attribute) {
+            throw new Error("syntax error cp-" + this.eventName + " expected arguments");
         }
     }
     CPClick.prototype.create = function () {
@@ -19985,13 +20334,14 @@ var CPClick = /** @class */ (function () {
     CPClick.prototype.init = function () {
         var _this = this;
         var onClick = function (evt) {
-            _this.attribute = _this.attribute.replace(/ /g, '');
-            _common__WEBPACK_IMPORTED_MODULE_1__["Common"].executeFunctionCallback(_this.element, _this.attribute, evt);
+            _this.attribute = _this.attribute.trim();
+            _common__WEBPACK_IMPORTED_MODULE_1__["Common"].executeFunctionCallback(_this.element, _this.attribute, (_a = {}, _a[_constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].EVENT_ATTRIBUTE_NAME] = evt, _a));
+            var _a;
         };
         // Remove old event
-        this.element.removeEventListener('click', onClick);
+        this.element.removeEventListener(this.eventName, onClick);
         // Add new event
-        this.element.addEventListener('click', onClick);
+        this.element.addEventListener(this.eventName, onClick);
     };
     return CPClick;
 }());
@@ -20000,72 +20350,18 @@ var CPClick = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-dbclick.ts":
-/*!*****************************************!*\
-  !*** ./src/map/directive/cp-dbclick.ts ***!
-  \*****************************************/
-/*! exports provided: CPdbClick */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPdbClick", function() { return CPdbClick; });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
-
-
-
-var CPdbClick = /** @class */ (function () {
-    function CPdbClick(_element, _map) {
-        this.element = _element;
-        this.element['cpDbClick'] = this;
-        this.map = _map;
-        this.attribute = this.element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].DBCLICK_ATTRIBUTE_NAME);
-        if (!this.attribute) {
-            throw new Error("syntax error " + _constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].DBCLICK_ATTRIBUTE_NAME + " expected arguments");
-        }
-    }
-    CPdbClick.prototype.create = function () {
-        this.init();
-    };
-    CPdbClick.prototype.getIndexRow = function (element) {
-        var index = lodash__WEBPACK_IMPORTED_MODULE_0__["get"](_common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(element).scope, _constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].REPEAT_INDEX_NAME);
-        if (index === undefined && element.parentNode) {
-            return this.getIndexRow(element.parentNode);
-        }
-        return index;
-    };
-    CPdbClick.prototype.onDbClick = function (evt) {
-        evt.target['cpDbClick'].attribute = evt.target['cpDbClick'].attribute.replace(/ /g, '');
-        _common__WEBPACK_IMPORTED_MODULE_1__["Common"].executeFunctionCallback(evt.target['cpDbClick'].element, evt.target['cpDbClick'].attribute, evt);
-    };
-    CPdbClick.prototype.init = function () {
-        // Remove old event
-        this.element.removeEventListener('dblclick', this.onDbClick);
-        // Add new event
-        this.element.addEventListener('dblclick', this.onDbClick);
-    };
-    return CPdbClick;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/map/directive/cp-disabled.ts":
-/*!******************************************!*\
-  !*** ./src/map/directive/cp-disabled.ts ***!
-  \******************************************/
+/***/ "../src/map/directive/cp-disabled.ts":
+/*!*******************************************!*\
+  !*** ../src/map/directive/cp-disabled.ts ***!
+  \*******************************************/
 /*! exports provided: CPDisabled */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPDisabled", function() { return CPDisabled; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPDisabled = /** @class */ (function () {
@@ -20100,18 +20396,18 @@ var CPDisabled = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-else-if.ts":
-/*!*****************************************!*\
-  !*** ./src/map/directive/cp-else-if.ts ***!
-  \*****************************************/
+/***/ "../src/map/directive/cp-else-if.ts":
+/*!******************************************!*\
+  !*** ../src/map/directive/cp-else-if.ts ***!
+  \******************************************/
 /*! exports provided: CPElseIf */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPElseIf", function() { return CPElseIf; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPElseIf = /** @class */ (function () {
@@ -20170,18 +20466,18 @@ var CPElseIf = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-else.ts":
-/*!**************************************!*\
-  !*** ./src/map/directive/cp-else.ts ***!
-  \**************************************/
+/***/ "../src/map/directive/cp-else.ts":
+/*!***************************************!*\
+  !*** ../src/map/directive/cp-else.ts ***!
+  \***************************************/
 /*! exports provided: CPElse */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPElse", function() { return CPElse; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPElse = /** @class */ (function () {
@@ -20240,18 +20536,18 @@ var CPElse = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-focus.ts":
-/*!***************************************!*\
-  !*** ./src/map/directive/cp-focus.ts ***!
-  \***************************************/
+/***/ "../src/map/directive/cp-focus.ts":
+/*!****************************************!*\
+  !*** ../src/map/directive/cp-focus.ts ***!
+  \****************************************/
 /*! exports provided: CPFocus */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPFocus", function() { return CPFocus; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPFocus = /** @class */ (function () {
@@ -20268,7 +20564,8 @@ var CPFocus = /** @class */ (function () {
         this.init();
     };
     CPFocus.prototype.onFocus = function (evt) {
-        _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(evt.target['cpFocus'].element, evt.target['cpFocus'].attribute, evt);
+        _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(evt.target['cpFocus'].element, evt.target['cpFocus'].attribute, (_a = {}, _a[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].EVENT_ATTRIBUTE_NAME] = evt, _a));
+        var _a;
     };
     CPFocus.prototype.init = function () {
         // Remove old event
@@ -20283,18 +20580,18 @@ var CPFocus = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-hide.ts":
-/*!**************************************!*\
-  !*** ./src/map/directive/cp-hide.ts ***!
-  \**************************************/
+/***/ "../src/map/directive/cp-hide.ts":
+/*!***************************************!*\
+  !*** ../src/map/directive/cp-hide.ts ***!
+  \***************************************/
 /*! exports provided: CPHide */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPHide", function() { return CPHide; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPHide = /** @class */ (function () {
@@ -20331,18 +20628,18 @@ var CPHide = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-if.ts":
-/*!************************************!*\
-  !*** ./src/map/directive/cp-if.ts ***!
-  \************************************/
+/***/ "../src/map/directive/cp-if.ts":
+/*!*************************************!*\
+  !*** ../src/map/directive/cp-if.ts ***!
+  \*************************************/
 /*! exports provided: CPIf */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPIf", function() { return CPIf; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPIf = /** @class */ (function () {
@@ -20390,18 +20687,18 @@ var CPIf = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-init.ts":
-/*!**************************************!*\
-  !*** ./src/map/directive/cp-init.ts ***!
-  \**************************************/
+/***/ "../src/map/directive/cp-init.ts":
+/*!***************************************!*\
+  !*** ../src/map/directive/cp-init.ts ***!
+  \***************************************/
 /*! exports provided: CPInit */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPInit", function() { return CPInit; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPInit = /** @class */ (function () {
@@ -20417,8 +20714,8 @@ var CPInit = /** @class */ (function () {
         this.init();
     };
     CPInit.prototype.init = function () {
-        this.attribute = this.attribute.replace(/ /g, '');
-        _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(this.element, this.attribute);
+        this.attribute = this.attribute.trim();
+        _common__WEBPACK_IMPORTED_MODULE_0__["Common"].evalInMultiContext(this.element, this.attribute);
     };
     return CPInit;
 }());
@@ -20427,19 +20724,19 @@ var CPInit = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-key.ts":
-/*!*************************************!*\
-  !*** ./src/map/directive/cp-key.ts ***!
-  \*************************************/
+/***/ "../src/map/directive/cp-key.ts":
+/*!**************************************!*\
+  !*** ../src/map/directive/cp-key.ts ***!
+  \**************************************/
 /*! exports provided: CPKey */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPKey", function() { return CPKey; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
-/* harmony import */ var _core_util_keycodes_enum__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../core/util/keycodes.enum */ "./src/core/util/keycodes.enum.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
+/* harmony import */ var _core_util_keycodes_enum__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../core/util/keycodes.enum */ "../src/core/util/keycodes.enum.ts");
 
 
 
@@ -20448,13 +20745,13 @@ var CPKey = /** @class */ (function () {
         var _this = this;
         this.element = _element;
         this.attributes = [];
-        this.element['cpKey'] = this;
         this.map = _map;
         Array.from(this.element.attributes).forEach(function (attribute) {
             if (attribute.nodeName && attribute.nodeName.startsWith(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].KEY_ATTRIBUTE_NAME)) {
                 if (!attribute.value) {
                     throw new Error("syntax error " + _constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].KEY_ATTRIBUTE_NAME + " expected arguments");
                 }
+                _this.element[attribute.name] = _this;
                 _this.attributes.push(attribute.name);
             }
         });
@@ -20463,21 +20760,22 @@ var CPKey = /** @class */ (function () {
         this.init();
     };
     CPKey.prototype.onKeyPress = function (evt) {
-        if (evt.target && evt.target['cpKey']) {
-            evt.target['cpKey'].attributes.forEach(function (attribute) {
-                var indexSeparator = attribute.lastIndexOf('.');
-                if (indexSeparator === -1) {
-                    _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(evt.target['cpKey'].element, evt.target['cpKey'].element.getAttribute(attribute), evt);
+        var directiveName = 'cp-' + evt.type;
+        if (evt.target && evt.target.hasAttributeStartingWith(directiveName)) {
+            var attribute = evt.target.getAttributeStartingWith(directiveName)[0].name;
+            var indexSeparator = attribute.lastIndexOf('.');
+            if (indexSeparator === -1) {
+                _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(evt.target[attribute].element, evt.target[attribute].element.getAttribute(attribute), (_a = {}, _a[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].EVENT_ATTRIBUTE_NAME] = evt, _a));
+            }
+            else {
+                var watchKeyName = attribute.substring(attribute.lastIndexOf('.') + 1);
+                var watchKey = !isNaN(watchKeyName) ? Number(watchKeyName) : _core_util_keycodes_enum__WEBPACK_IMPORTED_MODULE_2__["KeyCode"][(watchKeyName || '').toUpperCase()];
+                if (watchKey !== undefined && evt.keyCode === watchKey) {
+                    _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(evt.target[attribute].element, evt.target[attribute].element.getAttribute(attribute), (_b = {}, _b[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].EVENT_ATTRIBUTE_NAME] = evt, _b));
                 }
-                else {
-                    var watchKeyName = attribute.substring(attribute.lastIndexOf('.') + 1);
-                    var watchKey = !isNaN(watchKeyName) ? Number(watchKeyName) : _core_util_keycodes_enum__WEBPACK_IMPORTED_MODULE_2__["KeyCode"][(watchKeyName || '').toUpperCase()];
-                    if (watchKey !== undefined && evt.keyCode === watchKey) {
-                        _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(evt.target['cpKey'].element, evt.target['cpKey'].element.getAttribute(attribute), evt);
-                    }
-                }
-            });
+            }
         }
+        var _a, _b;
     };
     CPKey.prototype.init = function () {
         var _this = this;
@@ -20497,155 +20795,27 @@ var CPKey = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-max.ts":
-/*!*************************************!*\
-  !*** ./src/map/directive/cp-max.ts ***!
-  \*************************************/
-/*! exports provided: CPMax */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPMax", function() { return CPMax; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
-
-
-var CPMax = /** @class */ (function () {
-    function CPMax(_element, _map) {
-        this.element = _element;
-        this.map = _map;
-        this.attribute = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getAttributeCpMax(this.element);
-        if (this.attribute === undefined) {
-            throw new Error("syntax error " + _constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MAX_ATTRIBUTE_NAME + " expected arguments");
-        }
-    }
-    CPMax.prototype.create = function () {
-        this.init();
-    };
-    CPMax.prototype.init = function () {
-        this.attribute = this.attribute.replace(/ /g, '');
-        try {
-            var value = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].evalInContext(this.attribute, _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(this.element).scope);
-            if (value !== undefined) {
-                this.element.setAttribute('max', value);
-            }
-        }
-        catch (e) { }
-    };
-    return CPMax;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/map/directive/cp-maxlength.ts":
-/*!*******************************************!*\
-  !*** ./src/map/directive/cp-maxlength.ts ***!
-  \*******************************************/
-/*! exports provided: CPMaxLength */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPMaxLength", function() { return CPMaxLength; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
-
-
-var CPMaxLength = /** @class */ (function () {
-    function CPMaxLength(_element, _map) {
-        this.element = _element;
-        this.map = _map;
-        this.attribute = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getAttributeCpMaxLength(this.element);
-        if (this.attribute === undefined) {
-            throw new Error("syntax error " + _constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MAX_LENGTH_ATTRIBUTE_NAME + " expected arguments");
-        }
-    }
-    CPMaxLength.prototype.create = function () {
-        this.init();
-    };
-    CPMaxLength.prototype.init = function () {
-        this.attribute = this.attribute.replace(/ /g, '');
-        try {
-            var value = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].evalInContext(this.attribute, _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(this.element).scope);
-            if (value !== undefined) {
-                this.element.setAttribute('maxlength', value);
-            }
-        }
-        catch (e) { }
-    };
-    return CPMaxLength;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/map/directive/cp-min.ts":
-/*!*************************************!*\
-  !*** ./src/map/directive/cp-min.ts ***!
-  \*************************************/
-/*! exports provided: CPMin */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPMin", function() { return CPMin; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
-
-
-var CPMin = /** @class */ (function () {
-    function CPMin(_element, _map) {
-        this.element = _element;
-        this.map = _map;
-        this.attribute = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getAttributeCpMin(this.element);
-        if (this.attribute === undefined) {
-            throw new Error("syntax error " + _constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MIN_ATTRIBUTE_NAME + " expected arguments");
-        }
-    }
-    CPMin.prototype.create = function () {
-        this.init();
-    };
-    CPMin.prototype.init = function () {
-        this.attribute = this.attribute.replace(/ /g, '');
-        try {
-            var value = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].evalInContext(this.attribute, _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(this.element).scope);
-            if (value !== undefined) {
-                this.element.setAttribute('min', value);
-            }
-        }
-        catch (e) { }
-    };
-    return CPMin;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/map/directive/cp-model.ts":
-/*!***************************************!*\
-  !*** ./src/map/directive/cp-model.ts ***!
-  \***************************************/
+/***/ "../src/map/directive/cp-model.ts":
+/*!****************************************!*\
+  !*** ../src/map/directive/cp-model.ts ***!
+  \****************************************/
 /*! exports provided: CPModel */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPModel", function() { return CPModel; });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 
 var CPModel = /** @class */ (function () {
     function CPModel(_element, _map) {
         this.element = _element;
+        this.element['cpModel'] = this;
         this.map = _map;
         this.attribute = this.element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].MODEL_ATTRIBUTE_NAME);
         if (!this.attribute) {
@@ -20657,9 +20827,9 @@ var CPModel = /** @class */ (function () {
         this.applyModelInValue();
     };
     CPModel.prototype.init = function () {
-        var _this = this;
         this.map.addCpModels(this);
-        this.element.addEventListener('input', function () { return _this.applyValueInModel(); });
+        this.element.removeEventListener('input', this.applyValueInModel);
+        this.element.addEventListener('input', this.applyValueInModel);
     };
     CPModel.prototype.applyModelInValue = function () {
         var value = lodash__WEBPACK_IMPORTED_MODULE_0__["get"](_common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(this.element).scope, this.attribute);
@@ -20680,18 +20850,18 @@ var CPModel = /** @class */ (function () {
                 }
         }
     };
-    CPModel.prototype.applyValueInModel = function () {
-        switch (this.element.type) {
+    CPModel.prototype.applyValueInModel = function (evt) {
+        var self = (evt ? (evt.target || evt.srcElement) : this.element)['cpModel'];
+        switch (self.element.type) {
             case 'date':
-                lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(this.element).scope, this.attribute, this.element.valueAsDate);
+                lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(self.element).scope, self.attribute, self.element.valueAsDate);
                 break;
             case 'number':
-                lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(this.element).scope, this.attribute, isNaN(this.element.valueAsNumber) ? undefined : this.element.valueAsNumber);
+                lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(self.element).scope, self.attribute, isNaN(self.element.valueAsNumber) ? undefined : self.element.valueAsNumber);
                 break;
             default:
-                lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(this.element).scope, this.attribute, this.element.value);
+                lodash__WEBPACK_IMPORTED_MODULE_0__["set"](_common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(self.element).scope, self.attribute, self.element.value);
         }
-        this.map.reload();
     };
     return CPModel;
 }());
@@ -20700,64 +20870,79 @@ var CPModel = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-placeholder.ts":
-/*!*********************************************!*\
-  !*** ./src/map/directive/cp-placeholder.ts ***!
-  \*********************************************/
-/*! exports provided: CPPlaceholder */
+/***/ "../src/map/directive/cp-mouse.ts":
+/*!****************************************!*\
+  !*** ../src/map/directive/cp-mouse.ts ***!
+  \****************************************/
+/*! exports provided: CPMouse */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPPlaceholder", function() { return CPPlaceholder; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPMouse", function() { return CPMouse; });
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
-var CPPlaceholder = /** @class */ (function () {
-    function CPPlaceholder(_element, _map) {
+var CPMouse = /** @class */ (function () {
+    function CPMouse(_element, _map) {
+        var _this = this;
         this.element = _element;
+        this.attributes = [];
         this.map = _map;
-        this.attribute = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getAttributeCpPlaceholder(this.element);
-        if (this.attribute === undefined) {
-            throw new Error("syntax error " + _constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].PLACEHOLDER_ATTRIBUTE_NAME + " expected arguments");
-        }
+        Array.from(this.element.attributes).forEach(function (attribute) {
+            if (attribute.nodeName && attribute.nodeName.startsWith(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MOUSE_ATTRIBUTE_NAME)) {
+                if (!attribute.value) {
+                    throw new Error("syntax error " + _constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MOUSE_ATTRIBUTE_NAME + " expected arguments");
+                }
+                _this.element[attribute.name] = _this;
+                _this.attributes.push(attribute.name);
+            }
+        });
     }
-    CPPlaceholder.prototype.create = function () {
+    CPMouse.prototype.create = function () {
         this.init();
     };
-    CPPlaceholder.prototype.init = function () {
-        this.attribute = this.attribute.replace(/ /g, '');
-        try {
-            var value = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].evalInContext(this.attribute, _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(this.element).scope);
-            if (value !== undefined) {
-                this.element.setAttribute('placeholder', value);
-            }
+    CPMouse.prototype.onMouse = function (evt) {
+        var directiveName = 'cp-' + evt.type;
+        if (evt.target && evt.target[directiveName]) {
+            _common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(evt.target[directiveName].element, evt.target[directiveName].element.getAttribute(directiveName), (_a = {}, _a[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].EVENT_ATTRIBUTE_NAME] = evt, _a));
         }
-        catch (e) { }
+        var _a;
     };
-    return CPPlaceholder;
+    CPMouse.prototype.init = function () {
+        var _this = this;
+        this.attributes.forEach(function (attribute) {
+            var indexSeparator = attribute.lastIndexOf('.');
+            var eventType = attribute.substring(0, (indexSeparator === -1 ? attribute.length : indexSeparator)).replace(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MOUSE_ATTRIBUTE_NAME, '');
+            // Remove old event
+            _this.element.removeEventListener("mouse" + eventType, function (evt) { return _this.onMouse(evt); });
+            // Add new event
+            _this.element.addEventListener("mouse" + eventType, _this.onMouse);
+        });
+    };
+    return CPMouse;
 }());
 
 
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-repeat.ts":
-/*!****************************************!*\
-  !*** ./src/map/directive/cp-repeat.ts ***!
-  \****************************************/
+/***/ "../src/map/directive/cp-repeat.ts":
+/*!*****************************************!*\
+  !*** ../src/map/directive/cp-repeat.ts ***!
+  \*****************************************/
 /*! exports provided: CPRepeat */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPRepeat", function() { return CPRepeat; });
-/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "./node_modules/lodash/lodash.js");
+/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ "../node_modules/lodash/lodash.js");
 /* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
-/* harmony import */ var _core_controller__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../core/controller */ "./src/core/controller.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
+/* harmony import */ var _core_controller__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../core/controller */ "../src/core/controller.ts");
 
 
 
@@ -20781,39 +20966,48 @@ var CPRepeat = /** @class */ (function () {
         }
     }
     CPRepeat.prototype.create = function () {
+        this.attributeAlias = this.attribute.substring(0, this.attribute.indexOf(_constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].REPEAT_ATTRIBUTE_OPERATOR)).replace(/ /g, '');
+        this.attributeScope = this.attribute.substring(this.attribute.indexOf(_constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].REPEAT_ATTRIBUTE_OPERATOR) + _constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].REPEAT_ATTRIBUTE_OPERATOR.length, this.attribute.length).replace(/ /g, '');
         this.applyLoop();
     };
     CPRepeat.prototype.applyLoop = function () {
-        var attributeAlias = this.attribute.substring(0, this.attribute.indexOf(_constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].REPEAT_ATTRIBUTE_OPERATOR)).replace(/ /g, '');
-        var attributeScope = this.attribute.substring(this.attribute.indexOf(_constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].REPEAT_ATTRIBUTE_OPERATOR) + _constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].REPEAT_ATTRIBUTE_OPERATOR.length, this.attribute.length).replace(/ /g, '');
-        var array = lodash__WEBPACK_IMPORTED_MODULE_0__["get"](_common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(this.originalElement).scope, attributeScope);
+        var array = _common__WEBPACK_IMPORTED_MODULE_1__["Common"].evalInMultiContext(this.originalElement, this.attributeScope);
         if (array && !lodash__WEBPACK_IMPORTED_MODULE_0__["isEqual"](array, this.lastArray)) {
             this.lastArray = array.slice();
             this.removeChildes();
-            this.loop(array.slice().reverse(), attributeAlias);
+            this.loop(array.slice().reverse(), this.attributeAlias);
         }
     };
     CPRepeat.prototype.removeChildes = function () {
         var _this = this;
         this.elms.forEach(function (elm) { return _this.referenceNode.parentNode.removeChild(elm); });
     };
+    CPRepeat.prototype.afterLoop = function () {
+        var _this = this;
+        setTimeout(function () {
+            _this.elms.forEach(function (elm) {
+                elm.style.visibility = 'visible';
+            });
+        }, 1);
+    };
     CPRepeat.prototype.loop = function (array, attributeAlias) {
         var _this = this;
         this.elms = array.map(function (row, index) {
             var elm = _this.element.cloneNode(true);
             elm.removeAttribute(_constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].REPEAT_ATTRIBUTE_NAME);
-            elm.classList.add('binding-repeat');
-            _common__WEBPACK_IMPORTED_MODULE_1__["Common"].appendAfter(_this.referenceNode, elm);
             new _core_controller__WEBPACK_IMPORTED_MODULE_3__["Controller"](elm, function () { });
+            elm.classList.add('binding-repeat');
+            elm.style.visibility = 'hidden';
+            _common__WEBPACK_IMPORTED_MODULE_1__["Common"].appendAfter(_this.referenceNode, elm);
             _common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(elm).scope[attributeAlias] = row;
-            _common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(elm).mapDom.reload();
             return elm;
         });
         this.elms.reverse().forEach(function (elm, index) { return _common__WEBPACK_IMPORTED_MODULE_1__["Common"].getScope(elm).scope[_constants__WEBPACK_IMPORTED_MODULE_2__["Constants"].REPEAT_INDEX_NAME] = index; });
-        var shift = Object.assign([], this.elms).shift();
+        var shift = Object.assign([], this.elms)[this.elms.length - 1];
         if (shift) {
             _common__WEBPACK_IMPORTED_MODULE_1__["Common"].appendAfter(shift, this.referenceNode.parentNode.appendChild(document.createComment('end repeat ' + this.attribute)));
         }
+        this.afterLoop();
     };
     return CPRepeat;
 }());
@@ -20822,18 +21016,18 @@ var CPRepeat = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-show.ts":
-/*!**************************************!*\
-  !*** ./src/map/directive/cp-show.ts ***!
-  \**************************************/
+/***/ "../src/map/directive/cp-show.ts":
+/*!***************************************!*\
+  !*** ../src/map/directive/cp-show.ts ***!
+  \***************************************/
 /*! exports provided: CPShow */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPShow", function() { return CPShow; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "../src/constants.ts");
 
 
 var CPShow = /** @class */ (function () {
@@ -20870,106 +21064,17 @@ var CPShow = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-src.ts":
-/*!*************************************!*\
-  !*** ./src/map/directive/cp-src.ts ***!
-  \*************************************/
-/*! exports provided: CPSrc */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPSrc", function() { return CPSrc; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-
-var CPSrc = /** @class */ (function () {
-    function CPSrc(_element, _map) {
-        this.element = _element;
-        this.element['cpSrc'] = this;
-        this.map = _map;
-        this.attribute = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getAttributeCpSrc(this.element);
-        this.elementComment = document.createComment('cpSrc ' + this.attribute);
-        this.elmScope = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(_element);
-    }
-    CPSrc.prototype.create = function () {
-        this.init();
-    };
-    CPSrc.prototype.init = function () {
-        try {
-            this.element.src = '';
-            var src = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].evalInContext(this.attribute, _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(this.element).scope);
-            this.addSrc(src);
-        }
-        catch (e) {
-            this.addSrc(_common__WEBPACK_IMPORTED_MODULE_0__["Common"].executeFunctionCallback(this.element, this.attribute));
-        }
-    };
-    CPSrc.prototype.addSrc = function (src) {
-        if (src) {
-            this.element.src = src;
-        }
-    };
-    return CPSrc;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/map/directive/cp-step.ts":
-/*!**************************************!*\
-  !*** ./src/map/directive/cp-step.ts ***!
-  \**************************************/
-/*! exports provided: CPStep */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPStep", function() { return CPStep; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
-
-
-var CPStep = /** @class */ (function () {
-    function CPStep(_element, _map) {
-        this.element = _element;
-        this.map = _map;
-        this.attribute = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getAttributeCpStep(this.element);
-        if (this.attribute === undefined) {
-            throw new Error("syntax error " + _constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].STEP_ATTRIBUTE_NAME + " expected arguments");
-        }
-    }
-    CPStep.prototype.create = function () {
-        this.init();
-    };
-    CPStep.prototype.init = function () {
-        this.attribute = this.attribute.replace(/ /g, '');
-        try {
-            var value = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].evalInContext(this.attribute, _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(this.element).scope);
-            if (value !== undefined) {
-                this.element.setAttribute('step', value);
-            }
-        }
-        catch (e) { }
-    };
-    return CPStep;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/map/directive/cp-style.ts":
-/*!***************************************!*\
-  !*** ./src/map/directive/cp-style.ts ***!
-  \***************************************/
+/***/ "../src/map/directive/cp-style.ts":
+/*!****************************************!*\
+  !*** ../src/map/directive/cp-style.ts ***!
+  \****************************************/
 /*! exports provided: CPStyle */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPStyle", function() { return CPStyle; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "../src/common.ts");
 
 var CPStyle = /** @class */ (function () {
     function CPStyle(_element, _map) {
@@ -20998,7 +21103,7 @@ var CPStyle = /** @class */ (function () {
                 .map(function (attr) {
                 return {
                     key: attr.substring(0, attr.indexOf(':')).replace(/'/g, "").replace(/"/, '').replace(/{/g, '').replace(/}/, ''),
-                    value: _common__WEBPACK_IMPORTED_MODULE_0__["Common"].evalInContext(attr.substring(attr.indexOf(':') + 1, attr.length).replace(/{/g, '').replace(/}/, ''), _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(_this.element).scope),
+                    value: _common__WEBPACK_IMPORTED_MODULE_0__["Common"].evalInMultiContext(_this.element, attr.substring(attr.indexOf(':') + 1, attr.length).replace(/{/g, '').replace(/}/, '')),
                 };
             })
                 .forEach(function (style) {
@@ -21021,83 +21126,36 @@ var CPStyle = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/map/directive/cp-title.ts":
-/*!***************************************!*\
-  !*** ./src/map/directive/cp-title.ts ***!
-  \***************************************/
-/*! exports provided: CPTitle */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPTitle", function() { return CPTitle; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../constants */ "./src/constants.ts");
-
-
-var CPTitle = /** @class */ (function () {
-    function CPTitle(_element, _map) {
-        this.element = _element;
-        this.map = _map;
-        this.attribute = this.element.getAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].TITLE_ATTRIBUTE_NAME);
-        if (!this.attribute) {
-            throw new Error("syntax error " + _constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].TITLE_ATTRIBUTE_NAME + " expected arguments");
-        }
-    }
-    CPTitle.prototype.create = function () {
-        this.init();
-    };
-    CPTitle.prototype.init = function () {
-        var attribute = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].evalInContext(this.attribute, _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(this.element).scope);
-        this.element.setAttribute("title", attribute);
-    };
-    return CPTitle;
-}());
-
-
-
-/***/ }),
-
-/***/ "./src/map/map-dom.ts":
-/*!****************************!*\
-  !*** ./src/map/map-dom.ts ***!
-  \****************************/
+/***/ "../src/map/map-dom.ts":
+/*!*****************************!*\
+  !*** ../src/map/map-dom.ts ***!
+  \*****************************/
 /*! exports provided: MapDom */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "MapDom", function() { return MapDom; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/constants.ts");
-/* harmony import */ var _directive_cp_blur__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./directive/cp-blur */ "./src/map/directive/cp-blur.ts");
-/* harmony import */ var _directive_cp_class__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./directive/cp-class */ "./src/map/directive/cp-class.ts");
-/* harmony import */ var _directive_cp_click__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./directive/cp-click */ "./src/map/directive/cp-click.ts");
-/* harmony import */ var _directive_cp_dbclick__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./directive/cp-dbclick */ "./src/map/directive/cp-dbclick.ts");
-/* harmony import */ var _directive_cp_disabled__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./directive/cp-disabled */ "./src/map/directive/cp-disabled.ts");
-/* harmony import */ var _directive_cp_else__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./directive/cp-else */ "./src/map/directive/cp-else.ts");
-/* harmony import */ var _directive_cp_else_if__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./directive/cp-else-if */ "./src/map/directive/cp-else-if.ts");
-/* harmony import */ var _directive_cp_focus__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./directive/cp-focus */ "./src/map/directive/cp-focus.ts");
-/* harmony import */ var _directive_cp_hide__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./directive/cp-hide */ "./src/map/directive/cp-hide.ts");
-/* harmony import */ var _directive_cp_if__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./directive/cp-if */ "./src/map/directive/cp-if.ts");
-/* harmony import */ var _directive_cp_init__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./directive/cp-init */ "./src/map/directive/cp-init.ts");
-/* harmony import */ var _directive_cp_key__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./directive/cp-key */ "./src/map/directive/cp-key.ts");
-/* harmony import */ var _directive_cp_max__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./directive/cp-max */ "./src/map/directive/cp-max.ts");
-/* harmony import */ var _directive_cp_maxlength__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./directive/cp-maxlength */ "./src/map/directive/cp-maxlength.ts");
-/* harmony import */ var _directive_cp_min__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./directive/cp-min */ "./src/map/directive/cp-min.ts");
-/* harmony import */ var _directive_cp_model__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./directive/cp-model */ "./src/map/directive/cp-model.ts");
-/* harmony import */ var _directive_cp_placeholder__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./directive/cp-placeholder */ "./src/map/directive/cp-placeholder.ts");
-/* harmony import */ var _directive_cp_repeat__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./directive/cp-repeat */ "./src/map/directive/cp-repeat.ts");
-/* harmony import */ var _directive_cp_show__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ./directive/cp-show */ "./src/map/directive/cp-show.ts");
-/* harmony import */ var _directive_cp_src__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ./directive/cp-src */ "./src/map/directive/cp-src.ts");
-/* harmony import */ var _directive_cp_step__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ./directive/cp-step */ "./src/map/directive/cp-step.ts");
-/* harmony import */ var _directive_cp_style__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ./directive/cp-style */ "./src/map/directive/cp-style.ts");
-/* harmony import */ var _directive_cp_title__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ./directive/cp-title */ "./src/map/directive/cp-title.ts");
-
-
-
-
-
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "../src/constants.ts");
+/* harmony import */ var _directive_cp_attr__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./directive/cp-attr */ "../src/map/directive/cp-attr.ts");
+/* harmony import */ var _directive_cp_blur__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./directive/cp-blur */ "../src/map/directive/cp-blur.ts");
+/* harmony import */ var _directive_cp_change__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./directive/cp-change */ "../src/map/directive/cp-change.ts");
+/* harmony import */ var _directive_cp_class__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./directive/cp-class */ "../src/map/directive/cp-class.ts");
+/* harmony import */ var _directive_cp_click__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./directive/cp-click */ "../src/map/directive/cp-click.ts");
+/* harmony import */ var _directive_cp_disabled__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./directive/cp-disabled */ "../src/map/directive/cp-disabled.ts");
+/* harmony import */ var _directive_cp_else__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./directive/cp-else */ "../src/map/directive/cp-else.ts");
+/* harmony import */ var _directive_cp_else_if__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./directive/cp-else-if */ "../src/map/directive/cp-else-if.ts");
+/* harmony import */ var _directive_cp_focus__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./directive/cp-focus */ "../src/map/directive/cp-focus.ts");
+/* harmony import */ var _directive_cp_hide__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./directive/cp-hide */ "../src/map/directive/cp-hide.ts");
+/* harmony import */ var _directive_cp_if__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./directive/cp-if */ "../src/map/directive/cp-if.ts");
+/* harmony import */ var _directive_cp_init__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./directive/cp-init */ "../src/map/directive/cp-init.ts");
+/* harmony import */ var _directive_cp_key__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ./directive/cp-key */ "../src/map/directive/cp-key.ts");
+/* harmony import */ var _directive_cp_model__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ./directive/cp-model */ "../src/map/directive/cp-model.ts");
+/* harmony import */ var _directive_cp_mouse__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./directive/cp-mouse */ "../src/map/directive/cp-mouse.ts");
+/* harmony import */ var _directive_cp_repeat__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ./directive/cp-repeat */ "../src/map/directive/cp-repeat.ts");
+/* harmony import */ var _directive_cp_show__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ./directive/cp-show */ "../src/map/directive/cp-show.ts");
+/* harmony import */ var _directive_cp_style__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ./directive/cp-style */ "../src/map/directive/cp-style.ts");
 
 
 
@@ -21126,31 +21184,26 @@ var MapDom = /** @class */ (function () {
              */
             cpModelsElements: {},
             /**
-             * Array com os ng repeat
+             * Array com os cp-repeat
              */
+            cpIfs: [],
             cpModels: [],
             repeats: [],
             cpShows: [],
-            cpIfs: [],
             cpElses: [],
             cpElseIfs: [],
             cpStyles: [],
             cpClasses: [],
             cpClicks: [],
             cpInits: [],
-            cpSrcs: [],
             cpKeys: [],
-            cpMins: [],
-            cpMaxs: [],
-            cpMaxsLength: [],
-            cpSteps: [],
+            cpAttrs: [],
             cpDisables: [],
             cpFocus: [],
             cpHide: [],
             cpBlur: [],
-            cpdbClick: [],
-            cpTitles: [],
-            cpPlaceholder: [],
+            cpMouse: [],
+            cpChange: [],
         };
         this.element = _element;
         this.regexInterpolation = new RegExp(/({{).*?(}})/g);
@@ -21186,9 +21239,7 @@ var MapDom = /** @class */ (function () {
             Object.keys(_this.directives).forEach(function (key) {
                 var directives = _this.directives[key];
                 if (Array.isArray(directives)) {
-                    directives.forEach(function (directive) {
-                        directive.create();
-                    });
+                    directives.forEach(function (directive) { return directive.create(); });
                 }
             });
             _this.$viewInit();
@@ -21211,7 +21262,10 @@ var MapDom = /** @class */ (function () {
         if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MODEL_ATTRIBUTE_NAME)) {
             this.createCPModel(child);
         }
-        if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].CLICK_ATTRIBUTE_NAME)) {
+        if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].IF_ATTRIBUTE_NAME)) {
+            this.createCPIf(child);
+        }
+        if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].CLICK_ATTRIBUTE_NAME) || child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].DBLCLICK_ATTRIBUTE_NAME)) {
             this.createCPClick(child);
         }
         if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].REPEAT_ATTRIBUTE_NAME)) {
@@ -21219,9 +21273,6 @@ var MapDom = /** @class */ (function () {
         }
         if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].SHOW_ATTRIBUTE_NAME)) {
             this.createCPShow(child);
-        }
-        if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].IF_ATTRIBUTE_NAME)) {
-            this.createCPIf(child);
         }
         if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].ELSE_ATTRIBUTE_NAME)) {
             this.createCPElse(child);
@@ -21238,23 +21289,11 @@ var MapDom = /** @class */ (function () {
         if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].CLASS_ATTRIBUTE_NAME)) {
             this.createCPClass(child);
         }
-        if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].SRC_ATTRIBUTE_NAME)) {
-            this.createCPSrc(child);
-        }
         if (child.hasAttributeStartingWith(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].KEY_ATTRIBUTE_NAME)) {
             this.createCPKey(child);
         }
-        if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MIN_ATTRIBUTE_NAME)) {
-            this.createCPMin(child);
-        }
-        if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MAX_ATTRIBUTE_NAME)) {
-            this.createCPMax(child);
-        }
-        if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].STEP_ATTRIBUTE_NAME)) {
-            this.createCPStep(child);
-        }
-        if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MAX_LENGTH_ATTRIBUTE_NAME)) {
-            this.createCPMaxLength(child);
+        if (child.hasAttributeStartingWith(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].ATTR_ATTRIBUTE_NAME)) {
+            this.createCPAttr(child);
         }
         if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].DISABLE_ATTRIBUTE_NAME)) {
             this.createCPDisabled(child);
@@ -21268,14 +21307,11 @@ var MapDom = /** @class */ (function () {
         if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].BLUR_ATTRIBUTE_NAME)) {
             this.createCPBlur(child);
         }
-        if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].DBCLICK_ATTRIBUTE_NAME)) {
-            this.createCPdbClick(child);
+        if (child.hasAttributeStartingWith(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].MOUSE_ATTRIBUTE_NAME)) {
+            this.createCPmouse(child);
         }
-        if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].TITLE_ATTRIBUTE_NAME)) {
-            this.createCPtitle(child);
-        }
-        if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].PLACEHOLDER_ATTRIBUTE_NAME)) {
-            this.createCPPlaceholder(child);
+        if (child.hasAttribute(_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].CHANGE_ATTRIBUTE_NAME)) {
+            this.createCPChange(child);
         }
     };
     MapDom.prototype.reloadElementChildes = function (element, initialScope) {
@@ -21294,10 +21330,7 @@ var MapDom = /** @class */ (function () {
         var _this = this;
         // Update input values
         Object.keys(this.directives.cpModelsElements)
-            .forEach(function (key) {
-            _this.directives.cpModelsElements[key]
-                .forEach(function (bind) { return bind.applyModelInValue(); });
-        });
+            .forEach(function (key) { return _this.directives.cpModelsElements[key].forEach(function (bind) { return bind.applyModelInValue(); }); });
         // Update cp repeats
         this.directives.repeats.forEach(function (repeat) { return repeat.applyLoop(); });
         // Update cp show
@@ -21312,18 +21345,8 @@ var MapDom = /** @class */ (function () {
         this.directives.cpStyles.forEach(function (cpStyle) { return cpStyle.init(); });
         // Update cp class
         this.directives.cpClasses.forEach(function (cpClass) { return cpClass.init(); });
-        // Update cp src
-        this.directives.cpSrcs.forEach(function (cpSrc) { return cpSrc.init(); });
         // Update cp key
         this.directives.cpKeys.forEach(function (cpKey) { return cpKey.init(); });
-        // Update cp min
-        this.directives.cpMins.forEach(function (cpMin) { return cpMin.init(); });
-        // Update cp min
-        this.directives.cpMaxs.forEach(function (cpMax) { return cpMax.init(); });
-        // Update cp step
-        this.directives.cpSteps.forEach(function (cpStep) { return cpStep.init(); });
-        // Update cp max length
-        this.directives.cpMaxsLength.forEach(function (cpMaxLength) { return cpMaxLength.init(); });
         // Update cp disable
         this.directives.cpDisables.forEach(function (cpDisable) { return cpDisable.init(); });
         // Update cp focus
@@ -21332,13 +21355,12 @@ var MapDom = /** @class */ (function () {
         this.directives.cpHide.forEach(function (cpHide) { return cpHide.init(); });
         // Update cp blur
         this.directives.cpBlur.forEach(function (cpBlur) { return cpBlur.init(); });
-        // Update cp dbClick
-        this.directives.cpdbClick.forEach(function (cpdbclick) { return cpdbclick.init(); });
-        // Update cp title
-        this.directives.cpTitles.forEach(function (cpTitle) { return cpTitle.init(); });
-        // Update cp placeholder
-        this.directives.cpPlaceholder.forEach(function (cpPlaceholder) { return cpPlaceholder.init(); });
-        this.processInterpolation(this.element, this.element);
+        // Update cp Mouse
+        this.directives.cpMouse.forEach(function (cpMouse) { return cpMouse.init(); });
+        // Update cp change
+        this.directives.cpChange.forEach(function (cpChange) { return cpChange.init(); });
+        // Update cp attr
+        this.directives.cpAttrs.forEach(function (cpAttr) { return cpAttr.init(); });
     };
     /**
      * @method void Atualiza os valores dos elementos HTML de acordo com o atributo que está sendo observado.
@@ -21347,45 +21369,70 @@ var MapDom = /** @class */ (function () {
         if (!this.renderedView) {
             return;
         }
+        if (this.timeLastReload) {
+            clearTimeout(this.timeLastReload);
+        }
         this.reloadDirectives();
+        this.processInterpolation(this.element);
         this.reloadElementChildes(this.element, _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(this.element));
+    };
+    MapDom.prototype.deepText = function (node) {
+        var A = [];
+        if (node) {
+            node = node.firstChild;
+            while (node != null) {
+                if (node.nodeType === 3) {
+                    A[A.length] = node;
+                }
+                else {
+                    A = A.concat(this.deepText(node));
+                }
+                node = node.nextSibling;
+            }
+        }
+        return A;
     };
     /**
      * @description Percorre os elementos para processar os interpolations.
      * @param element
      */
-    MapDom.prototype.processInterpolation = function (element, firstElem) {
+    MapDom.prototype.processInterpolation = function (element) {
         var _this = this;
-        if (element && element.nodeName && _common__WEBPACK_IMPORTED_MODULE_0__["Common"].isComponent(element) && firstElem.nodeName !== element.nodeName) {
-            return;
+        if (element.timeLastReload) {
+            clearTimeout(element.timeLastReload);
         }
-        Array.from(element.childNodes).forEach(function (childNode) {
-            _this.interpolation(childNode, firstElem);
-        });
-    };
-    MapDom.removeWordFromStr = function (str, word) {
-        return (str + '').replace(new RegExp("\\s+" + word + "\\s+|" + word + "\\s+|\\s+" + word + "|" + word + "$", 'gi'), '');
+        element.timeLastReload = setTimeout(function () {
+            _this.deepText(element).forEach(function (childNode) { return _this.interpolation(childNode); });
+        }, 1);
     };
     MapDom.prototype.getInterpolationValue = function (content, childNode, prefix) {
-        var evalValue = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].evalInContext(content.trim().startsWith(':') ? content.trim().slice(1) : content, _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScopeParent(childNode), prefix);
-        evalValue = MapDom.removeWordFromStr(evalValue, 'null');
-        evalValue = MapDom.removeWordFromStr(evalValue, 'undefined');
-        evalValue = MapDom.removeWordFromStr(evalValue, 'NaN');
-        evalValue = evalValue !== undefined ? evalValue : '';
-        return evalValue;
+        if (prefix) {
+            content = prefix + '.' + content;
+        }
+        try {
+            var evalValue = _common__WEBPACK_IMPORTED_MODULE_0__["Common"].evalInMultiContext(childNode, content.trim().startsWith(':') ? content.trim().slice(1) : content) + '';
+            evalValue = (evalValue.trim() !== undefined
+                && (evalValue).trim() !== 'undefined'
+                && (evalValue).trim() !== 'null'
+                && (evalValue).trim() !== 'NaN') ? evalValue : '';
+            return evalValue;
+        }
+        catch (e) {
+            return '';
+        }
     };
     /**
      * @description Função que modifica o texto da interpolação pelo determinado valor.
      * @param childNode
      */
-    MapDom.prototype.interpolation = function (childNode, firstElem) {
+    MapDom.prototype.interpolation = function (childNode) {
         var _this = this;
-        if (childNode.nodeName === '#text' && !_common__WEBPACK_IMPORTED_MODULE_0__["Common"].parentHasIgnore(childNode)) {
+        if (!_common__WEBPACK_IMPORTED_MODULE_0__["Common"].parentHasIgnore(childNode)) {
+            childNode.originalValue = childNode.originalValue || childNode.nodeValue;
             childNode.$immutableInterpolation = childNode.$immutableInterpolation || false;
             if (childNode.$immutableInterpolation) {
                 return;
             }
-            childNode.originalValue = childNode.originalValue || childNode.nodeValue;
             var nodeModified_1 = childNode.originalValue, str = childNode.originalValue;
             str = window['capivara'].replaceAll(str, _constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].START_INTERPOLATION, '{{');
             str = window['capivara'].replaceAll(str, _constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].END_INTERPOLATION, '}}');
@@ -21409,7 +21456,7 @@ var MapDom = /** @class */ (function () {
             this.alternativeInterpolation(childNode);
         }
         if (childNode.childNodes) {
-            this.processInterpolation(childNode, firstElem);
+            setTimeout(function () { return _this.processInterpolation(childNode); }, 1);
         }
     };
     MapDom.prototype.alternativeInterpolation = function (childNode) {
@@ -21419,7 +21466,7 @@ var MapDom = /** @class */ (function () {
             (nodeModified_2.match(/\${.+?}/g) || []).forEach(function (key) {
                 var content = key.replace('${', '').replace('}', '');
                 try {
-                    var evalValue = _this.getInterpolationValue(content, childNode, '$ctrl');
+                    var evalValue = _this.getInterpolationValue(content, childNode, _common__WEBPACK_IMPORTED_MODULE_0__["Common"].getScope(_this.element).scope['__$controllerAs__']);
                     nodeModified_2 = nodeModified_2.replace(key, evalValue);
                     childNode.nodeValue = nodeModified_2;
                 }
@@ -21438,7 +21485,7 @@ var MapDom = /** @class */ (function () {
      * @param capivaraBind Tipo de bind que será monitorado.
      */
     MapDom.prototype.addCpModels = function (capivaraBind) {
-        this.directives.cpModelsElements[capivaraBind.attribute] = this.directives.cpModels[capivaraBind.attribute] || [];
+        this.directives.cpModelsElements[capivaraBind.attribute] = this.directives.cpModelsElements[capivaraBind.attribute] || [];
         this.directives.cpModelsElements[capivaraBind.attribute].push(capivaraBind);
     };
     /**
@@ -21446,150 +21493,119 @@ var MapDom = /** @class */ (function () {
      * @param child Elemento que está sendo criado o bind de model
      */
     MapDom.prototype.createCPModel = function (child) {
-        this.directives.cpModels.push(new _directive_cp_model__WEBPACK_IMPORTED_MODULE_17__["CPModel"](child, this));
+        this.directives.cpModels.push(new _directive_cp_model__WEBPACK_IMPORTED_MODULE_15__["CPModel"](child, this));
     };
     /**
      *
      * @param child Elemento que está sendo criado o bind de click
      */
     MapDom.prototype.createCPClick = function (child) {
-        this.directives.cpClicks.push(new _directive_cp_click__WEBPACK_IMPORTED_MODULE_4__["CPClick"](child, this));
+        this.directives.cpClicks.push(new _directive_cp_click__WEBPACK_IMPORTED_MODULE_6__["CPClick"](child, this));
     };
     /**
      *
      * @param child Elemento que está sendo criado o bind de show
      */
     MapDom.prototype.createCPShow = function (child) {
-        this.directives.cpShows.push(new _directive_cp_show__WEBPACK_IMPORTED_MODULE_20__["CPShow"](child, this));
+        this.directives.cpShows.push(new _directive_cp_show__WEBPACK_IMPORTED_MODULE_18__["CPShow"](child, this));
     };
     /**
      *
      * @param child Elemento que está sendo criado o bind do if
      */
     MapDom.prototype.createCPIf = function (child) {
-        this.directives.cpIfs.push(new _directive_cp_if__WEBPACK_IMPORTED_MODULE_11__["CPIf"](child, this));
+        this.directives.cpIfs.push(new _directive_cp_if__WEBPACK_IMPORTED_MODULE_12__["CPIf"](child, this));
     };
     /**
      *
      * @param child Elemento que está sendo criado o bind do else
      */
     MapDom.prototype.createCPElse = function (child) {
-        this.directives.cpElses.push(new _directive_cp_else__WEBPACK_IMPORTED_MODULE_7__["CPElse"](child, this));
+        this.directives.cpElses.push(new _directive_cp_else__WEBPACK_IMPORTED_MODULE_8__["CPElse"](child, this));
     };
     /**
      *
      * @param child Elemento que está sendo criado o bind do else if
      */
     MapDom.prototype.createCPElseIf = function (child) {
-        this.directives.cpElseIfs.push(new _directive_cp_else_if__WEBPACK_IMPORTED_MODULE_8__["CPElseIf"](child, this));
+        this.directives.cpElseIfs.push(new _directive_cp_else_if__WEBPACK_IMPORTED_MODULE_9__["CPElseIf"](child, this));
     };
     /**
      *
      * @param child Elemento que está sendo criado o bind de repeat.
      */
     MapDom.prototype.createCPRepeat = function (child) {
-        this.directives.repeats.push(new _directive_cp_repeat__WEBPACK_IMPORTED_MODULE_19__["CPRepeat"](child, this));
+        this.directives.repeats.push(new _directive_cp_repeat__WEBPACK_IMPORTED_MODULE_17__["CPRepeat"](child, this));
     };
     /**
      *
      * @param child Elemento que está sendo criado o bind do init.
      */
     MapDom.prototype.createCPInit = function (child) {
-        this.directives.cpInits.push(new _directive_cp_init__WEBPACK_IMPORTED_MODULE_12__["CPInit"](child, this));
+        this.directives.cpInits.push(new _directive_cp_init__WEBPACK_IMPORTED_MODULE_13__["CPInit"](child, this));
     };
     /**
      *
      * @param child Elemento que está sendo criado o bind do style.
      */
     MapDom.prototype.createCPStyle = function (child) {
-        this.directives.cpStyles.push(new _directive_cp_style__WEBPACK_IMPORTED_MODULE_23__["CPStyle"](child, this));
+        this.directives.cpStyles.push(new _directive_cp_style__WEBPACK_IMPORTED_MODULE_19__["CPStyle"](child, this));
     };
     /**
      *
      * @param child Elemento que está sendo criado o bind do class.
      */
     MapDom.prototype.createCPClass = function (child) {
-        this.directives.cpClasses.push(new _directive_cp_class__WEBPACK_IMPORTED_MODULE_3__["CPClass"](child, this));
-    };
-    /**
-     *
-     * @param child Elemento que está sendo criado o bind do key.
-     */
-    MapDom.prototype.createCPSrc = function (child) {
-        this.directives.cpSrcs.push(new _directive_cp_src__WEBPACK_IMPORTED_MODULE_21__["CPSrc"](child, this));
+        this.directives.cpClasses.push(new _directive_cp_class__WEBPACK_IMPORTED_MODULE_5__["CPClass"](child, this));
     };
     /**
      *
      * @param child Elemento que está sendo criado o bind do key.
      */
     MapDom.prototype.createCPKey = function (child) {
-        this.directives.cpKeys.push(new _directive_cp_key__WEBPACK_IMPORTED_MODULE_13__["CPKey"](child, this));
+        this.directives.cpKeys.push(new _directive_cp_key__WEBPACK_IMPORTED_MODULE_14__["CPKey"](child, this));
     };
     /**
-    * @param child Elemento que está sendo criado o bind do min.
-    */
-    MapDom.prototype.createCPMin = function (child) {
-        this.directives.cpMins.push(new _directive_cp_min__WEBPACK_IMPORTED_MODULE_16__["CPMin"](child, this));
-    };
-    /**
-     * @param child Elemento que está sendo criado o bind do max.
+     * @param child Elemento que está criando a bind do attr.
      */
-    MapDom.prototype.createCPMax = function (child) {
-        this.directives.cpMaxs.push(new _directive_cp_max__WEBPACK_IMPORTED_MODULE_14__["CPMax"](child, this));
-    };
-    /**
-     * @param child Elemento que está sendo criado o bind do step.
-     */
-    MapDom.prototype.createCPStep = function (child) {
-        this.directives.cpSteps.push(new _directive_cp_step__WEBPACK_IMPORTED_MODULE_22__["CPStep"](child, this));
-    };
-    /**
-     * @param child Elemento que está sendo criado o bind do max length.
-     */
-    MapDom.prototype.createCPMaxLength = function (child) {
-        this.directives.cpMaxsLength.push(new _directive_cp_maxlength__WEBPACK_IMPORTED_MODULE_15__["CPMaxLength"](child, this));
+    MapDom.prototype.createCPAttr = function (child) {
+        this.directives.cpAttrs.push(new _directive_cp_attr__WEBPACK_IMPORTED_MODULE_2__["CPAttr"](child, this));
     };
     /**
      * @param child Elemento que está sendo criado o bind do disable.
      */
     MapDom.prototype.createCPDisabled = function (child) {
-        this.directives.cpDisables.push(new _directive_cp_disabled__WEBPACK_IMPORTED_MODULE_6__["CPDisabled"](child, this));
+        this.directives.cpDisables.push(new _directive_cp_disabled__WEBPACK_IMPORTED_MODULE_7__["CPDisabled"](child, this));
     };
     /**
      * @param child Elemento que está sendo criado o bind do focus.
      */
     MapDom.prototype.createCPFocus = function (child) {
-        this.directives.cpFocus.push(new _directive_cp_focus__WEBPACK_IMPORTED_MODULE_9__["CPFocus"](child, this));
+        this.directives.cpFocus.push(new _directive_cp_focus__WEBPACK_IMPORTED_MODULE_10__["CPFocus"](child, this));
     };
     /**
      * @param child Elemento que está sendo criado o bind do hide.
      */
     MapDom.prototype.createCPHide = function (child) {
-        this.directives.cpHide.push(new _directive_cp_hide__WEBPACK_IMPORTED_MODULE_10__["CPHide"](child, this));
+        this.directives.cpHide.push(new _directive_cp_hide__WEBPACK_IMPORTED_MODULE_11__["CPHide"](child, this));
     };
     /**
      * @param child Elemento que está sendo criado o bind do blur.
      */
     MapDom.prototype.createCPBlur = function (child) {
-        this.directives.cpBlur.push(new _directive_cp_blur__WEBPACK_IMPORTED_MODULE_2__["CPBlur"](child, this));
+        this.directives.cpBlur.push(new _directive_cp_blur__WEBPACK_IMPORTED_MODULE_3__["CPBlur"](child, this));
     };
     /**
-    * @param child Elemento que está sendo criado o bind do dbClick.
+    * @param child Elemento que está sendo criado o bind do dbTitle.
     */
-    MapDom.prototype.createCPdbClick = function (child) {
-        this.directives.cpdbClick.push(new _directive_cp_dbclick__WEBPACK_IMPORTED_MODULE_5__["CPdbClick"](child, this));
-    };
-    /**
-    * @param child Elemento que está sendo criado o bind do Title.
-    */
-    MapDom.prototype.createCPtitle = function (child) {
-        this.directives.cpTitles.push(new _directive_cp_title__WEBPACK_IMPORTED_MODULE_24__["CPTitle"](child, this));
+    MapDom.prototype.createCPmouse = function (child) {
+        this.directives.cpMouse.push(new _directive_cp_mouse__WEBPACK_IMPORTED_MODULE_16__["CPMouse"](child, this));
     };
     /**
     * @param child Elemento que está sendo criado o bind do placeholder.
     */
-    MapDom.prototype.createCPPlaceholder = function (child) {
-        this.directives.cpPlaceholder.push(new _directive_cp_placeholder__WEBPACK_IMPORTED_MODULE_18__["CPPlaceholder"](child, this));
+    MapDom.prototype.createCPChange = function (child) {
+        this.directives.cpChange.push(new _directive_cp_change__WEBPACK_IMPORTED_MODULE_4__["CPChange"](child, this));
     };
     return MapDom;
 }());
@@ -21598,36 +21614,43 @@ var MapDom = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/scope/scope.proxy.ts":
-/*!**********************************!*\
-  !*** ./src/scope/scope.proxy.ts ***!
-  \**********************************/
+/***/ "../src/scope/scope.proxy.ts":
+/*!***********************************!*\
+  !*** ../src/scope/scope.proxy.ts ***!
+  \***********************************/
 /*! exports provided: ScopeProxy */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ScopeProxy", function() { return ScopeProxy; });
-/* harmony import */ var _core_observer__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../core/observer */ "./src/core/observer/index.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../constants */ "../src/constants.ts");
+/* harmony import */ var _core_observer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../core/observer */ "../src/core/observer/index.ts");
+
 
 var ScopeProxy = /** @class */ (function () {
     function ScopeProxy(_scope, _mapDom, _element) {
-        this.scope = _scope;
         this.mapDom = _mapDom;
         this.element = _element;
-        this.createWatcherScope(this);
+        this.createWatcherScope(_scope, this);
     }
-    ScopeProxy.prototype.createWatcherScope = function (objectObserve) {
+    ScopeProxy.prototype.createWatcherScope = function (scope, objectObserve) {
         var _this = this;
         if (this.element['$instance']) {
-            objectObserve.scope.$on('$onInit', function () {
-                _core_observer__WEBPACK_IMPORTED_MODULE_0__["Observe"].observe(objectObserve[_this.element['$instance'].config.controllerAs], function (changes) {
-                    _this.mapDom.reload();
-                    objectObserve.scope.$emit('$onChanges', changes);
+            scope.$on('$onInit', function () {
+                _core_observer__WEBPACK_IMPORTED_MODULE_1__["Observe"].observe(objectObserve[_this.element['$instance'].config.controllerAs], function (changes) {
+                    _this.updateScopes(objectObserve.element[_constants__WEBPACK_IMPORTED_MODULE_0__["Constants"].SCOPE_ATTRIBUTE_NAME]);
+                    scope.$emit('$onChanges', changes);
                     _this.executeObservers(objectObserve, '$onChanges', changes);
                     _this.executeObservers(objectObserve, '_$$checkBindings', changes);
                 });
             });
+        }
+    };
+    ScopeProxy.prototype.updateScopes = function (scope) {
+        scope.mapDom.reload();
+        if (scope.$parent) {
+            this.updateScopes(scope.$parent);
         }
     };
     ScopeProxy.prototype.executeObservers = function (objectObserve, observeName, changes) {
@@ -21642,21 +21665,23 @@ var ScopeProxy = /** @class */ (function () {
 
 /***/ }),
 
-/***/ "./src/scope/scope.ts":
-/*!****************************!*\
-  !*** ./src/scope/scope.ts ***!
-  \****************************/
+/***/ "../src/scope/scope.ts":
+/*!*****************************!*\
+  !*** ../src/scope/scope.ts ***!
+  \*****************************/
 /*! exports provided: Scope */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Scope", function() { return Scope; });
-/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common */ "./src/common.ts");
-/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "./src/constants.ts");
-/* harmony import */ var _core_eval__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/eval */ "./src/core/eval.ts");
-/* harmony import */ var _map_map_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../map/map-dom */ "./src/map/map-dom.ts");
-/* harmony import */ var _scope_proxy__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./scope.proxy */ "./src/scope/scope.proxy.ts");
+/* harmony import */ var _common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../common */ "../src/common.ts");
+/* harmony import */ var _constants__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../constants */ "../src/constants.ts");
+/* harmony import */ var _core_element__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../core/element */ "../src/core/element.ts");
+/* harmony import */ var _core_eval__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../core/eval */ "../src/core/eval.ts");
+/* harmony import */ var _map_map_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../map/map-dom */ "../src/map/map-dom.ts");
+/* harmony import */ var _scope_proxy__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./scope.proxy */ "../src/scope/scope.proxy.ts");
+
 
 
 
@@ -21665,6 +21690,7 @@ __webpack_require__.r(__webpack_exports__);
 var Scope = /** @class */ (function () {
     function Scope(_element) {
         var _this = this;
+        this.cpElements = {};
         this.$on = function (evtName, callback) {
             _this.watchers.push({ evtName: evtName, callback: callback });
         };
@@ -21676,12 +21702,12 @@ var Scope = /** @class */ (function () {
             _this.watchers
                 .filter(function (watcher) { return watcher.evtName === evtName; })
                 .forEach(function (watcher) {
-                (_a = watcher.callback).call.apply(_a, args);
+                (_a = watcher.callback).call.apply(_a, [_this].concat(args));
                 var _a;
             });
         };
         this.$eval = function (source) {
-            return _core_eval__WEBPACK_IMPORTED_MODULE_2__["Eval"].exec(_this.scope, source);
+            return _core_eval__WEBPACK_IMPORTED_MODULE_3__["Eval"].exec(_this.scope, source);
         };
         if (!_element || !_element.nodeName) {
             console.warn('Unable to create a scope, it is necessary to report an html element.');
@@ -21689,11 +21715,13 @@ var Scope = /** @class */ (function () {
         _common__WEBPACK_IMPORTED_MODULE_0__["Common"].setScopeId(this);
         this.watchers = [];
         Scope.addScope(_element, this);
-        this.mapDom = new _map_map_dom__WEBPACK_IMPORTED_MODULE_3__["MapDom"](_element);
-        this.scope = new _scope_proxy__WEBPACK_IMPORTED_MODULE_4__["ScopeProxy"](this, this.mapDom, _element);
+        this.mapDom = new _map_map_dom__WEBPACK_IMPORTED_MODULE_4__["MapDom"](_element);
+        this.scope = new _scope_proxy__WEBPACK_IMPORTED_MODULE_5__["ScopeProxy"](this, this.mapDom, _element);
         if (!_element['$instance']) {
             this.$emit('$onInit');
         }
+        this.observers = [];
+        this.$on('$onChanges', this.onChanges);
     }
     Scope.prototype.getScopeProxy = function () {
         return this.scope;
@@ -21707,6 +21735,37 @@ var Scope = /** @class */ (function () {
         if (element && element.nodeName) {
             element[_constants__WEBPACK_IMPORTED_MODULE_1__["Constants"].SCOPE_ATTRIBUTE_NAME] = scope;
         }
+    };
+    Scope.prototype.onChanges = function (changes) {
+        this.observers.forEach(function (observer) {
+            changes.filter(function (change) { return change.type === 'update' && change.name === observer.key; }).forEach(function (change) {
+                observer.callback.call(observer.ctx, change.object[change.name], change.oldValue);
+            });
+        });
+    };
+    Scope.prototype.$watch = function (key, callback, ctx) {
+        this.observers.push({
+            key: key,
+            callback: callback,
+            ctx: ctx,
+        });
+    };
+    Scope.prototype.$unwatch = function (key, callback) {
+        this.observers = this.observers.filter(function (observer) { return observer.key !== key; });
+    };
+    Scope.prototype.element = function (element) {
+        if (this.cpElements[element] && this.cpElements[element].element === element) {
+            return this.cpElements[element];
+        }
+        var capivaraElement = new _core_element__WEBPACK_IMPORTED_MODULE_2__["CapivaraElement"](element);
+        this.cpElements[element] = capivaraElement;
+        return capivaraElement;
+    };
+    Scope.prototype.destroy = function () {
+        var _this = this;
+        Object.keys(this.cpElements).forEach(function (key) {
+            _this.cpElements[key].destroy();
+        });
     };
     return Scope;
 }());
@@ -23967,14 +24026,33 @@ var CapivaraImageCrop = /** @class */ (function () {
     function CapivaraImageCrop() {
         this.$constants = this.$constants || {};
     }
+    CapivaraImageCrop.prototype.$onViewInit = function () {
+        this.appendDriverAPI();
+    };
+    CapivaraImageCrop.prototype.insertScript = function (url, elm) {
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = url;
+        elm.appendChild(script);
+    };
+    CapivaraImageCrop.prototype.appendDriverAPI = function () {
+        if (this.$constants.drive && this.$constants.drive.apiKey && this.$constants.drive.clientId) {
+            var SRC_GOOGLE_CLIENT = 'https://apis.google.com/js/client.js';
+            var SRC_DRIVE_CLIENT = "https://www.google.com/jsapi?key=" + this.$constants.drive.apiKey;
+            var head = document.getElementsByTagName('head')[0];
+            if (!head.querySelector("script[src=\"" + SRC_DRIVE_CLIENT + "\"]")) {
+                this.insertScript(SRC_DRIVE_CLIENT, head);
+            }
+            if (!head.querySelector("script[src=\"" + SRC_GOOGLE_CLIENT + "\"]")) {
+                this.insertScript(SRC_GOOGLE_CLIENT, head);
+            }
+        }
+    };
     /**
      * @description Method executed when a component is build
      */
     CapivaraImageCrop.prototype.$onBuild = function () {
-        if (this.$constants.drive && this.$constants.drive.apiKey && this.$constants.drive.clientId) {
-            document.write("<script async src=\"https://www.google.com/jsapi?key=" + this.$constants.drive.apiKey + "\"></script>");
-            document.write('<script async src="https://apis.google.com/js/client.js"></script>');
-        }
+        this.appendDriverAPI();
     };
     /**
      * @description Generate a dynamic style to element
@@ -23983,7 +24061,6 @@ var CapivaraImageCrop = /** @class */ (function () {
         return {
             'width': (this.$constants && this.$constants.width) ? this.$constants.width : '170px',
             'height': (this.$constants && this.$constants.height) ? this.$constants.height : '170px',
-            'border-radius': (this.$constants && this.$constants.type == 'circle') ? '50%' : '3px'
         };
     };
     /**
@@ -24050,7 +24127,8 @@ var CapivaraImageCrop = /** @class */ (function () {
             keyboard: true,
             controller: _modal_view_modal_view_controller__WEBPACK_IMPORTED_MODULE_3__["ModalViewController"],
             params: {
-                url: url || ''
+                url: url || '',
+                constants: this.$constants,
             }
         });
     };
@@ -24096,7 +24174,7 @@ var CapivaraImageCrop = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"image-crop-card\" cp-style=\"$ctrl.getCropStyle()\">\n    <div class=\"image-crop-card-content\">\n        <img cp-if=\"$ctrl.$bindings.cpModel\" cp-src=\"$ctrl.$bindings.cpModel\" cp-click=\"$ctrl.viewImage($ctrl.$bindings.cpModel)\" />\n        <div class=\"backdrop-crop-button\" cp-click=\"$ctrl.openModalEditImage()\">\n            <div class=\"backdrop-crop-button-container\">\n                <svg version=\"1.1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\" viewBox=\"0 0 100 100\"\n                    style=\"enable-background:new 0 0 100 100;\" xml:space=\"preserve\">\n                    <g>\n                        <g>\n                            <path d=\"M50,40c-8.285,0-15,6.718-15,15c0,8.285,6.715,15,15,15c8.283,0,15-6.715,15-15\n\t\t\tC65,46.718,58.283,40,50,40z M90,25H78c-1.65,0-3.428-1.28-3.949-2.846l-3.102-9.309C70.426,11.28,68.65,10,67,10H33\n\t\t\tc-1.65,0-3.428,1.28-3.949,2.846l-3.102,9.309C25.426,23.72,23.65,25,22,25H10C4.5,25,0,29.5,0,35v45c0,5.5,4.5,10,10,10h80\n\t\t\tc5.5,0,10-4.5,10-10V35C100,29.5,95.5,25,90,25z M50,80c-13.807,0-25-11.193-25-25c0-13.806,11.193-25,25-25\n\t\t\tc13.805,0,25,11.194,25,25C75,68.807,63.805,80,50,80z M86.5,41.993c-1.932,0-3.5-1.566-3.5-3.5c0-1.932,1.568-3.5,3.5-3.5\n\t\t\tc1.934,0,3.5,1.568,3.5,3.5C90,40.427,88.433,41.993,86.5,41.993z\" />\n                        </g>\n                    </g>\n                </svg>\n                <label>Alterar foto</label>\n            </div>\n        </div>\n    </div>\n</div>";
+module.exports = "<div class=\"image-crop-card\"\n     cp-style=\"$ctrl.getCropStyle()\"\n     cp-class=\"{ 'circle' : $ctrl.$constants.type == 'circle' }\">\n    <div class=\"image-crop-card-content\">\n        <img cp-show=\"$ctrl.$bindings.cpModel\"\n             cp-attr.src=\"$ctrl.$bindings.cpModel\"\n             cp-click=\"$ctrl.viewImage($ctrl.$bindings.cpModel)\" />\n        <img cp-show=\"!$ctrl.$bindings.cpModel\"\n             cp-attr.src=\"$ctrl.$constants.defaultImage\"\n             cp-click=\"$ctrl.viewImage($ctrl.$constants.defaultImage)\" />\n        <div class=\"backdrop-crop-button\"\n             cp-click=\"$ctrl.openModalEditImage()\">\n            <div class=\"backdrop-crop-button-container\">\n                <svg version=\"1.1\"\n                     xmlns=\"http://www.w3.org/2000/svg\"\n                     xmlns:xlink=\"http://www.w3.org/1999/xlink\"\n                     x=\"0px\"\n                     y=\"0px\"\n                     viewBox=\"0 0 100 100\"\n                     style=\"enable-background:new 0 0 100 100;\"\n                     xml:space=\"preserve\">\n                    <g>\n                        <g>\n                            <path d=\"M50,40c-8.285,0-15,6.718-15,15c0,8.285,6.715,15,15,15c8.283,0,15-6.715,15-15\n\t\t\tC65,46.718,58.283,40,50,40z M90,25H78c-1.65,0-3.428-1.28-3.949-2.846l-3.102-9.309C70.426,11.28,68.65,10,67,10H33\n\t\t\tc-1.65,0-3.428,1.28-3.949,2.846l-3.102,9.309C25.426,23.72,23.65,25,22,25H10C4.5,25,0,29.5,0,35v45c0,5.5,4.5,10,10,10h80\n\t\t\tc5.5,0,10-4.5,10-10V35C100,29.5,95.5,25,90,25z M50,80c-13.807,0-25-11.193-25-25c0-13.806,11.193-25,25-25\n\t\t\tc13.805,0,25,11.194,25,25C75,68.807,63.805,80,50,80z M86.5,41.993c-1.932,0-3.5-1.566-3.5-3.5c0-1.932,1.568-3.5,3.5-3.5\n\t\t\tc1.934,0,3.5,1.568,3.5,3.5C90,40.427,88.433,41.993,86.5,41.993z\" />\n                        </g>\n                    </g>\n                </svg>\n                <label>Alterar</label>\n            </div>\n        </div>\n    </div>\n</div>";
 
 /***/ }),
 
@@ -24124,10 +24202,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var ModalEditController = /** @class */ (function () {
-    function ModalEditController(scope) {
+    function ModalEditController($scope, $element) {
+        this.$element = $element;
         this.mode = 'view';
-        this.element = scope.element;
-        this.contentElement = this.element.querySelector('.content-image-crop-edit');
+        this.contentElement = this.$element.querySelector('.content-image-crop-edit');
     }
     ModalEditController.prototype.$onInit = function () {
         this.setDefaultFilters();
@@ -24206,11 +24284,11 @@ var ModalEditController = /** @class */ (function () {
         });
     };
     ModalEditController.prototype.chooseFile = function () {
-        this.element.querySelector('input[type="file"]').click();
+        this.$element.querySelector('input[type="file"]').click();
     };
     ModalEditController.prototype.$onViewInit = function () {
-        this.fileDrag = this.element.querySelector('.content-image-crop-edit.small .content-left');
-        this.inputFile = this.element.querySelector('input[type="file"]');
+        this.fileDrag = this.$element.querySelector('.content-image-crop-edit.small .content-left');
+        this.inputFile = this.$element.querySelector('input[type="file"]');
         this.fileDrag.addEventListener('drop', this.fileSelectFunc);
         this.inputFile.addEventListener('change', this.fileSelectFunc);
         this.fileDrag.addEventListener('dragover', this.dragOverFunc);
@@ -24246,7 +24324,7 @@ var ModalEditController = /** @class */ (function () {
             viewport: {
                 width: 170,
                 height: 170,
-                type: 'square'
+                type: this.params.type == 'circle' ? 'circle' : 'square'
             },
             zoomOnWheel: true,
             enableOrientation: true,
@@ -24318,7 +24396,7 @@ var ModalEditController = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-instance\">\n    <span class=\"close\" cp-click=\"$ctrl.close();\">&times;</span>\n\n    <div class=\"content-image-crop-edit\" cp-show=\"$ctrl.mode == 'crop'\">\n        <div class=\"content-left\">\n            <div id=\"cropElem\"></div>\n        </div>\n        <div class=\"content-right\">\n            <div class=\"filter-custom\" cp-repeat=\"filter in $ctrl.filters\">\n                <h3>[[filter.label]]</h3>\n                <div class=\"range-slider\">\n                    <input class=\"range-slider__range\" cp-model=\"filter.value\" type=\"range\" cp-min=\"filter.min\" cp-max=\"filter.max\" cp-step=\"filter.step\"\n                    />\n                    <span class=\"range-slider__value\">\n                        [[ filter.value ]][[ filter.measure ]]\n                    </span>\n                </div>\n            </div>\n            <div class=\"modal-crop-footer-options\">\n                <a cp-click=\"$ctrl.destroyCrop()\">Cancelar</a>\n                <button type=\"button\" class=\"btn-modal-crop btn-modal-save-crop\" cp-click=\"$ctrl.saveCrop()\">Salvar</button>\n            </div>\n        </div>\n    </div>\n    <div class=\"content-image-crop-edit small\" cp-class=\"{'empty' : !$ctrl.params.image}\" cp-show=\"$ctrl.mode == 'view'\">\n        <div class=\"content-left\">\n            <img cp-if=\"$ctrl.params.image\" cp-src=\"$ctrl.params.image\" class=\"image-view\">\n            <div class=\"image-drop-area\" cp-if=\"!$ctrl.params.image\">\n                <svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n                    viewBox=\"0 0 58 58\" style=\"enable-background:new 0 0 58 58;\" xml:space=\"preserve\">\n                    <g>\n                        <path d=\"M57,6H1C0.448,6,0,6.447,0,7v44c0,0.553,0.448,1,1,1h56c0.552,0,1-0.447,1-1V7C58,6.447,57.552,6,57,6z M56,50H2V8h54V50z\"\n                        />\n                        <path d=\"M16,28.138c3.071,0,5.569-2.498,5.569-5.568C21.569,19.498,19.071,17,16,17s-5.569,2.498-5.569,5.569\n                       C10.431,25.64,12.929,28.138,16,28.138z M16,19c1.968,0,3.569,1.602,3.569,3.569S17.968,26.138,16,26.138s-3.569-1.601-3.569-3.568\n                       S14.032,19,16,19z\" />\n                        <path d=\"M7,46c0.234,0,0.47-0.082,0.66-0.249l16.313-14.362l10.302,10.301c0.391,0.391,1.023,0.391,1.414,0s0.391-1.023,0-1.414\n                       l-4.807-4.807l9.181-10.054l11.261,10.323c0.407,0.373,1.04,0.345,1.413-0.062c0.373-0.407,0.346-1.04-0.062-1.413l-12-11\n                       c-0.196-0.179-0.457-0.268-0.72-0.262c-0.265,0.012-0.515,0.129-0.694,0.325l-9.794,10.727l-4.743-4.743\n                       c-0.374-0.373-0.972-0.392-1.368-0.044L6.339,44.249c-0.415,0.365-0.455,0.997-0.09,1.412C6.447,45.886,6.723,46,7,46z\"\n                        />\n                    </g>\n                </svg>\n                <h2>Solte a imagem</h2>\n            </div>\n        </div>\n        <div class=\"content-right\">\n\n            <h2 class=\"modal-text-upload\">Fazer upload</h2>\n\n            <div class=\"upload-divider\">\n                <svg class=\"detail\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 78.56 7.99\">\n                    <path class=\"pathdetaillogin\" d=\"M11.82,5A9.21,9.21,0,0,0,23.76,5a7.23,7.23,0,0,1,9.59,0,9.21,9.21,0,0,0,11.9,0,7.24,7.24,0,0,1,9.56,0,9.21,9.21,0,0,0,12,0,7,7,0,0,1,4.78-1.8A6.47,6.47,0,0,1,75.68,4.5c.48-.47.95-1,1.41-1.45a8.6,8.6,0,0,0-5.55-1.88,8.94,8.94,0,0,0-6,2.2,7.24,7.24,0,0,1-9.56,0A9.21,9.21,0,0,0,44,3.37a7.23,7.23,0,0,1-9.55,0,9.21,9.21,0,0,0-11.94,0,7.23,7.23,0,0,1-9.55,0,8.94,8.94,0,0,0-6-2.2A8.58,8.58,0,0,0,1.51,3c.46.49.93,1,1.41,1.45A6.46,6.46,0,0,1,7,3.17,7,7,0,0,1,11.82,5Z\"\n                        transform=\"translate(-0.04 -0.16)\"></path>\n                </svg>\n            </div>\n\n            <div class=\"modal-crop-buttons\" cp-class=\"{'no-drive': !$ctrl.params.drive}\">\n                <div class=\"item\">\n                    <button class=\"btn-modal-crop\" cp-click=\"$ctrl.chooseFile()\">\n                        <svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n                            width=\"548.172px\" height=\"548.172px\" viewBox=\"0 0 548.172 548.172\" style=\"enable-background:new 0 0 548.172 548.172;\"\n                            xml:space=\"preserve\">\n                            <g>\n                                <path d=\"M534.75,49.965c-8.945-8.945-19.694-13.422-32.261-13.422H45.681c-12.562,0-23.313,4.477-32.264,13.422\n                               C4.471,58.913,0,69.663,0,82.226v310.633c0,12.566,4.471,23.315,13.417,32.265c8.951,8.945,19.702,13.414,32.264,13.414h155.318\n                               c0,7.231-1.524,14.661-4.57,22.269c-3.044,7.614-6.09,14.273-9.136,19.981c-3.042,5.715-4.565,9.897-4.565,12.56\n                               c0,4.948,1.807,9.24,5.424,12.847c3.615,3.621,7.898,5.435,12.847,5.435h146.179c4.949,0,9.233-1.813,12.848-5.435\n                               c3.62-3.606,5.427-7.898,5.427-12.847c0-2.468-1.526-6.611-4.571-12.415c-3.046-5.801-6.092-12.566-9.134-20.267\n                               c-3.046-7.71-4.569-15.085-4.569-22.128h155.318c12.56,0,23.309-4.469,32.254-13.414c8.949-8.949,13.422-19.698,13.422-32.265\n                               V82.226C548.176,69.663,543.699,58.913,534.75,49.965z M511.627,319.768c0,2.475-0.903,4.613-2.711,6.424\n                               c-1.81,1.804-3.952,2.707-6.427,2.707H45.681c-2.473,0-4.615-0.903-6.423-2.707c-1.807-1.817-2.712-3.949-2.712-6.424V82.226\n                               c0-2.475,0.902-4.615,2.712-6.423c1.809-1.805,3.951-2.712,6.423-2.712h456.815c2.471,0,4.617,0.904,6.42,2.712\n                               c1.808,1.809,2.711,3.949,2.711,6.423V319.768L511.627,319.768z\" />\n                            </g>\n                        </svg>\n                        Computador\n                    </button>\n                    <input type=\"file\" hidden accept=\"image/x-png,image/gif,image/jpeg\">\n                </div>\n                <div class=\"item\" cp-show=\"$ctrl.params.drive\">\n                    <button class=\"btn-modal-crop\" cp-click=\"$ctrl.openPickerGoogle()\">\n                        <svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n                            viewBox=\"0 0 512 512\" style=\"enable-background:new 0 0 512 512;\" xml:space=\"preserve\">\n                            <polygon style=\"fill:#FFC107;\" points=\"341.344,352 512,352 341.344,32 170.656,32 \" />\n                            <polygon style=\"fill:#2196F3;\" points=\"158.464,352 85.344,480 432,480 512,352 \" />\n                            <polygon style=\"fill:#4CAF50;\" points=\"170.656,32 0,330.656 85.344,480 253.056,186.496 \" />\n                        </svg>\n                        Google drive\n                    </button>\n                </div>\n            </div>\n\n        </div>\n    </div>\n\n</div>";
+module.exports = "<div class=\"modal-instance\" cp-class=\"{ 'circle' : $ctrl.params.type == 'circle' }\">\n    <span class=\"close\" cp-click=\"$ctrl.close();\">&times;</span>\n\n    <div class=\"content-image-crop-edit\" cp-show=\"$ctrl.mode == 'crop'\">\n        <div class=\"content-left\">\n            <div id=\"cropElem\"></div>\n        </div>\n        <div class=\"content-right\">\n            <div class=\"filter-custom\" cp-repeat=\"filter in $ctrl.filters\">\n                <h3>[[filter.label]]</h3>\n                <div class=\"range-slider\">\n                    <input class=\"range-slider__range\" cp-model=\"filter.value\" type=\"range\" cp-attr.min=\"filter.min\" cp-attr.max=\"filter.max\" cp-attr.step=\"filter.step\"\n                    />\n                    <span class=\"range-slider__value\">\n                        [[ filter.value ]][[ filter.measure ]]\n                    </span>\n                </div>\n            </div>\n            <div class=\"modal-crop-footer-options\">\n                <a cp-click=\"$ctrl.destroyCrop()\">Cancelar</a>\n                <button type=\"button\" class=\"btn-modal-crop btn-modal-save-crop\" cp-click=\"$ctrl.saveCrop()\">Salvar</button>\n            </div>\n        </div>\n    </div>\n    <div class=\"content-image-crop-edit small\" cp-class=\"{'empty' : !$ctrl.params.image}\" cp-show=\"$ctrl.mode == 'view'\">\n        <div class=\"content-left\">\n            <img cp-show=\"$ctrl.params.image\" cp-attr.src=\"$ctrl.params.image\" class=\"image-view\">\n            <div class=\"image-drop-area\" cp-show=\"!$ctrl.params.image\">\n                <svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n                    viewBox=\"0 0 58 58\" style=\"enable-background:new 0 0 58 58;\" xml:space=\"preserve\">\n                    <g>\n                        <path d=\"M57,6H1C0.448,6,0,6.447,0,7v44c0,0.553,0.448,1,1,1h56c0.552,0,1-0.447,1-1V7C58,6.447,57.552,6,57,6z M56,50H2V8h54V50z\"\n                        />\n                        <path d=\"M16,28.138c3.071,0,5.569-2.498,5.569-5.568C21.569,19.498,19.071,17,16,17s-5.569,2.498-5.569,5.569\n                       C10.431,25.64,12.929,28.138,16,28.138z M16,19c1.968,0,3.569,1.602,3.569,3.569S17.968,26.138,16,26.138s-3.569-1.601-3.569-3.568\n                       S14.032,19,16,19z\" />\n                        <path d=\"M7,46c0.234,0,0.47-0.082,0.66-0.249l16.313-14.362l10.302,10.301c0.391,0.391,1.023,0.391,1.414,0s0.391-1.023,0-1.414\n                       l-4.807-4.807l9.181-10.054l11.261,10.323c0.407,0.373,1.04,0.345,1.413-0.062c0.373-0.407,0.346-1.04-0.062-1.413l-12-11\n                       c-0.196-0.179-0.457-0.268-0.72-0.262c-0.265,0.012-0.515,0.129-0.694,0.325l-9.794,10.727l-4.743-4.743\n                       c-0.374-0.373-0.972-0.392-1.368-0.044L6.339,44.249c-0.415,0.365-0.455,0.997-0.09,1.412C6.447,45.886,6.723,46,7,46z\"\n                        />\n                    </g>\n                </svg>\n                <h2>Solte a imagem</h2>\n            </div>\n        </div>\n        <div class=\"content-right\">\n\n            <h2 class=\"modal-text-upload\">Fazer upload</h2>\n\n            <div class=\"upload-divider\">\n                <svg class=\"detail\" xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 78.56 7.99\">\n                    <path class=\"pathdetaillogin\" d=\"M11.82,5A9.21,9.21,0,0,0,23.76,5a7.23,7.23,0,0,1,9.59,0,9.21,9.21,0,0,0,11.9,0,7.24,7.24,0,0,1,9.56,0,9.21,9.21,0,0,0,12,0,7,7,0,0,1,4.78-1.8A6.47,6.47,0,0,1,75.68,4.5c.48-.47.95-1,1.41-1.45a8.6,8.6,0,0,0-5.55-1.88,8.94,8.94,0,0,0-6,2.2,7.24,7.24,0,0,1-9.56,0A9.21,9.21,0,0,0,44,3.37a7.23,7.23,0,0,1-9.55,0,9.21,9.21,0,0,0-11.94,0,7.23,7.23,0,0,1-9.55,0,8.94,8.94,0,0,0-6-2.2A8.58,8.58,0,0,0,1.51,3c.46.49.93,1,1.41,1.45A6.46,6.46,0,0,1,7,3.17,7,7,0,0,1,11.82,5Z\"\n                        transform=\"translate(-0.04 -0.16)\"></path>\n                </svg>\n            </div>\n\n            <div class=\"modal-crop-buttons\" cp-class=\"{'no-drive': !$ctrl.params.drive}\">\n                <div class=\"item\">\n                    <button class=\"btn-modal-crop\" cp-click=\"$ctrl.chooseFile()\">\n                        <svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n                            width=\"548.172px\" height=\"548.172px\" viewBox=\"0 0 548.172 548.172\" style=\"enable-background:new 0 0 548.172 548.172;\"\n                            xml:space=\"preserve\">\n                            <g>\n                                <path d=\"M534.75,49.965c-8.945-8.945-19.694-13.422-32.261-13.422H45.681c-12.562,0-23.313,4.477-32.264,13.422\n                               C4.471,58.913,0,69.663,0,82.226v310.633c0,12.566,4.471,23.315,13.417,32.265c8.951,8.945,19.702,13.414,32.264,13.414h155.318\n                               c0,7.231-1.524,14.661-4.57,22.269c-3.044,7.614-6.09,14.273-9.136,19.981c-3.042,5.715-4.565,9.897-4.565,12.56\n                               c0,4.948,1.807,9.24,5.424,12.847c3.615,3.621,7.898,5.435,12.847,5.435h146.179c4.949,0,9.233-1.813,12.848-5.435\n                               c3.62-3.606,5.427-7.898,5.427-12.847c0-2.468-1.526-6.611-4.571-12.415c-3.046-5.801-6.092-12.566-9.134-20.267\n                               c-3.046-7.71-4.569-15.085-4.569-22.128h155.318c12.56,0,23.309-4.469,32.254-13.414c8.949-8.949,13.422-19.698,13.422-32.265\n                               V82.226C548.176,69.663,543.699,58.913,534.75,49.965z M511.627,319.768c0,2.475-0.903,4.613-2.711,6.424\n                               c-1.81,1.804-3.952,2.707-6.427,2.707H45.681c-2.473,0-4.615-0.903-6.423-2.707c-1.807-1.817-2.712-3.949-2.712-6.424V82.226\n                               c0-2.475,0.902-4.615,2.712-6.423c1.809-1.805,3.951-2.712,6.423-2.712h456.815c2.471,0,4.617,0.904,6.42,2.712\n                               c1.808,1.809,2.711,3.949,2.711,6.423V319.768L511.627,319.768z\" />\n                            </g>\n                        </svg>\n                        Computador\n                    </button>\n                    <input type=\"file\" hidden accept=\"image/x-png,image/gif,image/jpeg\">\n                </div>\n                <div class=\"item\" cp-show=\"$ctrl.params.drive\">\n                    <button class=\"btn-modal-crop\" cp-click=\"$ctrl.openPickerGoogle()\">\n                        <svg version=\"1.1\" id=\"Capa_1\" xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" x=\"0px\" y=\"0px\"\n                            viewBox=\"0 0 512 512\" style=\"enable-background:new 0 0 512 512;\" xml:space=\"preserve\">\n                            <polygon style=\"fill:#FFC107;\" points=\"341.344,352 512,352 341.344,32 170.656,32 \" />\n                            <polygon style=\"fill:#2196F3;\" points=\"158.464,352 85.344,480 432,480 512,352 \" />\n                            <polygon style=\"fill:#4CAF50;\" points=\"170.656,32 0,330.656 85.344,480 253.056,186.496 \" />\n                        </svg>\n                        Google drive\n                    </button>\n                </div>\n            </div>\n\n        </div>\n    </div>\n\n</div>";
 
 /***/ }),
 
@@ -24335,13 +24413,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _relative_element__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../relative-element */ "../src/component/relative-element.ts");
 
 var ModalViewController = /** @class */ (function () {
-    function ModalViewController(scope) {
-        this.element = scope.element;
-        this.imageElement = scope.element.querySelector('img');
+    function ModalViewController($scope, $element) {
+        this.element = $element;
+        this.imageElement = $element.querySelector('img');
         this.funcListener = _relative_element__WEBPACK_IMPORTED_MODULE_0__["Relative"].relativeImage(this.imageElement);
     }
     ModalViewController.prototype.modalParams = function (params) {
         this.image = params.url;
+        this.$constants = params.constants;
         this.modalInstance = params.modalInstance;
     };
     ModalViewController.prototype.$destroy = function () {
@@ -24364,7 +24443,7 @@ var ModalViewController = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"modal-instance\">\n    <span class=\"close\" cp-click=\"$ctrl.close();\">&times;</span>\n    <img class=\"modal-content\" onclick=\"event.stopPropagation();\" cp-src=\"$ctrl.image\" />\n</div>";
+module.exports = "<div class=\"modal-instance\" cp-class=\"{ 'circle' : $ctrl.$constants.type == 'circle' }\">\n    <span class=\"close\" cp-click=\"$ctrl.close();\">&times;</span>\n    <img class=\"modal-content\" onclick=\"event.stopPropagation();\" cp-attr.src=\"$ctrl.image\" />\n</div>";
 
 /***/ }),
 
@@ -24465,7 +24544,7 @@ var Component = {
      * @name constants
      * @description Declares the constants that will be accepted by component. See https://capivarajs.github.io/components.html#constants
      */
-    constants: ['crop', 'drive', 'width', 'height', 'type'],
+    constants: ['crop', 'drive', 'width', 'height', 'type', 'defaultImage'],
     /**
      * @name functions
      * @description Declares the functions that will be accepted by component. See https://capivarajs.github.io/components.html#functions

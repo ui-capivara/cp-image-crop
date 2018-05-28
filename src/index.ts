@@ -11,17 +11,17 @@ const Component = {
      * @name template
      * @description Applies the visual part of the component
      */
-    template  : template,
+    template: template,
     /**
      * @name style
      * @description Import component style
      */
-    style     : style,
+    style: style,
     /**
      * @name constants
      * @description Declares the constants that will be accepted by component. See https://capivarajs.github.io/components.html#constants
      */
-    constants: ['crop', 'drive', 'width', 'height', 'type'],
+    constants: ['crop', 'drive', 'width', 'height', 'type', 'defaultImage'],
     /**
      * @name functions
      * @description Declares the functions that will be accepted by component. See https://capivarajs.github.io/components.html#functions

@@ -1,4 +1,4 @@
-<div class="modal-instance">
+<div class="modal-instance" cp-class="{ 'circle' : $ctrl.$constants.type == 'circle' }">
     <span class="close" cp-click="$ctrl.close();">&times;</span>
-    <img class="modal-content" onclick="event.stopPropagation();" cp-src="$ctrl.image" />
+    <img class="modal-content" onclick="event.stopPropagation();" cp-attr.src="$ctrl.image" />
 </div>

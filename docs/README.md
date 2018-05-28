@@ -9,10 +9,10 @@ O cp-image-crop é um componente para manipulação de imagens, ele permite que 
 Recomendamos vincular a um número de versão específico que você possa atualizar manualmente, porém no exemplo iremos utilizar a ultima versão disponível.
 ```html
 <!-- Stylesheet -->
-<link rel="stylesheet" href="https://unpkg.com/cp-image-crop@latest/dist/cp-image-crop.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uicapivara/cp-image-crop@1.0.1/dist/cp-image-crop.css">
 
 <!-- Component -->
-<script src="https://unpkg.com/cp-image-crop@latest/dist/cp-image-crop.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@uicapivara/cp-image-crop@1.0.1/dist/cp-image-crop.js"></script>
 ```
 Certifique-se de ler sobre as diferentes construções e use a produção, substituindo os arquivos .js por .min.js. Esta é uma compilação otimizada para velocidade em vez de experiência de desenvolvimento.
 
@@ -20,94 +20,78 @@ Certifique-se de ler sobre as diferentes construções e use a produção, subst
 O NPM é o método de instalação recomendado ao criar aplicativos de grande escala. Ele combina muito bem com bundlers de módulo, como Webpack ou Browserify.
 
 ```shell
-$ npm install cp-image-crop --save
+$ npm install @uicapivara/cp-image-crop --save
 ```
-Após a instalação, precisamos importar o componente no projeto, o componente é feito utilizando **typescript** então é necessário configurar o **ts-loader** no arquivo do configuração do seu **webpack**. Exemplo:
-```javascript
-module.exports = {
-  ...
-  resolve: {
-    extensions: [".ts", ".tsx", ".js"]
-  },
-  module: {
-    rules: [
-      {
-        test: /\.tsx?$/,
-        use: 'ts-loader',
-        exclude: /node_modules/
-      }
-    ]
-  }
-}
-```
-Com o **ts-loader** configurado, basta importarmos o componente no arquivo principal do seu projeto. Exemplo:
-```javascript
-import 'cp-image-crop';
-```
+Após a instalação, precisamos importar o componente no projeto.
 
+Se seu projeto utiliza **typescript** você pode importar o componente normalmente.
+```javascript
+import '@uicapivara/cp-image-crop';
+```
+Caso contrário é necessário importa-los especificando o arquivo **js**. Exemplo:
+```javascript
+import '@uicapivara/cp-image-crop/index.js';
+```
 ------
-# Instância do componente
+# Como usar
 
 Se chegamos até aqui, provavelmente a instalação foi finalizada êxito, isso significa que já podemos utilizar o cp-image-crop.
-Vamos agora criar uma nova instância do componente, primeiro faça a declaração no HTML dando um **alias** para essa instância no exemplo usaremos o alias **exampleCrop**.
+Vamos agora criar uma nova instância do componente. Para isso basta colocarmos o HTML abaixo, informando o nome do atributo para o cp-model na qual será usado para atribuir o item selecionado.
 
 ```html
 <cp-image-crop cp-model="$ctrl.pessoa.foto"></cp-image-crop>
 ```
-
-Depois de declarar o componente no HTML precisamos inicializa-lo, nesse momento é possível passar alguns parâmetros caso julgarmos necessário.
-Na inicialização do componente, precisar informar o contexto que será aplicado o valor. Exemplo:
 ```javascript
 class MyController {
     constructor() {
-      this.pessoa = {
-        foto: ''
-      }
+      this.pessoa = { foto: '' };
     }
 }
 
 capivara.controller(document.body, MyController);
 ```
 
-Exemplo em CapivaraJS - [Jsfiddle](https://jsfiddle.net/t0b8xxfj/6/).
+Exemplo em CapivaraJS - [Jsfiddle](https://jsfiddle.net/t0b8xxfj/28/).
 
-Exemplo em Angular.js - [Jsfiddle](https://jsfiddle.net/t0b8xxfj/8/).
+Exemplo em Angular.js - [Jsfiddle](https://jsfiddle.net/t0b8xxfj/29/).
 
-Exemplo em Angular - [Jsfiddle](https://jsfiddle.net/1hk7knwq/3584/).
+Exemplo em Angular - [Jsfiddle](https://jsfiddle.net/1hk7knwq/3664/).
 
-Exemplo em Vue.js - [Jsfiddle](http://jsfiddle.net/td4v7qqd/61/).
+Exemplo em Vue.js - [Jsfiddle](http://jsfiddle.net/td4v7qqd/77/).
 
-Exemplo em React - [Jsfiddle](http://jsfiddle.net/td4v7qqd/62/).
+Exemplo em React - [Jsfiddle](http://jsfiddle.net/td4v7qqd/86/).
 
 
 
 ------
-# Configuração
+## Atributos
+| Atributo: Default | Tipo        | Descrição                                 |
+| ----------------- | :---------: | ----------------------------------------: |
+| cpModel           | ANY      | Atributo na qual será setado a imagem que o usuário selecionar. |
+| width: 170px      | string      | Define a largura da área de visualização. |
+| height: 170px     | string      | Define a altura da área de visualização.  |
+| crop              | CropConfig  | Configuração da área de recorte.          |
+| drive             | DriveConfig | Configuração do google drive.             |
+| type: circle/square             | string | Define se o componente será no formato circulo ou quadrado. |
+| defaultImage | string | Imagem padrão que será mostrada quando o cpModel for nulo. |
 
-O componente aceita algumas constantes que permitem configurar funcionalidades. No exemplo abaixo iremos fazer a visualização em **200x200**, entretanto definir que a imagem será recortada em **250x250**.
+## CropConfig
 
-Você pode ver esse exemplo no [Jsfiddle](https://jsfiddle.net/xfnkp3no/15/)
+Você pode ver esse exemplo no [Jsfiddle](https://jsfiddle.net/xfnkp3no/29/)
 
+```html
+<cp-image-crop cp-model="$ctrl.pessoa.foto" crop="$ctrl.cropConfig"></cp-image-crop>
+```
 ```javascript
 class MyController {
-  constructor() {
-    this.pessoa = {
-      foto: 'https://goo.gl/SYn4yp'
-    }
-  }
 
-  $onInit() {
-    const config = {
-      crop: {
-        viewport: {
-          width: 50,
-          height: 250
-        }
+  $onInit() {    
+    this.cropConfig = {
+      viewport: {
+        width: 100,
+        height: 250
       }
-    };
-    capivara.componentBuilder('exampleCrop').then((instance) => {
-      instance.constants(config).build();
-    });
+    }
   }
 
 }
@@ -115,40 +99,29 @@ class MyController {
 capivara.controller(document.body, MyController);
 
 ```
-## Objeto de config
-| Atributo: Default      | Tipo          | Descrição |
-| ------------- |:-------------:| -----:|
-| width: 170px      | string | Define a largura da área de visualização. |
-| height: 170px      | string | Define a altura da área de visualização. |
-| crop      | CropConfig | Configuração da área de recorte. |
-| drive      | DriveConfig | Configuração do google drive. |
 
-## CropConfig
-
-Veja esse exemplo no [Jsfiddle](https://jsfiddle.net/xfnkp3no/20/) que demostramos como deixar o resize livre e o zoom infinito.
-
-| Atributo: Default      | Tipo          | Descrição |
-| ------------- |:-------------:| -----:|
-| customClass: ''   | string | Uma classe de sua escolha para adicionar ao contêiner para adicionar estilos personalizados. |
-| enableOrientation: false      | boolean | Ativar ou desativar o suporte a orientação personalizada.  |
-| enableResize: false      | boolean | Ativar ou desativar o suporte para redimensionar a área da janela de visualização. |
-| enableZoom: true      | boolean | Ative a funcionalidade de zoom. Se definido como falso, a rolagem não aumentariam. |
-| enforceBoundary: true      | boolean | Restringe o zoom, de modo que a imagem não pode ser menor que a viewport. |
-| showZoomer: true      | boolean | Ocultar ou Mostrar o controle deslizante de zoom. |
-| viewport: object      | ViewPortConfig | Configuração da parte visível da imagem. |
+| Atributo: Default        | Tipo           | Descrição                                                                                    |
+| ------------------------ | :------------: | -------------------------------------------------------------------------------------------: |
+| customClass: ''          | string         | Uma classe de sua escolha para adicionar ao contêiner para adicionar estilos personalizados. |
+| enableOrientation: false | boolean        | Ativar ou desativar o suporte a orientação personalizada.                                    |
+| enableResize: false      | boolean        | Ativar ou desativar o suporte para redimensionar a área da janela de visualização.           |
+| enableZoom: true         | boolean        | Ative a funcionalidade de zoom. Se definido como falso, a rolagem não aumentariam.           |
+| enforceBoundary: true    | boolean        | Restringe o zoom, de modo que a imagem não pode ser menor que a viewport.                    |
+| showZoomer: true         | boolean        | Ocultar ou Mostrar o controle deslizante de zoom.                                            |
+| viewport: object         | ViewPortConfig | Configuração da parte visível da imagem.                                                     |
 
 ## ViewPortConfig
-| Atributo: Default      | Tipo          | Descrição |
-| ------------- |:-------------:| -----:|
-| width: 170px      | string | Define a largura da área de recorte. |
-| height: 170px      | string | Define a altura da área de recorte. |
-| type: square/circle      | string | Define a a imagem será recortada em circulo ou quadrado. |
+| Atributo: Default   | Tipo   | Descrição                                                |
+| ------------------- | :----: | -------------------------------------------------------: |
+| width: 170px        | string | Define a largura da área de recorte.                     |
+| height: 170px       | string | Define a altura da área de recorte.                      |
+| type: square/circle | string | Define a a imagem será recortada em circulo ou quadrado. |
 
 ## DriveConfig
-| Atributo      | Tipo          | Descrição |
-| ------------- |:-------------:| -----:|
-| apiKey      | string | Define a chave da api do google. |
-| clientId      | string | Define o id do cliente google. |
+| Atributo | Tipo   | Descrição                        |
+| -------- | :----: | -------------------------------: |
+| apiKey   | string | Define a chave da api do google. |
+| clientId | string | Define o id do cliente google.   |
 
 ------
 # Integração com google drive
@@ -161,4 +134,4 @@ Você pode permitir que seu usuário sincronize as imagens do google drive com o
 
 Obs: Quando estiver criando o **ID do cliente OAuth** certifique-se de colocar as URL de origens permitidas.
 
-Veja no [Jsfiddle](https://jsfiddle.net/xfnkp3no/26/) como informar suas chaves.
+Veja no [Jsfiddle](https://jsfiddle.net/xfnkp3no/36/) como informar suas chaves.

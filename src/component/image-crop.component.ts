@@ -14,14 +14,36 @@ export class CapivaraImageCrop {
         this.$constants = this.$constants || {};
     }
 
+    $onViewInit() {
+        this.appendDriverAPI();
+    }
+
+    insertScript(url, elm) {
+        let script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.src = url;
+        elm.appendChild(script);
+    }
+
+    appendDriverAPI() {
+        if (this.$constants.drive && this.$constants.drive.apiKey && this.$constants.drive.clientId) {
+            const SRC_GOOGLE_CLIENT = 'https://apis.google.com/js/client.js';
+            const SRC_DRIVE_CLIENT = `https://www.google.com/jsapi?key=${this.$constants.drive.apiKey}`;
+            const head = document.getElementsByTagName('head')[0];
+            if (!head.querySelector(`script[src="${SRC_DRIVE_CLIENT}"]`)) {
+                this.insertScript(SRC_DRIVE_CLIENT, head);
+            }
+            if (!head.querySelector(`script[src="${SRC_GOOGLE_CLIENT}"]`)) {
+                this.insertScript(SRC_GOOGLE_CLIENT, head);
+            }
+        }
+    }
+
     /**
      * @description Method executed when a component is build
      */
     $onBuild() {
-        if (this.$constants.drive && this.$constants.drive.apiKey && this.$constants.drive.clientId) {
-            document.write(`<script async src="https://www.google.com/jsapi?key=${this.$constants.drive.apiKey}"></script>`);
-            document.write('<script async src="https://apis.google.com/js/client.js"></script>');
-        }
+        this.appendDriverAPI();
     }
 
     /**
@@ -31,7 +53,6 @@ export class CapivaraImageCrop {
         return {
             'width': (this.$constants && this.$constants.width) ? this.$constants.width : '170px',
             'height': (this.$constants && this.$constants.height) ? this.$constants.height : '170px',
-            'border-radius': (this.$constants && this.$constants.type == 'circle') ? '50%' : '3px'
         };
     }
 
@@ -97,7 +118,8 @@ export class CapivaraImageCrop {
             keyboard: true,
             controller: ModalViewController,
             params: {
-                url: url || ''
+                url: url || '',
+                constants: this.$constants,
             }
         });
     }

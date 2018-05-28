@@ -1,6 +1,6 @@
 {
-  "name": "cp-image-crop",
-  "version": "1.6.2",
+  "name": "@uicapivara/cp-image-crop",
+  "version": "1.0.3",
   "description": "cp-image-crop",
   "main": "src/index.ts",
   "scripts": {
@@ -50,7 +50,7 @@
   "author": "CapivaraJS Team",
   "license": "LGPL-3.0",
   "dependencies": {
-    "capivarajs": "^2.1.2",
+    "capivarajs": "^3.3.4",
     "croppie": "^2.6.2"
   }
 }

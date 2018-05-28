@@ -1,4 +1,4 @@
-<div class="modal-instance">
+<div class="modal-instance" cp-class="{ 'circle' : $ctrl.params.type == 'circle' }">
     <span class="close" cp-click="$ctrl.close();">&times;</span>
 
     <div class="content-image-crop-edit" cp-show="$ctrl.mode == 'crop'">
@@ -9,7 +9,7 @@
             <div class="filter-custom" cp-repeat="filter in $ctrl.filters">
                 <h3>[[filter.label]]</h3>
                 <div class="range-slider">
-                    <input class="range-slider__range" cp-model="filter.value" type="range" cp-min="filter.min" cp-max="filter.max" cp-step="filter.step"
+                    <input class="range-slider__range" cp-model="filter.value" type="range" cp-attr.min="filter.min" cp-attr.max="filter.max" cp-attr.step="filter.step"
                     />
                     <span class="range-slider__value">
                         [[ filter.value ]][[ filter.measure ]]
@@ -24,8 +24,8 @@
     </div>
     <div class="content-image-crop-edit small" cp-class="{'empty' : !$ctrl.params.image}" cp-show="$ctrl.mode == 'view'">
         <div class="content-left">
-            <img cp-if="$ctrl.params.image" cp-src="$ctrl.params.image" class="image-view">
-            <div class="image-drop-area" cp-if="!$ctrl.params.image">
+            <img cp-show="$ctrl.params.image" cp-attr.src="$ctrl.params.image" class="image-view">
+            <div class="image-drop-area" cp-show="!$ctrl.params.image">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     viewBox="0 0 58 58" style="enable-background:new 0 0 58 58;" xml:space="preserve">
                     <g>

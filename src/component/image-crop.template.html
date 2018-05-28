@@ -1,10 +1,24 @@
-<div class="image-crop-card" cp-style="$ctrl.getCropStyle()">
+<div class="image-crop-card"
+     cp-style="$ctrl.getCropStyle()"
+     cp-class="{ 'circle' : $ctrl.$constants.type == 'circle' }">
     <div class="image-crop-card-content">
-        <img cp-if="$ctrl.$bindings.cpModel" cp-src="$ctrl.$bindings.cpModel" cp-click="$ctrl.viewImage($ctrl.$bindings.cpModel)" />
-        <div class="backdrop-crop-button" cp-click="$ctrl.openModalEditImage()">
+        <img cp-show="$ctrl.$bindings.cpModel"
+             cp-attr.src="$ctrl.$bindings.cpModel"
+             cp-click="$ctrl.viewImage($ctrl.$bindings.cpModel)" />
+        <img cp-show="!$ctrl.$bindings.cpModel"
+             cp-attr.src="$ctrl.$constants.defaultImage"
+             cp-click="$ctrl.viewImage($ctrl.$constants.defaultImage)" />
+        <div class="backdrop-crop-button"
+             cp-click="$ctrl.openModalEditImage()">
             <div class="backdrop-crop-button-container">
-                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100"
-                    style="enable-background:new 0 0 100 100;" xml:space="preserve">
+                <svg version="1.1"
+                     xmlns="http://www.w3.org/2000/svg"
+                     xmlns:xlink="http://www.w3.org/1999/xlink"
+                     x="0px"
+                     y="0px"
+                     viewBox="0 0 100 100"
+                     style="enable-background:new 0 0 100 100;"
+                     xml:space="preserve">
                     <g>
                         <g>
                             <path d="M50,40c-8.285,0-15,6.718-15,15c0,8.285,6.715,15,15,15c8.283,0,15-6.715,15-15
@@ -16,7 +30,7 @@
                         </g>
                     </g>
                 </svg>
-                <label>Alterar foto</label>
+                <label>Alterar</label>
             </div>
         </div>
     </div>

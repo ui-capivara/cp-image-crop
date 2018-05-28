@@ -15,6 +15,9 @@ cp-image-crop {
     box-shadow: 0 1px 1px rgba(0, 0, 0, 0.07);
     overflow: hidden;
     padding: 5px; }
+    cp-image-crop .image-crop-card.circle {
+      padding: 0;
+      border-radius: 50%; }
     cp-image-crop .image-crop-card .image-crop-card-content {
       height: 100%;
       width: 100%;
@@ -90,6 +93,8 @@ cp-image-crop {
   .modal-cp-image-crop .modal-instance {
     width: 100%;
     height: 100%; }
+    .modal-cp-image-crop .modal-instance.circle img {
+      border-radius: 50%; }
   .modal-cp-image-crop .modal-content {
     margin: auto;
     display: block;

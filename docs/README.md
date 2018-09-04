@@ -9,10 +9,10 @@ O cp-image-crop é um componente para manipulação de imagens, ele permite que 
 Recomendamos vincular a um número de versão específico que você possa atualizar manualmente, porém no exemplo iremos utilizar a ultima versão disponível.
 ```html
 <!-- Stylesheet -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uicapivara/cp-image-crop@1.0.1/dist/cp-image-crop.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@uicapivara/cp-image-crop@1.0.3/dist/cp-image-crop.css">
 
 <!-- Component -->
-<script src="https://cdn.jsdelivr.net/npm/@uicapivara/cp-image-crop@1.0.1/dist/cp-image-crop.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@uicapivara/cp-image-crop@1.0.3/dist/cp-image-crop.js"></script>
 ```
 Certifique-se de ler sobre as diferentes construções e use a produção, substituindo os arquivos .js por .min.js. Esta é uma compilação otimizada para velocidade em vez de experiência de desenvolvimento.
 

@@ -19,9 +19,13 @@ module.exports = {
                 use: 'html-loader'
             },
             {
-                test: /\.tsx?$/,
-                use: 'ts-loader',
-                exclude: /node_modules/
+              test: /\.tsx?$/,
+                use: {
+                  loader: 'ts-loader',
+                  options: {
+                      transpileOnly: true
+                  }
+                }
             },
             {
                 test: /\.js$/,

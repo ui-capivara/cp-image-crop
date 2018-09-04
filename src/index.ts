@@ -1,4 +1,4 @@
-/* 
+/*
     Component created by capivara-cli https://capivarajs.github.io/
 */
 import capivara from 'capivarajs';
